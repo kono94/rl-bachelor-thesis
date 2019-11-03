@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage[english,german]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{float}
+\usepackage{wrapfig}
+%\usepackage[onehalfspacing]{setspace}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit Umlauten
+\usepackage{microtype}% verbesserter Randausgleich
+\setlength{\headheight}{21.4pt}
+\usepackage{apacite}
+\usepackage{eurosym}
+
+\begin{document}
+\begin{titlepage}
+	\centering	
+	{\scshape\LARGE Hochschule Bremerhdaven \par}
+	\vspace{1cm}
+	{\scshape\Large Technikfolgenabschätzung\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Genome Editing\par}
+	\vspace{2cm}
+	{\Large\itshape Einsatzmöglichkeiten und gesellschaftliche Folgen von Genome Editing in Zeiten von CRISPR/Cas9 \par}
+	\vfill Autoren: Jan Löwenstrom (34937) und Johann Hoffer (34461) \par
+	begleitet von\par
+	Herrn Streibl
+    \vfill
+
+
+% Bottom of the page
+	{\large \today\par}       
+\end{titlepage}
+\tableofcontents
+\pagebreak
+\listoffigures
+\newpage
+
+\noindent
+\pagestyle{fancy}
+
+\fancyhf{}
+\cfoot{\thepage}
+\rhead{Hoffer \& Löwenstrom}
+\lhead{TFA}
+
+\section{Einleitung}
+\input{part1/einleitung.tex}
+
+\pagebreak
+\section{Eigenständigkeitserklärung}
+Wir erklären hiermit,
+
+• dass wir die vorliegende Arbeit ohne fremde Hilfe und
+ohne Verwendung anderer als der angegebenen
+Hilfsmittel verfasst haben
+
+• dass wir sämtliche verwendeten Quellen erwähnt und
+korrekt zitiert haben.
+
+\pagebreak
+\bibliographystyle{apacite}
+\bibliography{quellen}
+
+\pagebreak
+
+\end{document}
