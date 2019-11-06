@@ -1,0 +1,19 @@
+Bellman operator: \\
+For $k=1$ until convergence:
+For all $s$ in $S$:
+\[V_{k}^{\pi }(s)= r(s, \pi(s)) + \gamma \sum_{{s}'\in S}{ p({s}'|s, \pi (s))V_{k-1}^{\pi }({s}')}\]
+
+\noindent Policy Improvement: $\pi_{i+1 }(s)= \argmax_a Q^{\pi_{i}}(s,a) \forall s \in S$
+\\
+\noindent Monte Carlo First Visit: \\
+Init: $ N(s) = 0, G(s) = 0, \forall s \in S $
+Loop: \\
+    Sample episode: $ i = s_{i,1}, a_{i,1}, r_{i,1}, s_{i,2}, a_{i,2}, r_{i,2}, ... , s_{i,T_i} $
+\\
+    Temporal Difference:\\
+Input: $\alpha$ \\
+Init: $ V^{\pi}(s)=0, \forall s \in S $ \\
+Loop: \\
+Tuple = $(s_{t},a_{t},r_{t},s_{t+1})$
+
+\[V^\pi(s_{t}) = V^{\pi} + \alpha([r_{t}+\gamma V^{\pi}(s_{t+1})] - V^{\pi}(s_{t}))\]
