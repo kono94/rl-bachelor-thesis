@@ -1,0 +1,24 @@
+Chapter 1.5 Tik-Tak-Toe Beispiel:
+Gibt einfachen Einblick wie eine Value function aufgebaut und
+benutzt wird. 
+Dieses Kapital erläutert anhand des Beispiels, was der Unterschied ist
+zwischen Reinforcement Learning und evolutionary methods (Eike Gruppe).
+Kurz: Beide Methode versuchen den Policy-Space abzulaufen und die beste Policy zu finden,
+auch gegen einen nicht-perfekten Gegner (er geht darauf ein, warum die minmax methode der
+Spieltheorie hier nicht anwendbar ist, wenn man davon ausgeht, dass der Gegner nicht
+immer den perfekten Move macht). Evolutionary Methods wählen eine fixe Policy und spielen
+viele Spiele mit diesem Ruleset, um an Ende einen Fitnessscore zu errechnen (z.B Anzahl der
+Siege). Danach überleben die besseren Policies und es werden Methodes des evolutionary benutzt
+(Mutation etc). Hierbei sind aber einzelne Züge für die Bewertung einer Policy irrelavant, da
+nur das Endresultat bewertet wird.
+RL konstruiert im Gegensatz eine Value Function. Vorstellbar durch eine Tabelle, in der
+in der linken Spalte alle möglichen States stehen und in der rechten Spalte das Value für
+diesen spezifischen State. In diesem Fall ist es vielleicht die Wahrscheinlichkeit zu gewinnen.
+Wenn man X spielt, dann ist das Value für alle State bei denen bereits drei Xe in einer Reihe sind 1,
+drei Os bei 0. Initialisiert werden alle States mit 0.5.
+In jedem State schaut man nun, zu welchen States man durch Actions gelangen kann und wählt
+mit einer hohen Wahrscheinlichkeit die "greedy" Aktion, also jene die zu dem State mit dem höchsten
+Value führt. Alternativ wählt man zufällig einen State, "Exploration". Values des vorherrigen
+Zustands werden daraufhin geupdated mit der Differenz zu dem aktuellem Zustand gewichtet
+um einen Learning Faktion Alpha. "Temporal-difference learning". Alpha wird mit der Zeit immer weiter verringert
+und converged/strebt gegen 0, die optimale Policy ist gefunden, um gegen diesen einen imperfekten Gegner zu spielen.

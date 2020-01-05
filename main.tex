@@ -1,74 +1,90 @@
-\documentclass[a4paper, 12pt]{article}
-
+\documentclass[12pt]{article}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage[english,german]{babel} 
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[article, total={6in, 8in}]{geometry}
 \usepackage{float}
 \usepackage{wrapfig}
 %\usepackage[onehalfspacing]{setspace}
 \usepackage{url}
+\usepackage{tabularx}
 \usepackage{pdfpages}
+\usepackage{wrapfig}
 \usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit Umlauten
 \usepackage{microtype}% verbesserter Randausgleich
 \setlength{\headheight}{21.4pt}
 \usepackage{apacite}
 \usepackage{eurosym}
 \usepackage{amsmath}
+% Special characters
+\usepackage{eucal}
+% math. alphabet
+\usepackage{amssymb}
+\usepackage{scrpage2}%
 \DeclareMathOperator*{\argmax}{argmax}
 
+%%%% footer and header %%%%
+\usepackage{scrpage2}%
+\pagestyle{scrheadings}%  S
+\clearscrheadfoot% 
+\setheadwidth{text}%
+\automark{section}% 
+\ihead{\textbf{\pagemark}}
+\renewcommand{\sectionmark}[1]{\markright{\ #1}} 
+\ohead{\rightmark}
+\setheadsepline{0.5pt}
+%%%% \footer and header %%%%
+
 \begin{document}
+
 \begin{titlepage}
 	\centering	
-	{\scshape\LARGE Hochschule Bremerhdaven \par}
+	{\scshape\LARGE Hochschule Bremerhaven \par}
 	\vspace{1cm}
-	{\scshape\Large Technikfolgenabschätzung\par}
+	{\scshape\Large Exposé für eine Bachelorarbeit zum Thema:\par}
 	\vspace{1.5cm}
-	{\huge\bfseries Genome Editing\par}
+	{\huge\bfseries Reinforcement Learning\par}
 	\vspace{2cm}
-	{\Large\itshape Einsatzmöglichkeiten und gesellschaftliche Folgen von Genome Editing in Zeiten von CRISPR/Cas9 \par}
-	\vfill Autoren: Jan Löwenstrom (34937) und Johann Hoffer (34461) \par
-	begleitet von\par
-	Herrn Streibl
+	{\Large\itshape Theoretische Grundlagen und praktische Umsetzung am Beispiel
+	eines Ameisen-Agentenspiels oder eines lernenden Systems zur Bestimmung des optimalen
+	Lenkverhaltens für einen autonom agierenden Einparkassistenten
+	\par}
+	\vfill
+	\begin{tabularx}{\textwidth}{lX}
+		Autor: & Jan Löwenstrom \\
+		Matrikelnr.: & 34937 \\
+		Erstprüfer: & Prof. Dr.-Ing. Henrik Lipskoch \\
+		Zweitprüfer: & Prof. Dr. Mathias Lindemann || Prof. Dr. Nadija Syrjakow \\
+	\end{tabularx}  
     \vfill
 
-
-% Bottom of the page
-	{\large \today\par}       
+% Bottom of the page with current date
+	{\large \today \par}       
 \end{titlepage}
+
 \tableofcontents
 \pagebreak
 \listoffigures
 \newpage
 
+
 \noindent
-\pagestyle{fancy}
-
-\fancyhf{}
-\cfoot{\thepage}
-\rhead{Hoffer \& Löwenstrom}
-\lhead{TFA}
-
 \section{Einleitung}
+
 \input{part1/einleitung.tex}
-\input{formular.tex}
 \pagebreak
-\section{Eigenständigkeitserklärung}
-Wir erklären hiermit,
 
-• dass wir die vorliegende Arbeit ohne fremde Hilfe und
-ohne Verwendung anderer als der angegebenen
-Hilfsmittel verfasst haben
+\section{Markow Entscheidungsprozess}
+\input{part1/MDP.tex}
+\pagebreak
 
-• dass wir sämtliche verwendeten Quellen erwähnt und
-korrekt zitiert haben.
-
+\section{Markow-Eigenschaft und Zustandsmodellierung}
+\input{part1/MP.tex}
 \pagebreak
 \bibliographystyle{apacite}
 \bibliography{quellen}
-
 \pagebreak
 
 \end{document}

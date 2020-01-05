@@ -1,3 +1,28 @@
 \begin{thebibliography}{}
 
+\bibitem [\protect \citeauthoryear {%
+Fedjaev%
+}{%
+Fedjaev%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+master}
+\APACinsertmetastar {%
+master}%
+\begin{APACrefauthors}%
+Fedjaev, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {Decoding EEG Brain Signals using Recurrent Neural Networks.}
+  {Decoding eeg brain signals using recurrent neural networks.}
+\newblock
+\begin{APACrefURL}
+  \url{https://www.spektrum.de/kolumne/eine-waffe-gegen-malaria/1525481}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
