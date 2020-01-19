@@ -1,5 +1,6 @@
 \babel@toc {german}{}
 \contentsline {section}{\numberline {1}Einleitung}{3}% 
-\contentsline {section}{\numberline {2}Markow Entscheidungsprozess}{4}% 
-\contentsline {section}{\numberline {3}Markow-Eigenschaft und Zustandsmodellierung}{5}% 
-\contentsline {section}{Literatur}{7}% 
+\contentsline {section}{\numberline {2}Grundlagen}{4}% 
+\contentsline {subsection}{\numberline {2.1}Markow Entscheidungsprozess}{4}% 
+\contentsline {section}{\numberline {3}Markow-Eigenschaft und Zustandsmodellierung}{6}% 
+\contentsline {section}{Literatur}{8}% 
