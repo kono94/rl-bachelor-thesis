@@ -18,6 +18,7 @@
 \usepackage{apacite}
 \usepackage{eurosym}
 \usepackage{amsmath}
+\numberwithin{equation}{section}
 % Special characters
 \usepackage{eucal}
 % math. alphabet
@@ -47,16 +48,14 @@
 	\vspace{1.5cm}
 	{\huge\bfseries Reinforcement Learning\par}
 	\vspace{2cm}
-	{\Large\itshape Theoretische Grundlagen und praktische Umsetzung am Beispiel
-	eines Ameisen-Agentenspiels oder eines lernenden Systems zur Bestimmung des optimalen
-	Lenkverhaltens für einen autonom agierenden Einparkassistenten
+	{\Large\itshape Theoretische Grundlagen der tabellarischen Lernmethoden und praktische Umsetzung am Beispiel eines Ameisen-Agentenspiels
 	\par}
 	\vfill
 	\begin{tabularx}{\textwidth}{lX}
 		Autor: & Jan Löwenstrom \\
 		Matrikelnr.: & 34937 \\
 		Erstprüfer: & Prof. Dr.-Ing. Henrik Lipskoch \\
-		Zweitprüfer: & Prof. Dr. Mathias Lindemann || Prof. Dr. Nadija Syrjakow \\
+		Zweitprüfer: & Prof. Dr. Nadija Syrjakow \\
 	\end{tabularx}  
     \vfill
 
@@ -80,11 +79,17 @@
 	\input{part1/grundlagen.tex}
 	\subsection{Markow Entscheidungsprozess}
 	\input{part1/MDP.tex}
+
+	\subsection{Markow-Eigenschaft und Zustandsmodellierung}
+	\input{part1/MP.tex}
 	\pagebreak
-	
-\section{Markow-Eigenschaft und Zustandsmodellierung}
-\input{part1/MP.tex}
-\pagebreak
+
+	\subsection{Belohnungen und Zielstrebigkeit}
+	\input{part1/BelohnungenZielstrebigkeit.tex}
+
+	\subsection{Gewinn und Episoden}
+	\input{part1/GewinnEpisoden.tex}
+
 \bibliographystyle{apacite}
 \bibliography{quellen}
 \pagebreak

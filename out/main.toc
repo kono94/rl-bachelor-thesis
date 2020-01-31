@@ -2,5 +2,7 @@
 \contentsline {section}{\numberline {1}Einleitung}{3}% 
 \contentsline {section}{\numberline {2}Grundlagen}{4}% 
 \contentsline {subsection}{\numberline {2.1}Markow Entscheidungsprozess}{4}% 
-\contentsline {section}{\numberline {3}Markow-Eigenschaft und Zustandsmodellierung}{6}% 
-\contentsline {section}{Literatur}{8}% 
+\contentsline {subsection}{\numberline {2.2}Markow-Eigenschaft und Zustandsmodellierung}{6}% 
+\contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{7}% 
+\contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{8}% 
+\contentsline {section}{Literatur}{9}% 

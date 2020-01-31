@@ -25,4 +25,59 @@ Fedjaev, J.%
   \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
+\bibitem [\protect \citeauthoryear {%
+Gosavi%
+}{%
+Gosavi%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+Gosavi}
+\APACinsertmetastar {%
+Gosavi}%
+\begin{APACrefauthors}%
+Gosavi, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reinforcement Learning: A Tutorial Survey and Recent
+  Advances} {Reinforcement learning: A tutorial survey and recent
+  advances}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{INFORMS Journal on Computing}{21}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1287/ijoc.1080.0305} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sutton%
+\ \BBA {} Barto%
+}{%
+Sutton%
+\ \BBA {} Barto%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Sutton1998}
+\APACinsertmetastar {%
+Sutton1998}%
+\begin{APACrefauthors}%
+Sutton, R\BPBI S.%
+\BCBT {}\ \BBA {} Barto, A\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2018}.
+\newblock
+\APACrefbtitle {Reinforcement Learning: An Introduction} {Reinforcement
+  learning: An introduction}\ (\PrintOrdinal{Second}\ \BEd).
+\newblock
+\APACaddressPublisher{}{The MIT Press}.
+\newblock
+\begin{APACrefURL} \url{http://incompleteideas.net/book/the-book-2nd.html}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
