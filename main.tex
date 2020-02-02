@@ -18,6 +18,7 @@
 \usepackage{apacite}
 \usepackage{eurosym}
 \usepackage{amsmath}
+\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
 \numberwithin{equation}{section}
 % Special characters
 \usepackage{eucal}
@@ -25,6 +26,7 @@
 \usepackage{amssymb}
 \usepackage{scrpage2}%
 \DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\max}{argmax}
 
 %%%% footer and header %%%%
 \usepackage{scrpage2}%
@@ -92,8 +94,13 @@
 
 	\subsection{Strategie und Nutzenfunktion}
 	\input{part1/StrategieNutzenfunktion.tex}
+
+	\subsection{Optimalität}
+	\input{part1/Optimalitaet.tex}
+
 \bibliographystyle{apacite}
 \bibliography{quellen}
 \pagebreak
 
+\input{anhang.tex}
 \end{document}

@@ -1,0 +1,24 @@
+Wofür Nutzenfunktionen?
+Beste Strategie, beste Nutzenfunktion.
+Warum actionValue besser ist (pefektes Modell)
+Bellmann equation, Berechnung.
+Approximation  - Cliffhänger zu den Methoden
+Prediction und Control.
+
+
+Ein Reinforcment Learning Problem zu lösen bedeutet, eine Strategie zu finden, die den größten Gewinn bringt. Dabei lassen sich Strategien vergleichen, insofern, dass eine Strategie besser ist als eine andere, wenn der erwartete Gewinn für alle Zustände größer oder gleich ist. Mit anderen Worten, $\pi \geq \pi'$ gilt, wenn $v_\pi(s) \geq v_{\pi'}(s)$ für alle $s \in \mathcal{S}$. Es existiert immer eine Stragie die besser oder gleich gegenüber allen anderen Strategien ist. Diese ist die optimale Strategie $\pi_*$. Optimale Strategien teilen die selbe (optimale) Zustands-Nutzenfunktion $v_*$ und (optimale) Aktions-Zustands-Nutzenfunktion $q_*$. 
+
+\begin{equation}\label{eq:optimaleValueFunction}
+    v_*(s) = \max_\pi v_\pi(s)
+\end{equation}
+\begin{equation}\label{eq:optimaleActionValueFunction}
+    q_*(s,a) = \max_\pi q_\pi(s,a)
+\end{equation}
+
+
+Optimale Nutzenfunktionen sind solche, die den Gewinn im Bezug auf die Dynamiken des \textit{MDP} perfekt wiederspiegeln. Ist ein Modell der Umgebung vorhanden, dann ist es möglich, die optimale Nutzenfunktion zu berechnen, denn sich kann als Gleichungssystem verstanden werden, welches eine eindeutige Lösung hat. Dieses Gleichungssystem wird auch als \textit{Bellman Optimality Equation }bezeichnet \eqref{eq:bellman}, wird jedoch im Weiteren nicht geanuer erläutert. Grund hierfür ist, dass zur Lösung ein perfektes Modell vorhanden sein muss, eine Vorraussetzung, die unter normalen Umständen nicht oft gegeben ist. Selbst wenn die Dynamiken bekannt sind, kann die benötigte Rechenzeit zur Lösungen jedoch utopische Ausmaße annehmen. Das Gleichungssystem besitzt eine Gleichung für jeden Zustand, das beudetet, wenn ein Problem $n$ Zustände hat, ergeben sich $n$ Gleichungen mit $n$ Unbekannten \cite[S.~64]{Sutton1998}. 
+\par
+Bei einem Spiel wie "Backgammon" sind die Regeln bekannt, ein perfektes Modell ist somit vorhanden, aber es existieren $10^23$ Zustände, was die mathematische Berechnung von $v_*$ mittels der \textit{Bellman Optimality Equation} praktisch unmöglich macht. Dennoch stellt sie ein wichtiges Fundament des Reinforcment Learning dar, da die meisten Reinforcment Learning Algorithmen als annährendes Lösungsverfahren verstanden werden können \cite[S.~66]{Sutton1998}.
+\par 
+Die optimale Strategie lässt sich leicht ermitteln, wenn eine optimale Nutzenfunktion gegeben ist. Ist zum Beispiel $v_*$ gegeben und befindet sich der Agent in Zustand $s$, dann muss er eine Aktion vorrausschauen, um den Folgezustand $s'$ zu finden, der den maximalen Nutzen hat. Dieses Vorrausschen benötigt jedoch ebenfalls ein perfektes Modell der Umgebung, um die Übergange für jede Aktion zu berechnen. Das ist der ausschlaggebende Grund, warum in der Regel $q_*$ berechnet wird. Denn dieser Nutzen umfasst implizit den Nutzen der Folgezustand für jede Aktion. Somit muss der Agent im Zustand $s$ nur schauen, welche Aktion $a$ und somit welches Zustands-Aktions-Paar den größten Nutzen hat und wählt genau jene Aktion.
+\par 
