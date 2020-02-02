@@ -211,6 +211,8 @@ INPUT part1/BelohnungenZielstrebigkeit.tex
 INPUT part1/BelohnungenZielstrebigkeit.tex
 INPUT part1/GewinnEpisoden.tex
 INPUT part1/GewinnEpisoden.tex
+INPUT part1/StrategieNutzenfunktion.tex
+INPUT part1/StrategieNutzenfunktion.tex
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd

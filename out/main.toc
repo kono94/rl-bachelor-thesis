@@ -5,4 +5,5 @@
 \contentsline {subsection}{\numberline {2.2}Markow-Eigenschaft und Zustandsmodellierung}{6}% 
 \contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{7}% 
 \contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{8}% 
+\contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{9}% 
 \contentsline {section}{Literatur}{9}% 

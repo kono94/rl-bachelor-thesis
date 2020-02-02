@@ -13,7 +13,7 @@ Um episodiale und kontinuierliche Aufgaben im Bezug auf den Gewinn zu vereinheit
 \begin{equation}\label{eq:discountedReturn}
     G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots  = \sum_{k=0}^\infty{\gamma^k R_{t+k+1}}
 \end{equation}
-Weiterhin ist zu vermerken, dass Gewinne von aufeinanderfolgenden Zeitpunkten miteinander verbunden sind \cite[S.55]{Sutton1998}.
+Weiterhin ist zu vermerken, dass Gewinne aufeinanderfolgender Zeitpunkte in Verbindung stehen \cite[S.55]{Sutton1998}.
 
 \begin{equation}\label{eq:successiveReturn}
     \begin{aligned}
@@ -22,7 +22,7 @@ Weiterhin ist zu vermerken, dass Gewinne von aufeinanderfolgenden Zeitpunkten mi
    & = R_{t+1} + \gamma G_{t+1}
     \end{aligned}
 \end{equation}
-Ist $\gamma = 0$, dann wählt der Agent seine Aktionen ausschließlich aufgrund der sofortigen Belohnung. Je näher $\gamma$ an 1 ist, desto "weitsichtiger" wird der Agent, da der Gewinn für den Zeitpunkt $t$ sich zusätzlich aus zukünftigen Belohnungen zusammensetzt. Bei Problemen, die sich in Episoden unterteilen lassen, ist es üblich, dass $\gamma = 1$ ist, sodass der Agent seine Entscheidungen immer aufgrund jeglicher Konsequenzen in der Zukunft bzw. bis zum Ende der jeweiligen Episode trifft. Um zu erreichen, dass die unendliche Summe in \eqref{eq:discountedReturn} bei kontinuierlichen Aufgaben einen endlichen Wert annimmt, muss $\gamma < 1$ \cite[S.55]{Sutton1998}. 
+Ist $\gamma = 0$, dann wählt der Agent seine Aktionen ausschließlich aufgrund der sofortigen Belohnung. Je näher $\gamma$ an 1 ist, desto "weitsichtiger" wird der Agent, da der Gewinn für den Zeitpunkt $t$ sich zusätzlich aus zukünftigen Belohnungen zusammensetzt. Es ist üblich, dass bei Problemen, die Episoden erzeugen $\gamma = 1$ zu bestimmen, sodass der Agent seine Entscheidungen immer aufgrund jeglicher Konsequenzen in der Zukunft bzw. bis zum Ende der jeweiligen Episode trifft. Um zu erreichen, dass die unendliche Summe in \eqref{eq:discountedReturn} bei kontinuierlichen Aufgaben einen endlichen Wert annimmt, muss $\gamma < 1$ gegeben sein \cite[S.55]{Sutton1998}. 
 \par 
 Probleme mit unendlichen Horizont können durch die Vergabe einer künstlichen Schranke zu einer episodialen Aufgabe umformuliert werden. Denkbar z.B. durch die Festlegung der maximalen Anzahl an Aktionen oder besuchten Zustände. 
 \par 
