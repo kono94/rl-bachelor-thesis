@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  2 FEB 2020 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  7 FEB 2020 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/jan/Projects/rl-bachelor-thesis/main.tex
-(/Users/jan/Projects/rl-bachelor-thesis/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -338,7 +338,7 @@ or  <return>  to continue without it.
 
 )
 
-/Users/jan/Projects/rl-bachelor-thesis/main.tex:29: LaTeX Error: Command \max already defined.
+./main.tex:29: LaTeX Error: Command \max already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -511,7 +511,7 @@ Overfull \hbox (11.06209pt too wide) in paragraph at lines 15--17
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 33.
 
-[5 <./images/agentUmweltInterface.png>]) (./part1/MP.tex) [6] (./part1/BelohnungenZielstrebigkeit.tex [7]) (./part1/GewinnEpisoden.tex [8]) (./part1/StrategieNutzenfunktion.tex [9]) (./part1/Optimalitaet.tex [10]) (out/main.bbl
+[5 <./images/agentUmweltInterface.png>]) (./part1/MP.tex) [6] (./part1/BelohnungenZielstrebigkeit.tex [7]) (./part1/GewinnEpisoden.tex [8]) (./part1/StrategieNutzenfunktion.tex [9]) (./part1/Optimalitaet.tex [10]) (./part1/ExplorationExploitation.tex [11]) (out/main.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -520,20 +520,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [11] (./anhang.tex) [12] (out/main.aux) ) 
+ [12]) [13] (./anhang.tex) [14] (out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 8006 strings out of 492616
- 116780 string characters out of 6129481
- 247960 words of memory out of 5000000
- 11566 multiletter control sequences out of 15000+600000
- 24943 words of font info for 113 fonts, out of 8000000 for 9000
+ 8037 strings out of 492616
+ 117082 string characters out of 6129481
+ 249101 words of memory out of 5000000
+ 11575 multiletter control sequences out of 15000+600000
+ 27342 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,43p,1057b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,43p,1017b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (13 pages, 345278 bytes).
+Output written on out/main.pdf (15 pages, 353993 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 18950 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 19974 words of extra memory for PDF output out of 20736 (max. 10000000)
 

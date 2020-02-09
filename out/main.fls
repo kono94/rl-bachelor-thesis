@@ -2,7 +2,7 @@ PWD /Users/jan/Projects/rl-bachelor-thesis
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jan/Projects/rl-bachelor-thesis/main.tex
+INPUT main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
@@ -215,6 +215,10 @@ INPUT part1/StrategieNutzenfunktion.tex
 INPUT part1/StrategieNutzenfunktion.tex
 INPUT part1/Optimalitaet.tex
 INPUT part1/Optimalitaet.tex
+INPUT part1/ExplorationExploitation.tex
+INPUT part1/ExplorationExploitation.tex
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd

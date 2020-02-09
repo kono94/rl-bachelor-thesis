@@ -52,6 +52,36 @@ Gosavi, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+M{\"o}ller%
+\ \BBA {} Struth%
+}{%
+M{\"o}ller%
+\ \BBA {} Struth%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+greedy}
+\APACinsertmetastar {%
+greedy}%
+\begin{APACrefauthors}%
+M{\"o}ller, B.%
+\BCBT {}\ \BBA {} Struth, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Greedy-Like Algorithms in Modal Kleene Algebra}
+  {Greedy-like algorithms in modal kleene algebra}.{\BBCQ}
+\newblock
+\BIn{} R.~Berghammer, B.~M{\"o}ller\BCBL {}\ \BBA {} G.~Struth\ (\BEDS),
+  \APACrefbtitle {Relational and Kleene-Algebraic Methods in Computer Science.}
+  {Relational and kleene-algebraic methods in computer science.}
+\newblock
+\APACaddressPublisher{Berlin, Heidelberg}{Springer Berlin Heidelberg}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Sutton%
 \ \BBA {} Barto%
 }{%

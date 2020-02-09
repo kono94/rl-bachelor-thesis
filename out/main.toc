@@ -7,4 +7,5 @@
 \contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{8}% 
 \contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{9}% 
 \contentsline {subsection}{\numberline {2.6}Optimalit\IeC {\"a}t}{10}% 
-\contentsline {section}{Literatur}{11}% 
+\contentsline {subsection}{\numberline {2.7}Exploration-Exploitation Dilemma}{12}% 
+\contentsline {section}{Literatur}{13}% 
