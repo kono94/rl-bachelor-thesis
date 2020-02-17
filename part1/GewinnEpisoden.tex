@@ -1,19 +1,21 @@
 In Kapitel 2.1 wurde gezeigt, dass die Interaktion eines Agenten mit seiner Umwelt als bestimmte Abfolge beschrieben werden kann \eqref{eq:episode}. In ihr werden letztendlich alle Triples von Zustand, ausgeführter Aktion aufgrund dieses Zustands und anschließende Belohnung chronologisch aufgezeichnet. Ist diese Reihenfolge endlich, so wird sie auch als Episode (\textit{Episode}) bezeichnet. Eine Episode fasst somit alle Informationen zusammen, die ein Agent erlebt, während er von einem beliebigen Startzustand aus anfängt die Umwelt zu erkunden. Das Ende einer Episode wird durch das Erreichen eines beliebigen Zielzustands erreicht. Ist eine Episode zu Ende, dann wird das Szenario zurückgesetzt und der Agent startet erneut im Startzustand. Episoden sind komplett unabhängig voneinander und erzeugen Abfolgen, die nicht durch vorrige Episoden beeinflusst sind.
 \par
-Bisher wurde erwähnt, dass das Ziel eines Agenten sei, die Summe der zu erwartenden Belohnungen zu maximieren. Formal betrachtet, versucht er somit die Sequenz der Belohnungen, die er nach dem Zeitpunkt $t$ erhält, den sog. erwarteten Gewinn (\textit{Return}), zu maximieren. Im einfachsten Fall sieht $G_t$ wie folgt aus, wobei $T$ der finale Zeitstempel ist.
+Bisher wurde erwähnt, dass das Ziel eines Agenten sei, die Summe der zu erwartenden Belohnungen zu maximieren. Formal betrachtet, versucht er somit die Sequenz der Belohnungen, die er nach dem Zeitpunkt $t$ erhält, den sog. erwarteten Gewinn (\textit{Return}), zu maximieren. Im einfachsten Fall sieht $G_t$ wie folgt aus, wobei $T$ der finale Zeitstempel ist: \cite[S.55]{Sutton1998}
 
 \begin{equation}\label{eq:simpleReturn}
     G_t = R_{t+1} + R_{t+2} + R_{t+3} + \dots + R_{T}
 \end{equation}
 
-Diese simple Addition von nachfolgenden Belohnungen ist ausreichend und sehr praktikabel bei episodialen Problemszenarien. Jedoch ungeeignet für Probleme, bei denen keine klaren Endzustände definiert sind und daher einen sog. unendlichen Zeithorizont (infinite horizon) besitzen. Folglich ist  $T=\infty$, was wiederum bedeutet, dass der Gewinn ebenfalls unendlich ist. 
+Diese simple Addition von nachfolgenden Belohnungen ist ausreichend und sehr praktikabel bei episodialen Problemszenarien. Jedoch ungeeignet für Probleme, bei denen keine klaren Endzustände definiert sind und daher einen sog. unendlichen Zeithorizont (infinite horizon) besitzen. Folglich ist  $T=\infty$, was wiederum bedeutet, dass der Gewinn unendlich ist. 
 \par 
-Um episodiale und kontinuierliche Aufgaben im Bezug auf den Gewinn zu vereinheitlichen, wird das Konzept der Diskontierung (\textit{discounting}) verwendet. Dabei gibt der Parameter $\gamma$, $0\leq \gamma \leq 1$, Auskunft darüber, wie die Gewichtung zwischen sofortigen und zukünftigen Belohnungen verteilt ist. Der zukünftige diskontierte Gewinn, der durch die Aktion $A_t$ maximiert werden soll, berechnet sich somit wie folgt\cite[S.55]{Sutton1998}:
+Um episodiale und kontinuierliche Aufgaben im Bezug auf den Gewinn zu vereinheitlichen, wird das Konzept der Diskontierung (\textit{discounting}) verwendet. Dabei gibt der Parameter $\gamma$, $0\leq \gamma \leq 1$, Auskunft darüber, wie die Gewichtung zwischen sofortigen und zukünftigen Belohnungen verteilt ist. Der zukünftige diskontierte Gewinn, der durch die Aktion $A_t$ maximiert werden soll, berechnet sich somit wie folgt \cite[S.55]{Sutton1998}:
 
 \begin{equation}\label{eq:discountedReturn}
     G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots  = \sum_{k=0}^\infty{\gamma^k R_{t+k+1}}
 \end{equation}
-Weiterhin ist zu vermerken, dass Gewinne aufeinanderfolgender Zeitpunkte in Verbindung stehen \cite[S.55]{Sutton1998}.
+Eine wichtige Erkenntnis ist, dass Gewinne aufeinanderfolgender Zeitpunkte in Verbindung stehen. Vor allem Algorithmen, die nach jedem Zeitstempel updaten, profitieren von dieser Eigenschaft. Sie verwenden den geschätzten Gewinn des Folgezustands, also $G_{t+1}$, zur Berechnung von $G_t$, dem geschätzten Gewinn des aktuellen Zustands. Dieses Verfahren, bei dem ein Schätzwert aufgrund eines anderen Schätzwertes geupdated wird, wird auch als \textit{bootstrapping} bezeichnet.  
+\par 
+Durch simple Umformung wird der Zusammenhang von Gewinnen deutlich \cite[S.55]{Sutton1998}:
 
 \begin{equation}\label{eq:successiveReturn}
     \begin{aligned}
@@ -22,8 +24,10 @@ Weiterhin ist zu vermerken, dass Gewinne aufeinanderfolgender Zeitpunkte in Verb
    & = R_{t+1} + \gamma G_{t+1}
     \end{aligned}
 \end{equation}
-Ist $\gamma = 0$, dann wählt der Agent seine Aktionen ausschließlich aufgrund der sofortigen Belohnung. Je näher $\gamma$ an 1 ist, desto "weitsichtiger" wird der Agent, da der Gewinn für den Zeitpunkt $t$ sich zusätzlich aus zukünftigen Belohnungen zusammensetzt. Es ist üblich, dass bei Problemen, die Episoden erzeugen $\gamma = 1$ zu bestimmen, sodass der Agent seine Entscheidungen immer aufgrund jeglicher Konsequenzen in der Zukunft bzw. bis zum Ende der jeweiligen Episode trifft. Um zu erreichen, dass die unendliche Summe in \eqref{eq:discountedReturn} bei kontinuierlichen Aufgaben einen endlichen Wert annimmt, muss $\gamma < 1$ gegeben sein \cite[S.55]{Sutton1998}. 
+Ist $\gamma = 0$, dann wählt der Agent seine Aktionen ausschließlich aufgrund der sofortigen Belohnung $R_{t+1}$. Je näher $\gamma$ an 1 ist, desto \glqq weitsichtiger\grqq{} wird der Agent, da der Gewinn für den Zeitpunkt $t$ sich zusätzlich aus zukünftigen Belohnungen zusammensetzt. $\gamma = 1$ führt zu der gleichen Summe wie \eqref{eq:simpleReturn} und wird bei Problemen bestimmt, die Episoden erzeugen. Dadurch trifft der Agent seine Entscheidungen immer aufgrund jeglicher Konsequenzen in der Zukunft bzw. bis zum Ende der jeweiligen Episode. Um zu erreichen, dass die unendliche Summe in \eqref{eq:discountedReturn} bei kontinuierlichen Aufgaben einen endlichen Wert annimmt, muss $\gamma < 1$ gegeben sein.
 \par 
 Probleme mit unendlichem Zeithorizont können durch die Vergabe einer künstlichen Schranke zu einer episodialen Aufgabe umformuliert werden. Denkbar z.B. durch die Festlegung der maximalen Anzahl an Aktionen oder besuchten Zustände. 
 \par 
+//TODO TD-Episodic tasks?! Weglassen?
+\par
 Die Algorithmen der Monte-Carlo-Methoden, die in Kapitel X vorgestellt werden, können ausschließlich auf Basis von Episoden lernen. Jedoch existieren auch Methoden, wie das Temporal-Difference-Learning (Kapitel X), die neben dem episodialen Lernen, zusätzlich in der Lage sind, mit kontinuierlichen Aufgaben zurechtzukommen. 

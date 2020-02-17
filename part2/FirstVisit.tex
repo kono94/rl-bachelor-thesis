@@ -1,0 +1,36 @@
+//TODO englisch oder deutsch?
+\begin{algorithm}
+    \caption{On-policy first-visit MC control (for $\epsilon$-soft policies), estimates $\pi \approx \pi_*$}
+    \begin{algorithmic}[1]
+        \State Algorithm parameter: small $\epsilon > 0$
+        \State Initialize:
+        \Indent
+           \State $\pi \gets$ an arbitary $\epsilon$-soft policy
+           \State $Q(s,a) \in \mathbb{R}$ (arbitrarily), for all $s \in \mathcal{S}, a \in \mathcal{A}(s)$
+           \State $Returns(s,a) \gets$ empty list, for all $s \in \mathcal{S}, a \in \mathcal{A}(s)$
+        \EndIndent
+        \State Repeat forever (for each episode):
+        \Indent
+            \State Generate an episode following $\pi: S_0, A_0, R_1, \dots, S_{T-1}, A_{T-1}, R_T$
+            \State $G \gets 0$
+            \State Loop for each step of episode, $t= T-1,T-2, \dots, 0:$
+            \Indent
+                \State $G \gets \gamma G + R_{t+1}$
+                \State Unless the pair $S_t, A_t$ appears in $S_0, A_0, S_1, A_1, \dots ,S_{t-1}, A_{t-1}:$
+                \Indent
+                    \State Append $G$ to $Returns(S_t,A_t)$
+                    \State $Q(S_t,A_t) \gets$ average$(Returns(S_t,A_t))$
+                    \State $A^* \gets \argmax_a Q(S_t, a)$ (with ties broken arbitrarily)
+                    \State For all $a \in \mathcal{A}(S_t):$
+                    \Indent
+                     \State  $\pi(a|S_t) =   
+                        \begin{cases}
+                            1-\epsilon + \epsilon / |\mathcal{A}(S_t)|      & \quad \text{if } a = A^* \\
+                            \epsilon / |\mathcal{A}(S_t)|  & \quad \text{if } a \neq A^*
+                        \end{cases}$
+                    \EndIndent
+                \EndIndent
+            \EndIndent
+        \EndIndent 
+    \end{algorithmic}
+\end{algorithm}

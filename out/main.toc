@@ -1,11 +1,31 @@
 \babel@toc {german}{}
 \contentsline {section}{\numberline {1}Einleitung}{3}% 
 \contentsline {section}{\numberline {2}Grundlagen}{4}% 
-\contentsline {subsection}{\numberline {2.1}Markow Entscheidungsprozess}{4}% 
-\contentsline {subsection}{\numberline {2.2}Markow-Eigenschaft und Zustandsmodellierung}{6}% 
-\contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{7}% 
-\contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{8}% 
-\contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{9}% 
-\contentsline {subsection}{\numberline {2.6}Optimalit\IeC {\"a}t}{10}% 
-\contentsline {subsection}{\numberline {2.7}Exploration-Exploitation Dilemma}{12}% 
-\contentsline {section}{Literatur}{13}% 
+\contentsline {subsection}{\numberline {2.1}Markov Entscheidungsprozess}{4}% 
+\contentsline {subsection}{\numberline {2.2}Markov-Eigenschaft und Zustandsmodellierung}{6}% 
+\contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{9}% 
+\contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{10}% 
+\contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{12}% 
+\contentsline {subsection}{\numberline {2.6}Optimalit\IeC {\"a}t}{12}% 
+\contentsline {subsection}{\numberline {2.7}Exploration-Exploitation Dilemma}{14}% 
+\contentsline {section}{\numberline {3}Lernmethoden}{15}% 
+\contentsline {subsection}{\numberline {3.1}Monte-Carlo Methoden}{15}% 
+\contentsline {subsubsection}{\numberline {3.1.1}First Visit}{15}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Every Visit*}{16}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Off-Policy}{16}% 
+\contentsline {subsection}{\numberline {3.2}Temporal Difference Learning}{16}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Sarsa}{16}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Q-Learning}{17}% 
+\contentsline {subsubsection}{\numberline {3.2.3}$n$-step Sarsa*}{18}% 
+\contentsline {section}{\numberline {4}Implementierung}{18}% 
+\contentsline {subsection}{\numberline {4.1}Architektur}{18}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino*}{18}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{18}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{18}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{18}% 
+\contentsline {subsection}{\numberline {4.3}Ant-Game}{18}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{18}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{18}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{18}% 
+\contentsline {section}{\numberline {5}Fazit}{18}% 
+\contentsline {section}{\numberline {6}Ausblick}{18}% 

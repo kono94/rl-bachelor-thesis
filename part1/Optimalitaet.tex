@@ -1,12 +1,4 @@
-Wofür Nutzenfunktionen?
-Beste Strategie, beste Nutzenfunktion.
-Warum actionValue besser ist (pefektes Modell)
-Bellmann equation, Berechnung.
-Approximation  - Cliffhänger zu den Methoden
-Prediction und Control.
-
-
-Ein Reinforcement Learning Problem zu lösen bedeutet, eine Strategie zu finden, die den größten Gewinn bringt. Dabei lassen sich Strategien vergleichen, insofern, dass eine Strategie besser ist als eine andere, wenn der erwartete Gewinn für alle Zustände größer oder gleich ist. Mit anderen Worten, $\pi \geq \pi'$ gilt, wenn $v_\pi(s) \geq v_{\pi'}(s)$ für alle $s \in \mathcal{S}$. Es existiert mindestens eine Strategie die besser oder gleich gegenüber allen anderen Strategien ist. Diese ist die optimale Strategie $\pi_*$. Optimale Strategien teilen die selbe (optimale) Zustands-Nutzenfunktion $v_*$ und (optimale) Aktions-Zustands-Nutzenfunktion $q_*$ \cite[S.~62f]{Sutton1998}. 
+Ein Reinforcement Learning Problem zu lösen bedeutet, eine Strategie zu finden, die den größten Gewinn bringt. Dabei lassen sich Strategien vergleichen, insofern, dass eine Strategie besser ist als eine andere, wenn der erwartete Gewinn für alle Zustände größer oder gleich ist \cite[S.~62f]{Sutton1998}. Mit anderen Worten, $\pi \geq \pi'$ gilt, wenn $v_\pi(s) \geq v_{\pi'}(s)$ für alle $s \in \mathcal{S}$. Es existiert mindestens eine Strategie die besser oder gleich gegenüber allen anderen Strategien ist. Diese ist die optimale Strategie $\pi_*$. Optimale Strategien teilen die selbe (optimale) Zustands-Nutzenfunktion $v_*$ und (optimale) Aktions-Zustands-Nutzenfunktion $q_*$ \cite[S.~62f]{Sutton1998}:
 
 \begin{equation}\label{eq:optimaleValueFunction}
     v_*(s) = \max_\pi v_\pi(s)
@@ -15,7 +7,7 @@ Ein Reinforcement Learning Problem zu lösen bedeutet, eine Strategie zu finden,
     q_*(s,a) = \max_\pi q_\pi(s,a)
 \end{equation}
 
-Nutzenfunktionen sind, wie im vorigen Kapitel //TODO LINK erläutert, immer abhängig von einer bestimmten Strategie, da diese die gesammelte Erfahrung beeinflusst und somit auch die erwarteten, geschätzten Gewinne. Die optimale Nutzenfunktion kann jedoch auch ohne Referenz auf eine bestimmte Strategie beschrieben werden, da der Gewinn eines Zustands unter einer optimalen Strategie gleich dem erwarteten Gewinn für die beste Aktion in diesem Zustand ist. $v_*(s)$ referenziert somit $v_*(s')$, den besten Folgezustand, wodurch eine rekursive Beziehung zustande kommt. Eine optimale Nutzenfunktion für $v_*$ kann folgendermaßen formal beschrieben werden:
+Nutzenfunktionen sind, wie im vorigen Kapitel (2.5) erläutert, immer abhängig von einer bestimmten Strategie, da diese die gesammelte Erfahrung beeinflusst und somit auch die erwarteten, geschätzten Gewinne. Die optimale Nutzenfunktion kann jedoch auch ohne Referenz auf eine bestimmte Strategie beschrieben werden, da der Gewinn eines Zustands unter einer optimalen Strategie gleich dem erwarteten Gewinn für die beste Aktion in diesem Zustand ist. $v_*(s)$ referenziert somit $v_*(s')$, den besten Folgezustand, wodurch eine rekursive Beziehung zustande kommt. Eine optimale Nutzenfunktion $v_*$ kann formal folgendermaßen beschrieben werden \cite[S.~63]{Sutton1998}:
 
 \begin{equation}\label{eq:bellmanValue}
     \begin{aligned}
@@ -26,11 +18,13 @@ Nutzenfunktionen sind, wie im vorigen Kapitel //TODO LINK erläutert, immer abh�
     \end{aligned}
 \end{equation}
 
-Diese Gleichung ist die sog. \textit{Bellman Optimality Equation} und lässt sich auch als Gleichungssystem interpretieren, welches eine Gleichung pro Zustand bestitzt. Für ein Problem mit $n$ Zuständen ergeben sich somit $n$ Gleichung mit $n$ Unbekannten. Eine Berechnung der optimalen Nutzenfunktion ist folglich in der Theorie möglich, jedoch muss die Übergangsfunktion $p$ bekannt sein. Ist $p$ gegeben wird von einem perfekten Modell gesprochen, eine Voraussetzung, die in der Regel nicht erfüllt ist.
+Diese Gleichung ist die sog. \textit{Bellman Optimality Equation} und lässt sich auch als Gleichungssystem interpretieren, welches eine Gleichung pro Zustand bestitzt. Für ein Problem mit $n$ Zuständen ergeben sich somit $n$ Gleichung mit $n$ Unbekannten \cite[S.~63]{Sutton1998}. Eine Berechnung der optimalen Nutzenfunktion ist folglich in der Theorie möglich, jedoch muss die Übergangsfunktion $p$ bekannt sein. Ist $p$ gegeben wird von einem perfekten Modell gesprochen, eine Voraussetzung, die nicht immer erfüllt ist.
 \par 
-Selbst wenn die Dynamiken der Umwelt bekannt sind, kann die benötigte Rechenzeit zur Lösungen jedoch utopische Ausmaße annehmen. Bei einem Spiel wie \glqq Backgammon\grqq{} sind die Regeln klar definiert, ein perfektes Modell ist demzufolge vorhanden, aber es existieren $10^{23}$ Zustände, was die mathematische Berechnung von $v_*$ mittels der \textit{Bellman Optimality Equation} praktisch unmöglich macht. Dennoch stellt sie ein wichtiges Fundament für das Reinforcement Learning dar, da die meisten Reinforcement Learning Algorithmen als annäherungsweises Lösungsverfahren verstanden werden können \cite[S.~66]{Sutton1998}.
+Selbst wenn die Dynamiken der Umwelt bekannt sind, kann die benötigte Rechenzeit zur Lösungen jedoch utopische Ausmaße annehmen. Bei einem Spiel wie \glqq Backgammon\grqq{} sind die Regeln klar definiert, ein perfektes Modell ist demzufolge vorhanden, aber es existieren $10^{23}$ Zustände, was die mathematische Berechnung von $v_*$ mittels der \textit{Bellman Optimality Equation} praktisch unmöglich macht \cite[S.~66]{Sutton1998}. Dennoch stellt sie ein wichtiges Fundament für das Reinforcement Learning dar, da die meisten Reinforcement Learning Algorithmen als annäherungsweises Lösungsverfahren verstanden werden können \cite[S.~66]{Sutton1998}. 
 \par 
-//TODO DYNAMISCHE PROGRAMMIERUNG?
+Methoden des Reinforcement Learnings, die die Umwelt als Blackbox betrachten, werden auch als \textit{model-free} beschrieben. Sie benötigen keinen Zugriff auf die Übergangsfunktion $p$, denn es wird ausschließlich aufgrund der erhaltenen Belohnungen und Beobachtungen gelernt wird. Hierbei bezieht sich der Lernprozess darauf, wie nah die geschätzte Nutzenfunktion der aktuellen Strategie $\pi$ an $v_*$ bzw. $q_*$ ist.
 \par 
-Die optimale Strategie lässt sich leicht ermitteln, wenn eine optimale Nutzenfunktion gegeben ist. Ist zum Beispiel $v_*$ gegeben und befindet sich der Agent in Zustand $s$, dann muss er eine Aktion vorrausschauen, um den Folgezustand $s'$ zu finden, der den maximalen Nutzen hat. Dieses Vorrausschen benötigt jedoch ebenfalls ein perfektes Modell der Umgebung, um die Übergänge für jede Aktion zu berechnen. Das ist der ausschlaggebende Grund, warum in der Regel $q_*$ berechnet wird. Denn dieser Nutzen umfasst implizit den Nutzen der Folgezustand für jede Aktion. Infolgedessen muss der Agent im Zustand $s$ nur schauen, welche Aktion $a$ und somit welches Zustands-Aktions-Paar den größten Nutzen hat und wählt genau jene Aktion.
+Die optimale Strategie lässt sich leicht ermitteln, wenn eine optimale Nutzenfunktion gegeben ist. Ist zum Beispiel $v_*$ gegeben und befindet sich der Agent in Zustand $s$, dann muss er eine Aktion vorrausschauen, um den Folgezustand $s'$ zu finden, der den maximalen Nutzen hat. Dieses Vorrausschen benötigt jedoch ein perfektes Modell der Umgebung, um die Übergänge für jede Aktion zu berechnen. Das ist der ausschlaggebende Grund, warum bei \textit{model-free} Methoden $q_*$ berechnet wird. Denn dieser Nutzen umfasst implizit den Nutzen der Folgezustände für jede Aktion. Infolgedessen muss der Agent im Zustand $s$ nur schauen, welche Aktion $a$ und somit welches Zustands-Aktions-Paar den größten Nutzen hat und wählt genau jene Aktion.
+\par 
+
 \par 

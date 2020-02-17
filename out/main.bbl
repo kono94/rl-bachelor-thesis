@@ -1,27 +1,27 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Fedjaev%
+Brunskill%
 }{%
-Fedjaev%
+Brunskill%
 }{%
-{\protect \APACyear {2017}}%
+{\protect \APACyear {2019}}%
 }]{%
-master}
+Brunskill}
 \APACinsertmetastar {%
-master}%
+Brunskill}%
 \begin{APACrefauthors}%
-Fedjaev, J.%
+Brunskill, E.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2019}{}{}.
 \newblock
-\APACrefbtitle {Decoding EEG Brain Signals using Recurrent Neural Networks.}
-  {Decoding eeg brain signals using recurrent neural networks.}
+\APACrefbtitle {Stanford CS234: Reinforcement Learning - Winter 2019.}
+  {Stanford cs234: Reinforcement learning - winter 2019.}
 \newblock
 \begin{APACrefURL}
-  \url{https://www.spektrum.de/kolumne/eine-waffe-gegen-malaria/1525481}
+  [{2020-02-10}]\url{https://www.youtube.com/watch?v=FgzM3zpZ55o}
   \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
@@ -108,6 +108,85 @@ Sutton, R\BPBI S.%
 \newblock
 \begin{APACrefURL} \url{http://incompleteideas.net/book/the-book-2nd.html}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Watkins%
+}{%
+Watkins%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+watkins1989learning}
+\APACinsertmetastar {%
+watkins1989learning}%
+\begin{APACrefauthors}%
+Watkins, C\BPBI J\BPBI C\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning from delayed rewards} {Learning from delayed
+  rewards}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wiering%
+\ \BBA {} van Otterlo%
+}{%
+Wiering%
+\ \BBA {} van Otterlo%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Wiering}
+\APACinsertmetastar {%
+Wiering}%
+\begin{APACrefauthors}%
+Wiering, M.%
+\BCBT {}\ \BBA {} van Otterlo, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\newblock
+\APACrefbtitle {Reinforcement Learning: State-Of-the-Art} {Reinforcement
+  learning: State-of-the-art}.
+\newblock
+\begin{APACrefURL} \url{https://ebookcentral.proquest.com} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yu%
+, Mannor%
+\BCBL {}\ \BBA {} Shimkin%
+}{%
+Yu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+YuMDP}
+\APACinsertmetastar {%
+YuMDP}%
+\begin{APACrefauthors}%
+Yu, J\BPBI Y.%
+, Mannor, S.%
+\BCBL {}\ \BBA {} Shimkin, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Markov Decision Processes with Arbitrary Reward
+  Processes} {Markov decision processes with arbitrary reward
+  processes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Mathematics of Operations Research}{}{3}{737--757}.
+\newblock
+\begin{APACrefURL} \url{http://www.jstor.org/stable/40538443} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

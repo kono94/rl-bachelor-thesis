@@ -18,6 +18,14 @@
 \usepackage{apacite}
 \usepackage{eurosym}
 \usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
 \DeclareMathOperator{\EX}{\mathbb{E}}% expected value
 \numberwithin{equation}{section}
 % Special characters
@@ -28,6 +36,11 @@
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\max}{argmax}
 
+%Pseudo-code indent
+
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
 %%%% footer and header %%%%
 \usepackage{scrpage2}%
 \pagestyle{scrheadings}%  S
@@ -39,7 +52,7 @@
 \ohead{\rightmark}
 \setheadsepline{0.5pt}
 %%%% \footer and header %%%%
-
+\usepackage{natbib}
 \begin{document}
 
 \begin{titlepage}
@@ -79,10 +92,10 @@
 
 \section{Grundlagen}
 	\input{part1/grundlagen.tex}
-	\subsection{Markow Entscheidungsprozess}
+	\subsection{Markov Entscheidungsprozess}
 	\input{part1/MDP.tex}
 
-	\subsection{Markow-Eigenschaft und Zustandsmodellierung}
+	\subsection{Markov-Eigenschaft und Zustandsmodellierung}
 	\input{part1/MP.tex}
 	\pagebreak
 
@@ -101,6 +114,40 @@
 	\subsection{Exploration-Exploitation Dilemma}
 	\input{part1/ExplorationExploitation.tex}
 
+\section{Lernmethoden}
+	\subsection{Monte-Carlo Methoden}
+	\input{part2/MonteCarlo.tex}
+		\subsubsection{First Visit}
+		\input{part2/FirstVisit.tex}
+		\pagebreak
+		\subsubsection{Every Visit*}
+		\subsubsection{Off-Policy}
+
+	\subsection{Temporal Difference Learning}
+	\input{part2/TemporalDifference.tex}
+		\subsubsection{Sarsa}
+		\input{part2/Sarsa.tex}
+		\pagebreak
+		\subsubsection{Q-Learning}
+		\input{part2/QLearning.tex}
+		\pagebreak
+		\subsubsection{$n$-step Sarsa*}
+
+\section{Implementierung}
+	\subsection{Architektur}
+	\subsection{Jumping Dino*}
+		\subsubsection{Problemstellung}
+		\subsubsection{Zustandsmodellierung}
+		\subsubsection{Konvergenzverhalten}
+	\subsection{Ant-Game}
+		\subsubsection{Problemstellung}
+		\subsubsection{Zustandsmodellierung}
+		\subsubsection{Konvergenzverhalten}
+
+\section{Fazit}
+\section{Ausblick}
+
+\pagebreak
 \bibliographystyle{apacite}
 \bibliography{quellen}
 \pagebreak

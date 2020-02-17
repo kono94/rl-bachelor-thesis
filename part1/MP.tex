@@ -1,21 +1,40 @@
-Die Markow-Eigenschaft, obwohl relativ simpel, erhält ein eigenes Kapitel, da sie von fundamentaler Wichtigkeit ist und bei der Modellierung eines Reinforcement Learning Problems eine besondere Rolle spielt. Verbinden lässt sich dies sehr gut mit einem Einblick über die grundsätzliche Modellierung von Zuständen bei einem Reinforcement Learning Problem.
+Die Markov-Eigenschaft, obwohl relativ simpel, erhält ein eigenes Kapitel, da sie von fundamentaler Wichtigkeit ist und bei der Modellierung eines Reinforcement Learning Problems eine besondere Rolle spielt. Verbinden lässt sich dies sehr gut mit einem Einblick über die grundsätzliche Modellierung von Zuständen bei einem Reinforcement Learning Problem.
 
 \begin{quote}
     The future is independent of the past given the present
   \end{quote}
 
-Dieser Satz erscheint oft in Büchern und Papern, wenn es um die Markov-Eigenschaft geht, denn er versucht zusammenzufassen, was diese aussagt. Im Zusammenhang von MDPs lässt sich dieser Satz so übersetzen, dass ein Folgezustand nicht abhängig von Aktionen bzw. Zuständen in der Vergangenheit ist, sondern ausschließlich von dem aktuellen Zustand und der aktuell gewählten Aktion.
-In der Literatur gibt es unterschiedliche Auffassungen darüber, ob die Markov-Eigenschaft an den MDP direkt geknüpft ist oder an den Zustand, den der Agent zur Abwägung der Entscheidung zur Verfügung hat. Bei der ersten Annahme wird davon ausgegangen, dass der Zustand, der von der Umwelt ausgeliefert wird direkt die Markov-Eigenschaft besitzen muss. (Sutton S.49) hingegen bindet die Eigenschaft an den Zustand und nicht an den Entscheidungsprozess als solches. Ein Zustand ist somit die Menge aller notwendigen Informationen der Vergangenheit, die für die Zukunft relevant sind. Statt den gegebenen Zustand der Umwelt direkt zu übernehmen, werden hier Beobachtungen der Umwelt zu einer internen Repräsentation von Markov-Zuständen verarbeitet.
+Dieser Satz erscheint oft in Büchern und Papern, wenn es um die Markov-Eigenschaft geht, denn er fasst prägnat zusammen, was diese aussagt. Im Zusammenhang von MDPs lässt sich dieser Satz so übersetzen, dass ein Folgezustand nicht abhängig von Aktionen bzw. Zuständen in der Vergangenheit ist, sondern ausschließlich von dem aktuellen Zustand und der aktuell gewählten Aktion.
+\par 
+Sutton und Barto (2018) sehen die Markov-Eigenschaft als Einschränkung für die Zustände und nicht für den Entscheidungsprozess als solches. 
+Ausschlaggebend ist, dass der Zustand, auf dessen Basis der Agent seine Entscheidung trifft, alle notwendigen Informationen der Vergangenheit beinhaltet, die für die Zukunft relevant sind (S.49).
+Die Umwelt ist somit nicht notwendigerweise gezwungen, Markov-konforme Zustände zu liefern. \cite{Brunskill} wählt aufgrunddessen die Bezeichnung \glqq Beobachtung\grqq{} (Observation $O_t$) als Feedback der Umwelt nach einer Aktion. Jene Beobachtungen können anschließend durch eine interne Repräsentation zu Markov-Zuständen verarbeitet werden, die dann dem Entscheidungsfinder zugrunde liegen.
+\par
+Folgendes Beispiel, basierend auf der Vorlesung der Stanford-Professorin \cite{Brunskill}, liefert einen guten Einblick in die Zustandsmodellierung und der Problematik, die mit der Markov-Eigenschaft einhergeht.
+\par 
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=200px]{images/2passagesDefault.png}
+  \caption{ Zwei-Wege Beispiel zu der Markov-Eigenschaft}
+  \label{fig:2-Wege-1}
+\end{figure}
+
+Gegeben ist ein beweglicher Roboter und eine Strecke mit zwei Korridoren. Der Roboter ist mit vier Sensoren ausgestattet, die jeweils eine Himmelsrichtung abdecken. Diese Sensoren sind in der Lage, angrenzende Wände zu erkennen und bilden den Zustand der Umwelt ab. Wahlweise ist der Zustand im Uhrzeiger definiert $\{N, O, S, W\}$, wobei 1 angibt, dass eine Wand erkannt wurde und 0, dass sich keine Wand in der unmittelbaren Nähe befindet. Es ergeben sich folglich 16 unterschiedliche Zustände, die der Agent unterscheiden und auf dessen Basis er Entscheidungen treffen kann (vier Aktionen: Fahrt in jeweils eine Richtungen). Der Roboter soll sein Ziel erreichen, markiert mit einer Flagge, ohne dabei in eine der beiden Fallen zu navigieren.
+\par
+\begin{wrapfigure}{H}{0.5\textwidth}
+  \begin{center}
+  \includegraphics[height=200px]{images/2passagesStart.png}  \end{center}
+  \caption{Zwei-Wege Beispiel Forts.}
+  \label{fig:2-Wege-2}
+\end{wrapfigure}
+
+Eine potentielle Startposition, wie in Abb. \ref{fig:2-Wege-1} dargestellt, liefert somit den Zustand $\{0, 1, 1, 1\}$. Angenommen der Agent hat gelernt in diesem Zustand Richtung Norden zu fahren, dann ist der Folgezustand ebenfalls $\{0, 1, 1, 1\}$. Schließlich erreicht er den ersten Korridor. Der westlicher Sensor liefert folgerichtig 0 und der Zustand ist $\{0, 1, 1, 0\}$. Da der Agent nicht den ersten Korridor folgen darf, sondern dem zweiten, muss der Zustand $\{0, 1, 1, 0\}$ ebenfalls die Aktion \glqq nach Norden fahren \grqq{} auslösen. Der Knackpunkt ist jedoch, dass der Zustand bei dem zweiten Korridor identisch mit dem Zustand bei dem ersten Korridor ist und der Agent somit keine Chance hat, zu unterscheiden, vor welchem er sich gerade befindet, siehe Abb. \ref{fig:2-Wege-2}. Er würde ebenfalls, wie schon bei dem ersten Korridor, weiter nach Norden und letztendlich in die Falle fahren.
+\par 
+
+Bezogen auf diesen Entscheidungsprozess ist die Modellierung der Zustände über den Sensorinput alleine nicht markov. In der Theorie ist es jedoch möglich diesen Entscheidungsprozess als MDP umzumodellieren. Dabei werden die Sensordaten als Beobachtungen der Umwelt betrachtet und eine interne Repräsentation von Markov-Zuständen gepflegt. Möglich ist z.B. die gesamte Historie der Zustände und Aktionen zu speichern, damit der Roboter zurückverfolgen kann, wo er sich zur Zeit befindet. Ein Prozess als MDP zu definiert bedeutet aber gerade darauf zu verzichten, nämlich die gesamte Vergangenheit in einen Zustand zu verarbeitet. Denkbar ist auch, dass der Agent eine interne Repräsentation nach jeder Beobachtung pflegt und die Umwelt suk­zes­si­ve nachbildet.
+\par 
+//TODO Schlussfolgerung; Modellierung
+\\
+Letztendlich sollte 
 
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[height=250px]{images/2passagesDefault.png}
-%     \caption{ Zwei-Wege Beispiel zu der Markov-Eigenschaft}
-% \end{figure}
-
-% \begin{wrapfigure}{L}{0.5\textwidth}
-%   \begin{center}
-%   \includegraphics[height=250px]{images/2passagesDefault.png}  \end{center}
-%   \caption{Birds}
-% \end{wrapfigure}
