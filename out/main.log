@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  17 FEB 2020 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  21 FEB 2020 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -553,7 +553,13 @@ File: images/2passagesStart.png Graphic file (type png)
 <use images/2passagesStart.png>
 Package pdftex.def Info: images/2passagesStart.png  used on input line 26.
 (pdftex.def)             Requested size: 101.4574pt x 200.75073pt.
- [7 <./images/2passagesDefault.png>]) [8 <./images/2passagesStart.png>] (./part1/BelohnungenZielstrebigkeit.tex [9]) (./part1/GewinnEpisoden.tex [10]) [11] (./part1/StrategieNutzenfunktion.tex) (./part1/Optimalitaet.tex [12] [13]) (./part1/ExplorationExploitation.tex [14]) (./part2/MonteCarlo.tex) (./part2/FirstVisit.tex) [15] (./part2/TemporalDifference.tex) (./part2/Sarsa.tex) [16] (./part2/QLearning.tex) [17] [18] (out/main.bbl
+ [7 <./images/2passagesDefault.png>]) [8 <./images/2passagesStart.png>] (./part1/BelohnungenZielstrebigkeit.tex [9]) (./part1/GewinnEpisoden.tex [10]) [11] (./part1/StrategieNutzenfunktion.tex) (./part1/Optimalitaet.tex [12] [13]) (./part1/GPI.tex [14]
+<images/gpi.jpg, id=78, 3791.16376pt x 1632.0975pt>
+File: images/gpi.jpg Graphic file (type jpg)
+<use images/gpi.jpg>
+Package pdftex.def Info: images/gpi.jpg  used on input line 10.
+(pdftex.def)             Requested size: 303.53267pt x 130.67007pt.
+) (./part1/ExplorationExploitation.tex [15 <./images/gpi.jpg>]) (./part2/MonteCarlo.tex) (./part2/FirstVisit.tex) [16] (./part2/TemporalDifference.tex) (./part2/Sarsa.tex) [17] (./part2/QLearning.tex) [18] [19] (out/main.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -562,20 +568,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [19] (./anhang.tex) [20] (out/main.aux) ) 
+) [20] (./anhang.tex) [21] (out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 8909 strings out of 492616
- 129395 string characters out of 6129481
- 265717 words of memory out of 5000000
- 12413 multiletter control sequences out of 15000+600000
- 28045 words of font info for 125 fonts, out of 8000000 for 9000
+ 8932 strings out of 492616
+ 129702 string characters out of 6129481
+ 265806 words of memory out of 5000000
+ 12421 multiletter control sequences out of 15000+600000
+ 28630 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,43p,1322b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (21 pages, 438492 bytes).
+Output written on out/main.pdf (22 pages, 797873 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 22032 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 22037 words of extra memory for PDF output out of 24883 (max. 10000000)
 

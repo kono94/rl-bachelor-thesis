@@ -6,7 +6,7 @@ Die Markov-Eigenschaft, obwohl relativ simpel, erhält ein eigenes Kapitel, da s
 
 Dieser Satz erscheint oft in Büchern und Papern, wenn es um die Markov-Eigenschaft geht, denn er fasst prägnat zusammen, was diese aussagt. Im Zusammenhang von MDPs lässt sich dieser Satz so übersetzen, dass ein Folgezustand nicht abhängig von Aktionen bzw. Zuständen in der Vergangenheit ist, sondern ausschließlich von dem aktuellen Zustand und der aktuell gewählten Aktion.
 \par 
-Sutton und Barto (2018) sehen die Markov-Eigenschaft als Einschränkung für die Zustände und nicht für den Entscheidungsprozess als solches. 
+\cite{Sutton1998} sehen die Markov-Eigenschaft als Einschränkung für die Zustände und nicht für den Entscheidungsprozess als solches. 
 Ausschlaggebend ist, dass der Zustand, auf dessen Basis der Agent seine Entscheidung trifft, alle notwendigen Informationen der Vergangenheit beinhaltet, die für die Zukunft relevant sind (S.49).
 Die Umwelt ist somit nicht notwendigerweise gezwungen, Markov-konforme Zustände zu liefern. \cite{Brunskill} wählt aufgrunddessen die Bezeichnung \glqq Beobachtung\grqq{} (Observation $O_t$) als Feedback der Umwelt nach einer Aktion. Jene Beobachtungen können anschließend durch eine interne Repräsentation zu Markov-Zuständen verarbeitet werden, die dann dem Entscheidungsfinder zugrunde liegen.
 \par

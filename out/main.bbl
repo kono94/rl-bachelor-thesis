@@ -26,6 +26,39 @@ Brunskill, E.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Dekking%
+, Kraaikamp%
+, Lopuha{\"a}%
+\BCBL {}\ \BBA {} Meester%
+}{%
+Dekking%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+dekking2006modern}
+\APACinsertmetastar {%
+dekking2006modern}%
+\begin{APACrefauthors}%
+Dekking, F.%
+, Kraaikamp, C.%
+, Lopuha{\"a}, H.%
+\BCBL {}\ \BBA {} Meester, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {A Modern Introduction to Probability and Statistics:
+  Understanding Why and How} {A modern introduction to probability and
+  statistics: Understanding why and how}.
+\newblock
+\APACaddressPublisher{}{Springer London}.
+\newblock
+\begin{APACrefURL} \url{https://books.google.de/books?id=TEcmHJX67coC}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gosavi%
 }{%
 Gosavi%
