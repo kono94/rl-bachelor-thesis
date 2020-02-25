@@ -7,20 +7,27 @@
 \usepackage[article, total={6in, 8in}]{geometry}
 \usepackage{float}
 \usepackage{wrapfig}
-%\usepackage[onehalfspacing]{setspace}
+\usepackage[onehalfspacing]{setspace}
 \usepackage{url}
 \usepackage{tabularx}
 \usepackage{pdfpages}
 \usepackage{wrapfig}
-\usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit Umlauten
+\usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit UmlaPuten
 \usepackage{microtype}% verbesserter Randausgleich
 \setlength{\headheight}{21.4pt}
 \usepackage{apacite}
+\usepackage{natbib}
 \usepackage{eurosym}
 \usepackage{amsmath}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage[noend]{algpseudocode}
+
+\begin{spacing}{1.0}
+	\bibliographystyle{apacite}
+\end{spacing}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{2mm}
 
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
@@ -52,7 +59,6 @@
 \ohead{\rightmark}
 \setheadsepline{0.5pt}
 %%%% \footer and header %%%%
-\usepackage{natbib}
 \begin{document}
 
 \begin{titlepage}
@@ -113,7 +119,7 @@
 
 	\subsection{Generalized Policy Iteration}
 	\input{part1/GPI.tex}
-	
+
 	\subsection{Exploration-Exploitation Dilemma}
 	\input{part1/ExplorationExploitation.tex}
 
@@ -151,7 +157,6 @@
 \section{Ausblick}
 
 \pagebreak
-\bibliographystyle{apacite}
 \bibliography{quellen}
 \pagebreak
 

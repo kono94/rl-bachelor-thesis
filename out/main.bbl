@@ -26,6 +26,34 @@ Brunskill, E.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Capela%
+, Céleri%
+, Modi%
+\BCBL {}\ \BBA {} Chaves%
+}{%
+Capela%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+capela2019monogamy}
+\APACinsertmetastar {%
+capela2019monogamy}%
+\begin{APACrefauthors}%
+Capela, M.%
+, Céleri, L\BPBI C.%
+, Modi, K.%
+\BCBL {}\ \BBA {} Chaves, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {Monogamy of Temporal Correlations: Witnessing non-Markovianity
+  Beyond Data Processing.} {Monogamy of temporal correlations: Witnessing
+  non-markovianity beyond data processing.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dekking%
 , Kraaikamp%
 , Lopuha{\"a}%
@@ -59,6 +87,34 @@ Dekking, F.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Feldman%
+\ \BBA {} Valdez-Flores%
+}{%
+Feldman%
+\ \BBA {} Valdez-Flores%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+Feldman2010}
+\APACinsertmetastar {%
+Feldman2010}%
+\begin{APACrefauthors}%
+Feldman, R\BPBI M.%
+\BCBT {}\ \BBA {} Valdez-Flores, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Markov Processes} {Markov processes}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Applied Probability and Stochastic Processes.} {Applied
+  probability and stochastic processes.}
+\newblock
+\APACaddressPublisher{Berlin, Heidelberg}{Springer Berlin Heidelberg}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gosavi%
 }{%
 Gosavi%
@@ -82,6 +138,32 @@ Gosavi, A.%
 \APACjournalVolNumPages{INFORMS Journal on Computing}{21}{}{}.
 \newblock
 \begin{APACrefDOI} \doi{10.1287/ijoc.1080.0305} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kumar%
+}{%
+Kumar%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+kumar2014markov}
+\APACinsertmetastar {%
+kumar2014markov}%
+\begin{APACrefauthors}%
+Kumar, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2014}.
+\unskip\
+\newblock
+\APACrefbtitle {Markov Chains and Markov Jump Processes} {Markov chains and
+  markov jump processes}\ \APACtypeAddressSchool {\BUPhD}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {}{Indian Institute of Science Education and Research
+  Kolkata}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -112,6 +194,36 @@ M{\"o}ller, B.%
   {Relational and kleene-algebraic methods in computer science.}
 \newblock
 \APACaddressPublisher{Berlin, Heidelberg}{Springer Berlin Heidelberg}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Saul%
+\ \BBA {} Jordan%
+}{%
+Saul%
+\ \BBA {} Jordan%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+SaulMarkov}
+\APACinsertmetastar {%
+SaulMarkov}%
+\begin{APACrefauthors}%
+Saul, L.%
+\BCBT {}\ \BBA {} Jordan, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{10}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Mixed Memory Markov Models: Decomposing Complex
+  Stochastic Processes as Mixtures of Simpler Ones} {Mixed memory markov
+  models: Decomposing complex stochastic processes as mixtures of simpler
+  ones}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine Learning}{37}{}{75-87}.
+\newblock
+\begin{APACrefDOI} \doi{10.1023/A:1007649326333} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

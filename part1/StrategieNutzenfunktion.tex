@@ -5,12 +5,12 @@ Eine Strategie (\textit{Policy}) kann als Abbildung verstanden werden, die jedem
 \par
 Wie anfangs erwähnt, gibt es zwei Varianten der Nutzenfunktion. Die erste sagt aus, wie groß der Erwartungswert des Gewinns für den Zustands $s$ ist, wenn in diesem gestartet und anschließend aufgrund der Strategie $\pi$ gehandelt wird. Dieser \textit{Zustands-Nutzen} kann für alle $s \in \mathcal{S}$ folgendermaßen definiert werden \cite[S.~58]{Sutton1998}:
 \begin{equation}\label{eq:valueFunction}
-    v_\pi(s) = \EX_\pi[G_t \mid S_t = s] = \EX_\pi[\sum_{k=0}^\infty{\gamma^k R_{t+k+1} \mid S_t = s}]
+    v_\pi(s) = \EX_\pi[G_t \mid S_t = s] = \EX_\pi \left[\sum_{k=0}^\infty{\gamma^k R_{t+k+1} \mid S_t = s} \right]
 \end{equation}
 
 Die zweiten Variante gibt Auskunft darüber, wie groß der Nutzen ist, wenn im Zustand $s$ gestartet, daraufhin die Aktion $a$ ausgeführt und anschließend der Strategie $\pi$ gefolgt wird. $q_\pi$ wird auch als \textit{Aktions-Nutzenfunktion} für die Strategie $\pi$ bezeichnet und wird formal ausgedrückt durch \cite[S.~58]{Sutton1998}:
 \begin{equation}\label{eq:actionValueFunction}
-    q_\pi(s,a) = \EX_\pi[G_t \mid S_t = s, A_t = a] = \EX_\pi[\sum_{k=0}^\infty{\gamma^k R_{t+k+1} \mid S_t = s, A_t = a}]
+    q_\pi(s,a) = \EX_\pi[G_t \mid S_t = s, A_t = a] = \EX_\pi\left[\sum_{k=0}^\infty{\gamma^k R_{t+k+1} \mid S_t = s, A_t = a}\right]
 \end{equation}
 
 //TODO der Erwartungswert auf ?
