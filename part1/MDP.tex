@@ -32,13 +32,11 @@ p(s',r \mid s,a) \doteq Pr\{S_t=s',R_t=r|S_{t-1}=s,A_{t-1}=a\},
 für alle $s', s \in \mathcal{S}, r \in \mathcal{R}$ und $a \in \mathcal{A}(s)$. Diese Funktion $p$ definiert die sog. Dynamiken (\textit{Dynamics}) eines \textit{MDP}. Sie ist eine gewöhnliche deterministische Funktion mit vier Parametern $p: \mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$. Das \glqq$\mid$\grqq{} Zeichen kommt ursprünglich aus der Notation für bedingte Wahrscheinlichkeiten, soll hier aber andeuten, dass es sich um eine Wahrscheinlichkeitsverteilung handelt für jeweils alle Kombinationen von $s$ und $a$ \cite[~S.49f]{Sutton1998}:
 
 \begin{equation}\label{eq:wahrscheinlichkeitsverteilung}
-\sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r \mid s,a) = 1 \ \forall s \in \mathcal{S}, a \in \mathcal{A}(s)
+    \forall s \in \mathcal{S}: \forall a \in \mathcal{A}(s):
+\sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r \mid s,a) = 1 
 \end{equation}
 
-//TODO Triple => falsch verstanden \\
-Eher: \\
-So ist für jedes Paar $(s,a)$ genau ein bestimmtes Paar $(s',r)$ gleich 1. Für alle weiteren Kombinationen von $(s',r)$ im Bezug auf auf dieses Zustands-Aktions-Paar $(s,a)$ ist $p$ gleich 0. \\
-Ist das Entscheidungsproblem nicht stochastischer Natur, sondern deterministisch, so ist $p$ immer nur für ein bestimmtes Triple $(s,a,r)$ für jedes $s' \in \mathcal{S}$ gleich 1, für alle andere jeweils 0. Mit anderen Worten, wird im Zustand $s$ die Aktion $a$ gewählt, führt dies in jedem Fall zu einem bestimmten Folgezustand $s’$. 
+Ist das Entscheidungsproblem nicht stochastischer Natur, sondern deterministisch, so ist für jedes Paar $(s,a)$ genau ein bestimmtes Paar $(s',r)$ gleich 1. Für alle weiteren Kombinationen von $(s',r)$ im Bezug auf dieses Zustands-Aktions-Paar $(s,a)$ ist $p$ folglich gleich 0. Mit anderen Worten, wird im Zustand $s$ die Aktion $a$ gewählt, führt dies in jedem Fall zu einem bestimmten Folgezustand $s’$. 
 \par 
 
 \cite{Sutton1998} erläutern, dass das MDP Framework als extrem flexibel gilt und es demzufolge auf die unterschiedlichsten Probleme angewendet werden kann. Sie führen weiter aus, dass es die nötige Abstraktion für Probleme bietet, bei denen unter Vorgabe eines Ziels mittels Interaktionen gelernt wird. Einzelheiten über das eigentliche Ziel, die Zustände oder die Form des Agenten sind dabei unerheblich. 

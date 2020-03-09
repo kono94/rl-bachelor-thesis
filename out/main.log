@@ -1,26 +1,113 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  25 FEB 2020 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  9 MAR 2020 13:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/Users/jan/Projects/rl-bachelor-thesis/main.tex
+(/Users/jan/Projects/rl-bachelor-thesis/main.tex
 LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
+))) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box27
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 134.
+Package scrartcl Info: You've used standard option `12pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=12pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=12pt' there
+(scrartcl)             instead of `12pt', too.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input line 2162.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12pt)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
+\ta@bcor=\skip42
+\ta@div=\count80
+\ta@hblk=\skip43
+\ta@vblk=\skip44
+\ta@temp=\skip45
+\footheight=\skip46
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1715.
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\scr@dte@section@maxnumwidth=\skip47
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4489.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4489.
+\scr@dte@part@maxnumwidth=\skip48
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4497.
+\scr@dte@subsection@maxnumwidth=\skip49
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4507.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4507.
+\scr@dte@subsubsection@maxnumwidth=\skip50
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4517.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4517.
+\scr@dte@paragraph@maxnumwidth=\skip51
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4527.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4527.
+\scr@dte@subparagraph@maxnumwidth=\skip52
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4537.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4537.
+\abovecaptionskip=\skip53
+\belowcaptionskip=\skip54
+\c@pti@nb@sid@b@x=\box28
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 5781.
+\scr@dte@figure@maxnumwidth=\skip55
+\c@figure=\count87
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 5793.
+\scr@dte@table@maxnumwidth=\skip56
+\c@table=\count88
+Class scrartcl Info: Redefining `\numberline' on input line 5957.
 \bibindent=\dimen102
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
@@ -32,10 +119,10 @@ File: switch.def 2019/05/04 3.31 Babel switching mechanism
 Language: english 2017/06/06 v3.3r English support from the babel system
  (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2019/05/04 3.31 Babel common definitions
-\babel@savecnt=\count88
+\babel@savecnt=\count89
 \U@D=\dimen103
  (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
+\bbl@dirlevel=\count90
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -47,25 +134,37 @@ Language: germanb 2018/12/08 v2.11 German support for babel (pre-1996 orthograph
 Package babel Info: Making " an active character on input line 135.
 ))) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+
+Class scrartcl Warning: Usage of package `fancyhdr' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use 
+(scrartcl)              package `scrlayer' or `scrlayer-scrpage', because
+(scrartcl)              they support KOMA-Script classes.
+(scrartcl)              With `fancyhdr' several features of class `scrartcl'
+(scrartcl)              like options `headsepline', `footsepline' or command
+(scrartcl)              `\MakeMarkcase' and the commands `\setkomafont' and
+(scrartcl)              `\addtokomafont' for the page style elements need
+(scrartcl)              explicite user intervention to work.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `fancyhdr' on input line 6.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
-\f@nch@headwidth=\skip43
-\f@nch@O@elh=\skip44
-\f@nch@O@erh=\skip45
-\f@nch@O@olh=\skip46
-\f@nch@O@orh=\skip47
-\f@nch@O@elf=\skip48
-\f@nch@O@erf=\skip49
-\f@nch@O@olf=\skip50
-\f@nch@O@orf=\skip51
+\f@nch@headwidth=\skip57
+\f@nch@O@elh=\skip58
+\f@nch@O@erh=\skip59
+\f@nch@O@olh=\skip60
+\f@nch@O@orh=\skip61
+\f@nch@O@elf=\skip62
+\f@nch@O@erf=\skip63
+\f@nch@O@olf=\skip64
+\f@nch@O@orf=\skip65
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -88,9 +187,9 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count90
-\Gm@cntv=\count91
-\c@Gm@tempcnt=\count92
+\Gm@cnth=\count91
+\Gm@cntv=\count92
+\c@Gm@tempcnt=\count93
 \Gm@bindingoffset=\dimen106
 \Gm@wd@mp=\dimen107
 \Gm@odd@mp=\dimen108
@@ -115,16 +214,16 @@ If that doesn't work, type  X <return>  to quit.
 
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count93
+\c@float@type=\count94
 \float@exts=\toks18
-\float@box=\box27
+\float@box=\box29
 \@float@everytoks=\toks19
-\@floatcapt=\box28
+\@floatcapt=\box30
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen114
 \WF@size=\dimen115
-\c@WF@wrappedlines=\count94
-\WF@box=\box29
+\c@WF@wrappedlines=\count95
+\WF@box=\box31
 \WF@everypar=\toks20
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
@@ -137,19 +236,19 @@ Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen116
-\ar@mcellbox=\box30
+\ar@mcellbox=\box32
 \extrarowheight=\dimen117
 \NC@list=\toks21
-\extratabsurround=\skip52
-\backup@length=\skip53
-\ar@cellbox=\box31
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box33
 )
 \TX@col@width=\dimen118
 \TX@old@table=\dimen119
 \TX@old@col=\dimen120
 \TX@target=\dimen121
 \TX@delta=\dimen122
-\TX@cols=\count95
+\TX@cols=\count96
 \TX@ftn=\toks22
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
@@ -157,16 +256,16 @@ Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count96
-\calc@Bcount=\count97
+\calc@Acount=\count97
+\calc@Bcount=\count98
 \calc@Adimen=\dimen123
 \calc@Bdimen=\dimen124
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Askip=\skip68
+\calc@Bskip=\skip69
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count98
-\calc@Cskip=\skip56
+\calc@Ccount=\count99
+\calc@Cskip=\skip70
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
@@ -196,11 +295,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box32
+\AM@pagebox=\box34
 \AM@global@opts=\toks23
 \AM@toc@title=\toks24
-\c@AM@survey=\count99
-\AM@templatesizebox=\box33
+\c@AM@survey=\count100
+\AM@templatesizebox=\box35
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
@@ -209,42 +308,42 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks25
-\MT@count=\count100
+\MT@count=\count101
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen127
 LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
-\MT@listname@count=\count101
+\MT@listname@count=\count102
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 914.
 LaTeX Info: Redefining \lslig on input line 914.
-\MT@outer@space=\skip57
+\MT@outer@space=\skip71
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count102
-\bibleftmargin=\skip58
-\bibindent=\skip59
-\bibparsep=\skip60
-\bibitemsep=\skip61
-\biblabelsep=\skip62
+\c@BibCnt=\count103
+\bibleftmargin=\skip72
+\bibindent=\skip73
+\bibparsep=\skip74
+\bibitemsep=\skip75
+\biblabelsep=\skip76
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip63
-\bibsep=\skip64
+\bibhang=\skip77
+\bibsep=\skip78
 LaTeX Info: Redefining \cite on input line 694.
 LaTeX Info: Redefining \citeauthor on input line 712.
 LaTeX Info: Redefining \citeyear on input line 735.
-\c@NAT@ctr=\count103
+\c@NAT@ctr=\count104
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box34
+\@eurobox=\box36
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
-\@mathmargin=\skip65
+\@mathmargin=\skip79
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -259,30 +358,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count104
+\inf@bad=\count105
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count105
-\leftroot@=\count106
+\uproot@=\count106
+\leftroot@=\count107
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count107
-\DOTSCASE@=\count108
+\classnum@=\count108
+\DOTSCASE@=\count109
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box35
-\strutbox@=\box36
+\Mathstrutbox@=\box37
+\strutbox@=\box38
 \big@size=\dimen130
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count109
-\c@MaxMatrixCols=\count110
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
 \dotsspace@=\muskip11
-\c@parentequation=\count111
-\dspbrk@lvl=\count112
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
 \tag@help=\toks27
-\row@=\count113
-\column@=\count114
-\maxfields@=\count115
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
 \andhelp@=\toks28
 \eqnshift@=\dimen131
 \alignsep@=\dimen132
@@ -291,29 +390,29 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \totwidth@=\dimen135
 \lineht@=\dimen136
 \@envbody=\toks29
-\multlinegap=\skip66
-\multlinetaggap=\skip67
+\multlinegap=\skip80
+\multlinetaggap=\skip81
 \mathdisplay@stack=\toks30
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 \@float@every@algorithm=\toks31
-\c@algorithm=\count116
+\c@algorithm=\count117
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count117
-\c@ALG@rem=\count118
-\c@ALG@nested=\count119
-\ALG@tlm=\skip68
-\ALG@thistlm=\skip69
-\c@ALG@Lnr=\count120
-\c@ALG@blocknr=\count121
-\c@ALG@storecount=\count122
-\c@ALG@tmpcounter=\count123
-\ALG@tmplength=\skip70
+\c@ALG@line=\count118
+\c@ALG@rem=\count119
+\c@ALG@nested=\count120
+\ALG@tlm=\skip82
+\ALG@thistlm=\skip83
+\c@ALG@Lnr=\count121
+\c@ALG@blocknr=\count122
+\c@ALG@storecount=\count123
+\c@ALG@tmpcounter=\count124
+\ALG@tmplength=\skip84
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
@@ -340,6 +439,7 @@ Package scrpage2 Warning: usage of obsolete package!
 (scrpage2)                You should replace usage of package `scrpage2'
 (scrpage2)                by `scrlayer-scrpage' on input line 52.
 
+LaTeX Info: Redefining \pagemark on input line 180.
 
 /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrpage2.sty:895: LaTeX Error: Command \chead already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -370,7 +470,7 @@ or  <return>  to continue without it.
 
 )
 
-./main.tex:44: LaTeX Error: Command \max already defined.
+/Users/jan/Projects/rl-bachelor-thesis/main.tex:44: LaTeX Error: Command \max already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -383,33 +483,37 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-(out/main.aux)
+(out/main.aux
+
+LaTeX Warning: Label `fig:GPI' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count125
 \scratchdimen=\dimen137
-\scratchbox=\box37
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\scratchbox=\box39
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count127
+\MPscratchCnt=\count128
 \MPscratchDim=\dimen138
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -448,21 +552,21 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(90.3375pt, 433.62pt, 90.33751pt)
-* v-part:(T,H,B)=(86.724pt, 578.15999pt, 130.086pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
+* h-part:(L,W,R)=(81.94397pt, 433.62pt, 81.94397pt)
+* v-part:(T,H,B)=(106.75476pt, 578.15999pt, 160.13219pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
 * \textwidth=433.62pt
 * \textheight=578.15999pt
-* \oddsidemargin=18.0675pt
-* \evensidemargin=18.0675pt
-* \topmargin=-22.54599pt
+* \oddsidemargin=9.67398pt
+* \evensidemargin=9.67398pt
+* \topmargin=-5.39023pt
 * \headheight=21.4pt
-* \headsep=25.0pt
+* \headsep=21.75pt
 * \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \footskip=50.75pt
+* \marginparwidth=49.79233pt
+* \marginparsep=12.8401pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
@@ -474,7 +578,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box38
+\AtBeginShipoutBox=\box40
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
@@ -482,7 +586,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \microtypecontext on input line 62.
+LaTeX Info: Redefining \microtypecontext on input line 63.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -495,22 +599,34 @@ Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\c@maskedRefs=\count130
+\c@maskedRefs=\count131
  (/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/german.apc
 File: german.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 142.
 LaTeX Info: Redefining \BHBI on input line 143.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (out/main.toc [1])
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 90.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package tocbasic Info: character protrusion at toc deactivated on input line 90.
+ (out/main.toc [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2] (out/main.lof)
+ [3]
+Package tocbasic Info: character protrusion at lof deactivated on input line 92.
+ (out/main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [3] (./part1/einleitung.tex) [4] (./part1/grundlagen.tex) (./part1/MDP.tex
+ [4] (./part1/einleitung.tex) [5] (./part1/grundlagen.tex) (./part1/MDP.tex
 
 ./part1/MDP.tex:2: Package inputenc Error: Unicode character ∏ (U+220F)
 (inputenc)                not set up for use with LaTeX.
@@ -524,8 +640,8 @@ l.2 ...theoretische Aussagen treffen zu können∏
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[5]
-<images/agentUmweltInterface.png, id=33, 675.52374pt x 353.32pt>
+[6]
+<images/agentUmweltInterface.png, id=32, 675.52374pt x 353.32pt>
 File: images/agentUmweltInterface.png Graphic file (type png)
 <use images/agentUmweltInterface.png>
 Package pdftex.def Info: images/agentUmweltInterface.png  used on input line 10.
@@ -535,11 +651,11 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 16.
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-) [6 <./images/agentUmweltInterface.png>]
+) [7 <./images/agentUmweltInterface.png>]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 41.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 39.
 
-[7]) (./part1/MP.tex [8]
+[8]) (./part1/MP.tex [9]
 <images/2passagesDefault.png, id=55, 304.13625pt x 608.2725pt>
 File: images/2passagesDefault.png Graphic file (type png)
 <use images/2passagesDefault.png>
@@ -550,35 +666,58 @@ File: images/2passagesStart.png Graphic file (type png)
 <use images/2passagesStart.png>
 Package pdftex.def Info: images/2passagesStart.png  used on input line 26.
 (pdftex.def)             Requested size: 101.4574pt x 200.75073pt.
- [9 <./images/2passagesDefault.png>] [10 <./images/2passagesStart.png>]) [11] (./part1/BelohnungenZielstrebigkeit.tex [12]) (./part1/GewinnEpisoden.tex [13] [14]) [15] (./part1/StrategieNutzenfunktion.tex [16]) (./part1/Optimalitaet.tex [17] [18]) (./part1/GPI.tex [19]
-<images/gpi.jpg, id=94, 3791.16376pt x 1632.0975pt>
+ [10 <./images/2passagesDefault.png>]) [11 <./images/2passagesStart.png>] (./part1/BelohnungenZielstrebigkeit.tex [12]) (./part1/GewinnEpisoden.tex [13] [14]) [15] (./part1/StrategieNutzenfunktion.tex [16]) (./part1/Optimalitaet.tex [17] [18]) (./part1/GPI.tex [19]
+<images/gpi.jpg, id=91, 3791.16376pt x 1632.0975pt>
 File: images/gpi.jpg Graphic file (type jpg)
 <use images/gpi.jpg>
 Package pdftex.def Info: images/gpi.jpg  used on input line 10.
 (pdftex.def)             Requested size: 303.53267pt x 130.67007pt.
-) (./part1/ExplorationExploitation.tex [20 <./images/gpi.jpg>]) (./part2/MonteCarlo.tex) (./part2/FirstVisit.tex) [21] [22] (./part2/TemporalDifference.tex) (./part2/Sarsa.tex) [23] (./part2/QLearning.tex) [24] [25] (out/main.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
+) (./part1/ExplorationExploitation.tex [20 <./images/gpi.jpg>]) (./part1/Zusammenfasung.tex) [21] (./part2/DP.tex [22] [23] [24]) (./part2/MonteCarlo.tex [25] [26] [27] [28]) (./part2/TemporalDifference.tex [29] [30] [31]) (./part3/Implementierung.tex
+<images/Interfaces.png, id=134, 2469.225pt x 2344.76pt>
+File: images/Interfaces.png Graphic file (type png)
+<use images/Interfaces.png>
+Package pdftex.def Info: images/Interfaces.png  used on input line 5.
+(pdftex.def)             Requested size: 303.53267pt x 288.22845pt.
+) [32] [33 <./images/Interfaces.png (PNG copy)>] [34] (out/main.bbl
+
+out/main.bbl:23: Package inputenc Error: Unicode character ・ (U+30FB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \APACjournalVolNumPages{N・J}{95}{}{}
+                                           .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 47.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [26]) [27] (./anhang.tex) [28] (out/main.aux) ) 
+ [35]) [36] (./anhang.tex) [37] (out/main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8982 strings out of 492616
- 130607 string characters out of 6129481
- 265372 words of memory out of 5000000
- 12463 multiletter control sequences out of 15000+600000
- 28670 words of font info for 132 fonts, out of 8000000 for 9000
+ 11190 strings out of 492616
+ 177136 string characters out of 6129481
+ 412077 words of memory out of 5000000
+ 14633 multiletter control sequences out of 15000+600000
+ 31136 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,43p,1342b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (29 pages, 805492 bytes).
+ 51i,12n,51p,9194b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on out/main.pdf (37 pages, 1202085 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 240 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 22037 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 24602 words of extra memory for PDF output out of 24883 (max. 10000000)
 

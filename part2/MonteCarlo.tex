@@ -1,0 +1,72 @@
+Dieses Kapitel beschäftigt sich mit der Gruppe der Monte-Carlo Lernmethoden. Zunächst wird die Grundidee dieses \textit{model-free} Ansatzes erläutert, gefolgt von der Darstellung des Pseudocodes für den \textit{first-visit}-Algorithmus. Abgeschlossen wird mit einem Beispiel für das Glückspiel \textit{BlackJack}.
+\par 
+
+Im vorrigen Kapitel wurde die Dynamische Programmierung vorgestellt. Ein Verfahren, welches ein komplettes Modell der Umgebung benötigt und somit als \textit{model-based} bezeichnet wird. Die Hauptdisziplin des Reinforcement Learning ist jedoch die Suche nach optimalen Verhalten, wenn kein Zugriff auf die Dynamiken der Umwelt vorhanden ist \cite[S.~27]{Wiering}. Diese \textit{model-free} Methoden lernen und approximieren aufgrund der Erfahrung, die sie durch die Interaktion mit der Umwelt erwerben. Dabei kann entweder mit der tatsächlichen Umwelt interagiert werden oder mit einer Simulation.
+\par 
+Im Bezug auf Simulationen erwähnen \cite{Sutton1998} eine interessante Aussage. Zwar müsse ein Modell der Umwelt für eine Simulation vorhanden sein, aber sie behaupten, dass es in überraschend vielen Fällen möglich sei, Erfahrung aufgrund der erwünschten Wahrscheinlichkeitsverteilung zu erzeugen ohne dabei die komplette Wahrscheinlichkeitsverteilung für alle möglichen Übergänge zu kennen wie sie z.B. bei der DP benötigt wird (S.~91).
+\par 
+// TODO: Lindemann; Beispiel? Würfel, BlackJack? Anstatt die Wahrscheinlichkeiten immer wieder komplett auszurechnen, kann man einfach einen Kartenstapel simulieren, von dem Karten entfernt werden. Meinen die beiden das?
+\par 
+
+\subsubsection{Vorhersageproblem}
+Monte-Carlo Methoden lösen das Reinforcement Learning Problem über Durschnittsbildung der, durch Erfahrung gesammelten, Gewinne \cite[S.~91]{Sutton1998}. Dabei werden die Nutzen und die Strategien ausschließlich nach einer abgeschlossenen Episode aktualisiert. Folgerichtig ist das Aktualisierungsverhalten \textit{episode-by-episode} und nicht \textit{step-by-step} (als nach jeder Aktion)\cite[S.~91]{Sutton1998}. Das ist zugleich der Hauptunterschied zu den in Kapitel 4 vorgestelltem Temporal-Difference Learning, welches nach jeder Aktion die geschätzen Nutzen anpasst. Daraus folgt auch, dass Monte-Carlo Methoden ausschließlich auf episodiale Probleme anwendbar sind, TD Learning jedoch zusätzlich auch bei kontinuierlichen Aufgaben zum Einsatz kommen kann. 
+\par
+Zur Erinnerung, eine Nutzenfunktion gibt den Nutzen eines Zustands an, also den erwarteten Gewinn. Dabei ist der erwartete Gewinn eines Zustands die erwartbare Summe aller zukünftig, diskontierten Belohnungen, wenn von diesem Zustand gestartet wird. Um den erwarteten Gewinn zu schätzen, kann der Durschnitt über die, durch Erfahrung gesammelten, realen Gewinne gebildet werden.
+\par 
+Der Grundansatz ist dabei wie folgt. Eine Episode unter der Strategie $\pi$ wird z.B. durch eine Simulation erzeugt. Es entsteht eine Reihenfolge von Triple $(s,a,r)$. Kommt ein Zustand $s$ innerhalb der Episode vor, wird auch von einem Besuch (\textit{visit}) von $s$ gesprochen (im Rahmen der Monte-Carlo Methoden). Der Gewinn für den Zustand $s$ ist somit die Summe aller Belohnung nach dem ersten Besuch des Zustands $s$. Über alle, auf diese Weise gesammelten, Gewinne von $s$ wird der Durschnitt berechnet, der -mit steigender Anzahl an Besuchen- gegen den tatsächlichen Nutzen von $s$ strebt. Wird der Gewinn vom Start des ersten Besuchs von $s$ berechnet, dann wird diese Methode auch als \textit{First-Visit} bezeichnet. Konsequenterweise bezeichnet \textit{Every-Visit} die Methode, bei der für jegliche Besuche von $s$ in einer Episode der Gewinn berechnet wird. Diese beiden Methoden sind sehr ähnlich und unterscheiden sich z.B. im Pseudocode nur durch eine Abfrage, trotzdem haben sie unterschiedliche theoretische Eigenschaften \cite[S.~92]{Sutton1998}. Diese sind jedoch im Rahmen dieser Arbeit nicht weiter dargestellt, da ausschließlich mit der \textit{First-Visit} Variante garbeitet wird. //TODO für mehr Infos
+\par 
+In Kapitel 2.6 ist erwähnt worden, dass \textit{model-free} Lernmethoden die Aktions-Nutzenfunktion berechnen. Grund hierfür ist, dass sie nicht in der Lage sind einen Schritt vorherzusehen, weil die Übergangsfunktion $p$ nicht gegeben ist. Monte-Carlo Methoden können sowohl, wie im vorrigen Absatz erläutert, den Nutzen von Zuständen berechnen, als auch den Nutzen von Zustands-Aktions-Paaren. Der Unterschied besteht darin, dass nicht der Besuch von $s$ entscheidend ist, sondern der Besuch des Paares $(s,a)$.
+
+\subsubsection{Exploration}
+Da die Monte-Carlo Methoden mittels Durchschnittsbildung arbeiten, ist es unabdingbar, dass jeglichen Zustände respektive Zustands-Aktions-Paare ausreichend oft besucht werden. Wenn jedoch eine deterministische Strategie $\pi$ gegeben ist, dann wird immer nur eine Aktion pro Zustand ausgeführt, nämlich jene mit dem derzeitigen höchsten, geschätzten Nutzen. Dies sorgt dafür, dass der Zustands- und Aktionsraum nicht ausreichend erkundet wird und der Algorithm sozusagen in einem lokalem Maximum festhängt.
+\par 
+\cite{Sutton1998} stellen in ihrem Werk drei Ansatze vor, die die fortlaufende Exploration ermöglichen. Eine Möglichkeit ist die Verwendung einer $\epsilon$\textit{-greedy} Strategie, wie sie auch im Kapitel 2.8 vorgestellt wurde. Mit einer bestimmten Wahrscheinlichkeit $\epsilon$ wird nicht die vermeintlich beste Aktion gewählt (aktuell größter  Aktions-Nutzen), sondern eine zufällige Aktion $a \in \mathcal{A}$. Diese Methodik erlaubt die fortlaufende Exploration und garantiert trotzdem eine Konvergenz zu einer optimalen Strategie, wenn $\epsilon$ im Laufe der Zeit verringert wird \cite[S.~201]{Sutton1998}. Welche Auswirkungen die Werte von $\epsilon$ auf das Konvergenzverhalten haben und wie in eine \glqq Verringerung im Laufe der Zeit \grqq{} aussehen kann, wird im Rahmen der praktischen Umsetzung anhand des JumpingDino Beispiels in Kapitel 4.2 untersucht.
+\par 
+Um einen einen Überblick über weitere Vorgehensweisen zu der fortlaufenden Erkunden zu geben, werden auch die zwei weiteren Methoden nach \cite{Sutton1998} kurz dargestellt (S.96-108). 
+\par 
+Anstatt die Strategie so zu verändern, dass sie suboptimale Aktionen wählt, um alle Zustände oder Zustands-Aktions-Paare ausreichend oft zu besuchen, kann auch explizit mit einem bestimmten Zustand respektive Zustands-Aktions-Paar gestartet werden. Dabei muss jeder Zustand oder jedes Zustands-Aktions-Paar eine Wahrscheinlichkeit größer 0 haben, um als Start einer Episode ausgewählt zu werden. Dies wird auch als \textit{Exloring Starts} bezeichnet.
+\par
+Eine weitere Möglichkeit ist das sog. \textit{off-policy learning}. Die Grundidee hierbei besteht darin, nicht eine Strategie zu benutzen, die teilweise exploriert ($\epsilon$\textit{-greedy}), sondern zwei Strategien zu verwenden. Eine konvergiert zu der optimalen Strategie und die andere exploriert den Zustands- und Aktionsraum, sammelt somit die Erfahrung. Die Strategie, die stetig verbessert wird, wird als Zielstrategie (\textit{target policy}) bezeichnet wohingegen die Strategie, die die Episoden erzeugt als Verhaltensstrategie (\textit{behavior policy}) bezeichnet wird \cite[S.~103]{Sutton1998}. Das \glqq off \grqq{} in \textit{off-policy learning} bezieht sich darauf, dass die Erfahrung einer anderen, von der Zielstrategie abweichenden, Strategie dazu genutzt wird, um zu lernen.
+\pagebreak
+\subsubsection{Pseudocode}
+Der nachfolgende Pseudocode \cite[S.~101]{Sutton1998} zeigt die Vorgehensweise der Monte-Carlo Methoden zur Bestimmung der optimalen Strategie $\pi_*$ auf Basis der Aktions-Nutzenfunktion $q$ bzw. $Q$. Genauer wird die \textit{First-Visit} Variante vorgestellt, die mithilfe einer $\epsilon$-greedy Strategie die fortlaufende Erkunden garantiert. Wie in Kapitel 2.4 erläutert, sollte der Diskontierungsfaktor $\gamma$ für episodiale Probleme den Wert 1 annehmen, um jegliches Handeln während einer Episode bei der Berechnung des Gewinns zu berücksichtigen.
+\par 
+\begin{algorithm}
+    \caption{On-policy first-visit MC control (for $\epsilon$-soft policies), estimates $\pi \approx \pi_*$}
+    \begin{algorithmic}[1]
+        \State Algorithm parameter: small $\epsilon > 0$
+        \State Initialize:
+        \Indent
+           \State $\pi \gets$ an arbitary $\epsilon$-soft policy
+           \State $Q(s,a) \in \mathbb{R}$ (arbitrarily), for all $s \in \mathcal{S}, a \in \mathcal{A}(s)$
+           \State $Returns(s,a) \gets$ empty list, for all $s \in \mathcal{S}, a \in \mathcal{A}(s)$
+        \EndIndent
+        \State Repeat forever (for each episode):
+        \Indent
+            \State Generate an episode following $\pi: S_0, A_0, R_1, \dots, S_{T-1}, A_{T-1}, R_T$
+            \State $G \gets 0$
+            \State Loop for each step of episode, $t= T-1,T-2, \dots, 0:$
+            \Indent
+                \State $G \gets \gamma G + R_{t+1}$
+                \State Unless the pair $S_t, A_t$ appears in $S_0, A_0, S_1, A_1, \dots ,S_{t-1}, A_{t-1}:$
+                \Indent
+                    \State Append $G$ to $Returns(S_t,A_t)$
+                    \State $Q(S_t,A_t) \gets$ average$(Returns(S_t,A_t))$
+                    \State $A^* \gets \argmax_a Q(S_t, a)$ (with ties broken arbitrarily)
+                    \State For all $a \in \mathcal{A}(S_t):$
+                    \Indent
+                     \State  $\pi(a|S_t) =   
+                        \begin{cases}
+                            1-\epsilon + \epsilon / |\mathcal{A}(S_t)|      & \quad \text{if } a = A^* \\
+                            \epsilon / |\mathcal{A}(S_t)|  & \quad \text{if } a \neq A^*
+                        \end{cases}$
+                    \EndIndent
+                \EndIndent
+            \EndIndent
+        \EndIndent 
+    \end{algorithmic}
+\end{algorithm}
+Eine Umformung zur \textit{Every-Visit} Variante kann durch das Entfernen der Bedingung in Zeile 11 realisiert werden.
+\subsubsection{BlackJack Beispiel}
+
+\subsubsection{Zusammenfassung}

@@ -1,6 +1,29 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Bellman%
+}{%
+Bellman%
+}{%
+{\protect \APACyear {1957}}%
+}]{%
+bellman1957dynamic}
+\APACinsertmetastar {%
+bellman1957dynamic}%
+\begin{APACrefauthors}%
+Bellman, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1957}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dynamic programming: Princeton univ. press} {Dynamic
+  programming: Princeton univ. press}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{N・J}{95}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Brunskill%
 }{%
 Brunskill%
@@ -141,6 +164,29 @@ Gosavi, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Howard%
+}{%
+Howard%
+}{%
+{\protect \APACyear {1960}}%
+}]{%
+howard1960dynamic}
+\APACinsertmetastar {%
+howard1960dynamic}%
+\begin{APACrefauthors}%
+Howard, R\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1960}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dynamic programming and markov processes.} {Dynamic
+  programming and markov processes.}{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kumar%
 }{%
 Kumar%
@@ -164,6 +210,32 @@ Kumar, G.%
 \newblock
 \APACaddressSchool {}{Indian Institute of Science Education and Research
   Kolkata}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mehlhorn%
+\ \BBA {} Sanders%
+}{%
+Mehlhorn%
+\ \BBA {} Sanders%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+mehlhorn}
+\APACinsertmetastar {%
+mehlhorn}%
+\begin{APACrefauthors}%
+Mehlhorn, K.%
+\BCBT {}\ \BBA {} Sanders, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2008}.
+\newblock
+\APACrefbtitle {Algorithms and data structures: The basic toolbox} {Algorithms
+  and data structures: The basic toolbox}.
+\newblock
+\APACaddressPublisher{}{Springer Science \& Business Media}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

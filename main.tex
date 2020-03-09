@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{scrartcl}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage[english,german]{babel} 
 \usepackage[utf8]{inputenc}
@@ -37,17 +37,17 @@
 \numberwithin{equation}{section}
 % Special characters
 \usepackage{eucal}
-% math. alphabet
+% math alphabet
 \usepackage{amssymb}
 \usepackage{scrpage2}%
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\max}{argmax}
 
 %Pseudo-code indent
-
 \algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
 \algtext*{Indent}
 \algtext*{EndIndent}
+
 %%%% footer and header %%%%
 \usepackage{scrpage2}%
 \pagestyle{scrheadings}%  S
@@ -59,6 +59,7 @@
 \ohead{\rightmark}
 \setheadsepline{0.5pt}
 %%%% \footer and header %%%%
+
 \begin{document}
 
 \begin{titlepage}
@@ -84,6 +85,8 @@
 	{\large \today \par}       
 \end{titlepage}
 
+% Count title page as first page
+\setcounter{page}{2}
 \tableofcontents
 \pagebreak
 \listoffigures
@@ -114,7 +117,7 @@
 	\subsection{Strategie und Nutzenfunktion}
 	\input{part1/StrategieNutzenfunktion.tex}
 
-	\subsection{Optimalität}
+	\subsection{Optimalität} \label{sec:optimality}
 	\input{part1/Optimalitaet.tex}
 
 	\subsection{Generalized Policy Iteration}
@@ -123,28 +126,21 @@
 	\subsection{Exploration-Exploitation Dilemma}
 	\input{part1/ExplorationExploitation.tex}
 
+	\subsection{Zusammenfasung}
+	\input{part1/Zusammenfasung.tex}
+
 \section{Lernmethoden}
+	\subsection{Dynamische Programmierung}
+	\input{part2/DP.tex}
 	\subsection{Monte-Carlo Methoden}
 	\input{part2/MonteCarlo.tex}
-		\subsubsection{First Visit}
-		\input{part2/FirstVisit.tex}
-		\pagebreak
-		\subsubsection{Every Visit*}
-		\subsubsection{Off-Policy}
-
 	\subsection{Temporal Difference Learning}
 	\input{part2/TemporalDifference.tex}
-		\subsubsection{Sarsa}
-		\input{part2/Sarsa.tex}
-		\pagebreak
-		\subsubsection{Q-Learning}
-		\input{part2/QLearning.tex}
-		\pagebreak
-		\subsubsection{$n$-step Sarsa*}
 
-\section{Implementierung}
-	\subsection{Architektur}
-	\subsection{Jumping Dino*}
+\section{Praktischer Teil}
+	\subsection{Implementierung}
+	\input{part3/Implementierung.tex}
+	\subsection{Jumping Dino}
 		\subsubsection{Problemstellung}
 		\subsubsection{Zustandsmodellierung}
 		\subsubsection{Konvergenzverhalten}
