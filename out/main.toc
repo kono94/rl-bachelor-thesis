@@ -26,18 +26,18 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Vorhersageproblem}{31}% 
 \contentsline {subsubsection}{\numberline {3.3.2}SARSA}{32}% 
 \contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{33}% 
-\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{34}% 
-\contentsline {section}{\numberline {4}Praktischer Teil}{34}% 
-\contentsline {subsection}{\numberline {4.1}Implementierung}{34}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{34}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{34}% 
-\contentsline {subsection}{\numberline {4.2}Jumping Dino}{35}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{35}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{35}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{35}% 
-\contentsline {subsection}{\numberline {4.3}Ant-Game}{35}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{35}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{35}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{35}% 
-\contentsline {section}{\numberline {5}Fazit}{35}% 
-\contentsline {section}{\numberline {6}Ausblick}{35}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{33}% 
+\contentsline {section}{\numberline {4}Praktischer Teil}{33}% 
+\contentsline {subsection}{\numberline {4.1}Implementierung}{33}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{33}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{36}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino}{37}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{37}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{37}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{37}% 
+\contentsline {subsection}{\numberline {4.3}Ant-Game}{37}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{37}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{37}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{37}% 
+\contentsline {section}{\numberline {5}Fazit}{37}% 
+\contentsline {section}{\numberline {6}Ausblick}{37}% 

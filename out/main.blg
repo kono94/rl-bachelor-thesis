@@ -12,48 +12,52 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: quellen.bib
+Warning--entry type for "hashmap" isn't style-file defined
+--line 154 of file quellen.bib
+Warning--entry type for "linkedHashMap" isn't style-file defined
+--line 161 of file quellen.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in howard1960dynamic
 Warning--No journal in watkins1989learning
-You've used 15 entries,
+You've used 17 entries,
             6951 wiz_defined-function locations,
-            1364 strings with 12983 characters,
-and the built_in function-call counts, 26473 in all, are:
-= -- 3369
-> -- 211
-< -- 1135
-+ -- 1146
-- -- 30
-* -- 1582
-:= -- 4608
-add.period$ -- 65
-call.type$ -- 15
-change.case$ -- 259
+            1373 strings with 13254 characters,
+and the built_in function-call counts, 30040 in all, are:
+= -- 3905
+> -- 232
+< -- 1269
++ -- 1252
+- -- 39
+* -- 1764
+:= -- 5128
+add.period$ -- 73
+call.type$ -- 17
+change.case$ -- 309
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 681
-empty$ -- 1125
-format.name$ -- 351
-if$ -- 5222
+cite$ -- 36
+duplicate$ -- 745
+empty$ -- 1265
+format.name$ -- 379
+if$ -- 5991
 int.to.chr$ -- 0
-int.to.str$ -- 45
+int.to.str$ -- 55
 missing$ -- 0
-newline$ -- 381
-num.names$ -- 122
-pop$ -- 606
+newline$ -- 425
+num.names$ -- 138
+pop$ -- 646
 preamble$ -- 1
-purify$ -- 62
+purify$ -- 70
 quote$ -- 0
-skip$ -- 1781
+skip$ -- 2145
 stack$ -- 0
-substring$ -- 1260
-swap$ -- 377
-text.length$ -- 32
+substring$ -- 1374
+swap$ -- 407
+text.length$ -- 38
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1392
+type$ -- 1696
 warning$ -- 2
-while$ -- 121
+while$ -- 131
 width$ -- 0
-write$ -- 459
-(There were 2 warnings)
+write$ -- 507
+(There were 4 warnings)

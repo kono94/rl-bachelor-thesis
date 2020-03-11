@@ -269,6 +269,56 @@ M{\"o}ller, B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Oracle%
+}{%
+Oracle%
+}{%
+{\protect \APACyear {2020}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+hashmap}
+\APACinsertmetastar {%
+hashmap}%
+\begin{APACrefauthors}%
+Oracle.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020{\protect \BCnt {1}}}{}{}.
+\newblock
+\APACrefbtitle {Oracle Java documentation: HashMap Java™ 8.} {Oracle java
+  documentation: Hashmap java™ 8.}
+\newblock
+\begin{APACrefURL}
+  \url{https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Oracle%
+}{%
+Oracle%
+}{%
+{\protect \APACyear {2020}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+linkedHashMap}
+\APACinsertmetastar {%
+linkedHashMap}%
+\begin{APACrefauthors}%
+Oracle.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020{\protect \BCnt {2}}}{}{}.
+\newblock
+\APACrefbtitle {Oracle Java documentation: LinkedHashMap Java™ 8.} {Oracle
+  java documentation: Linkedhashmap java™ 8.}
+\newblock
+\begin{APACrefURL}
+  \url{https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Saul%
 \ \BBA {} Jordan%
 }{%
