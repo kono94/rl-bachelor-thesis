@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex out/main"] 1583756096 "out/main.aux" "out/main.bbl" "out/main" 1583756142
+["bibtex out/main"] 1583921255 "out/main.aux" "out/main.bbl" "out/main" 1583921573
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "out/main.aux" 1583756097 9852 57f46ff24aacabe37e8e14085417d439 "pdflatex"
+  "out/main.aux" 1583921572 10070 083a11842d5321f2e148c052014c0938 "pdflatex"
   "quellen.bib" 1583165321 4401 80f002b227761c099865979f8fb8e0e5 ""
   (generated)
   "out/main.blg"
   "out/main.bbl"
-["pdflatex"] 1583756096 "/Users/jan/Projects/rl-bachelor-thesis/main.tex" "out/main.pdf" "main" 1583756142
+["pdflatex"] 1583921571 "/Users/jan/Projects/rl-bachelor-thesis/main.tex" "out/main.pdf" "main" 1583921573
   "/Users/jan/Projects/rl-bachelor-thesis/main.tex" 1583756064 3973 c353ac990920d23aa20451d679b432a4 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -171,13 +171,13 @@
   "images/agentUmweltInterface.png" 1578262866 75977 03067038b9563ce1e4901d6fa5dcefa9 ""
   "images/gpi.jpg" 1582300242 352077 7dcb2cf4378db2228d896a422a3569cd ""
   "main.tex" 1583756064 3973 c353ac990920d23aa20451d679b432a4 ""
-  "out/main.aux" 1583756097 9852 57f46ff24aacabe37e8e14085417d439 "pdflatex"
-  "out/main.bbl" 1583756096 9152 678d10d5683e0bd55bb5e9754bd68765 "bibtex out/main"
-  "out/main.lof" 1583756097 467 e713f23907062e1e57e238bf9449d3fc "pdflatex"
-  "out/main.toc" 1583756097 2874 6e879cb5edf77f28d5c8cd35c329f7c2 "pdflatex"
+  "out/main.aux" 1583921572 10070 083a11842d5321f2e148c052014c0938 "pdflatex"
+  "out/main.bbl" 1583921255 9152 678d10d5683e0bd55bb5e9754bd68765 "bibtex out/main"
+  "out/main.lof" 1583921572 467 b7e8ee147b2a9f4bdd1f6105776e3278 "pdflatex"
+  "out/main.toc" 1583921572 3012 f7feb4c5057ffeb4e9a9c4ae88611da8 "pdflatex"
   "part1/BelohnungenZielstrebigkeit.tex" 1582479027 4416 17df2c2a8ef50b9d1e899524acec0537 ""
   "part1/ExplorationExploitation.tex" 1581862287 2918 8c059810ca5885110ba7f64a510a8df3 ""
-  "part1/GPI.tex" 1583146328 3014 aab186c9de9f60ed0ee4f9ef43fe1ec3 ""
+  "part1/GPI.tex" 1583917645 3014 96b9a02b3795b48ac7eca0cb1396dd74 ""
   "part1/GewinnEpisoden.tex" 1582631901 5035 ab3726e82a9ac5a8a9cc2929f088d15a ""
   "part1/MDP.tex" 1583161206 6343 213dff1fc1ba548be787df4019dc0162 ""
   "part1/MP.tex" 1583324733 5170 7593fa139f5135a8b8053b7fce1d15af ""
@@ -187,12 +187,12 @@
   "part1/einleitung.tex" 1581862369 7 729cc1ff82dcf0e45803203fecd65247 ""
   "part1/grundlagen.tex" 1579707612 696 591fab3a216f0bd37b8ac0ce8d00de8b ""
   "part2/DP.tex" 1583752446 6320 35ffcac497219f81a8d1a3f1362efef2 ""
-  "part2/MonteCarlo.tex" 1583754536 10052 0fbabc85e9ebf1482864ed66c96bbeb2 ""
-  "part2/TemporalDifference.tex" 1583752484 2114 174f95d719b84e2d4c9909be1caf6cb1 ""
-  "part3/Implementierung.tex" 1583756091 157 207f8eb8e38df10605a41af21392b8b7 ""
+  "part2/MonteCarlo.tex" 1583921571 12398 2f663f5578ff8655b85d4713f5544b50 ""
+  "part2/TemporalDifference.tex" 1583921020 2099 4cb77d9148dc2045e568c2b97cb50bfa ""
+  "part3/Implementierung.tex" 1583763951 213 f5206e2fac2a6c1ebd67eaf1d128a6ef ""
   (generated)
-  "out/main.lof"
   "out/main.toc"
+  "out/main.lof"
+  "out/main.aux"
   "out/main.pdf"
   "out/main.log"
-  "out/main.aux"

@@ -67,6 +67,15 @@ Der nachfolgende Pseudocode \cite[S.~101]{Sutton1998} zeigt die Vorgehensweise d
     \end{algorithmic}
 \end{algorithm}
 Eine Umformung zur \textit{Every-Visit} Variante kann durch das Entfernen der Bedingung in Zeile 11 realisiert werden.
-\subsubsection{BlackJack Beispiel}
+\par 
+Dieser Ansatz der Monte-Carlo Methode folgt dem Schema der \textit{Generalized Policy Iteration} (vgl. 2.7). Der Prozess der Strategieevaluation findet nach jeder Episode statt und benötigt im Vergleich zu der Dynamischen Programmierung kein perfektes Modell. Da die Evaluation für jeden Zustand bzw. jedes Zustands-Aktions-Paar nach nur einem Schritt (der Durschnittsermittlung des Gewinns) gestoppt wird und danach der Prozess der \textit{Policy Improvement} startet, errinert dieses Vorgehen an die Nutzeniteration aus der Dynamischen Programmierung (vgl 3.1.4).  Berechnete Werte für den Aktions-Nutzen jedes Zustands dienen als Grundlage für den Prozess der \textit{Policy Improvement}, dem Verbessern der Strategie, im Fall der Monte-Carlo Methoden, nach jeder Episode.
+\subsubsection{BlackJack Beispiel*}
 
 \subsubsection{Zusammenfassung}
+Monte-Carlo Methoden lernen Nutzenfunktionen durch die direkte Interaktion mit der Umgebung. Damit zählen sie zu den \textit{model-free} Lernmethoden, die kein perfektes Modell der Umgebung benötigen. Zur Ermittlung des erwarteten Gewinns für ein Zustands-Aktions-Paars wird der Durschnitt über jegliche erhaltene Gewinne pro Episode gebildet. Somit findet die Evaluation und Verbesserung einer Strategie immer nur nach dem Abschluss einer Episode statt. Dies ist zugleich der Grund, warum Monte-Carlo Methoden ausschließlich auf episodiale Probleme anwendbar sind.
+\par 
+Da Aktionen auf Basis der temporär besten Aktions-Nutzen gewählt werden, ist eine ausreichende Exploration nicht gegeben, weil Gewinne vermeintlich suboptimaler Zustands-Aktions-Paare nicht gesammelt werden. Der Algorithmus verharrt in einem lokalem Maximum. Um dies zu verhindern, kann eine $\epsilon$-greedy Strategie verwendet werden, die mit einer Wahrscheinlichkeit von $\epsilon$ eine zufällige Aktion ausführt.
+\par 
+Im Vergleich zu der Dynamischen Programmierung benötigen die MC Methoden kein perfektes Modell der Umgebung und können auf Basis von Simulationen lernen. Zugleich aktualiseren sie ihre geschätzten Nutzen nicht auf Basis von anderen geschätzten Nutzen, sie betreiben somit kein \textit{bootstrapping}. 
+\par 
+Im nächsten Kapitel werden Lernmethoden vorgestellt, die wie die MC Methoden kein perfektes Modell benötigt, aber wie die DP \textit{bootstrappen} und somit in der Lage sind, nach jedem Zeitstempel ihre geschätzten Nutzen zu aktualiseren.
