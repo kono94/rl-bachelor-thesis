@@ -23,7 +23,7 @@ Die umgesetzten Algorithmen sind alle iterativ und somit \textit{single-threaded
 \par 
 \textit{Visualisierung}. Wenn über tausende Episoden gelernt wird, Millionen von Belohnungen verteilt und Aktionen ausgeführt werden, dann reicht eine simple Konsolenausgabe nicht mehr aus, um das Verhalten eines Algorithmus einzuschätzen. Eine Graphische Nutzungsoberfläche (\textit{GUI}) ist erstellt worden, mit der Parameter während des Lernens gesteuert werden können. Außerdem wird die Umwelt visualisiert, die Nutzentabelle kann angezeigt werden und ein kontinuierlicher Graph zeigt die erhaltenen Belohnungen an.
 
-\textit{Erweiterbarkeit}. Der Aufbau der Implementierung erlaubt ein einfaches Hinzufügen von weiteren Lernszenarien. Hierzu muss lediglich ein \textit{Enum}, welches den Aktionsraum repräsentiert und eine Klasse, die das \textit{Environment}-Interface implementiert, anlegt werden.
+\textit{Erweiterbarkeit}. Der Aufbau der Implementierung erlaubt ein einfaches Hinzufügen von weiteren Lernszenarien. Hierzu muss lediglich ein \textit{Enum}, welches den Aktionsraum repräsentiert und eine Klasse, die das \textit{Environment}-Interface implementiert, anlegt werden. Ebenfalls können weitere RL Algorithmen ergänzt werden, indem von der abstrakten Klasse \textit{Learning} bzw. \textit{EpisodicLearning} abgeleitet wird. Letztendlich ergibt sich eine Art RL-Framework, welches unterschiedliche Umgebungen und Algorithmen bereitstellt.
 
 \textit{Sammlung von Statistiken}. Um z.B. Aussagen über das Konvergenzverhalten von unterschiedlichen Lernmethoden treffen zu können, ist es notwendig, Daten zu sammeln und auszuwerten. Das umgesetzte Listener-Pattern, bei dem die Algorithmen z.B. nach jedem Zeitstempel oder nach jeder kompletten Episode ein Event mit Informationen auslösen, erlaubt eine generische Datenerhebung für unterschiedliche Lernmethoden und Problemstellungen.
 
@@ -33,6 +33,6 @@ Die umgesetzten Algorithmen sind alle iterativ und somit \textit{single-threaded
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{images/Interfaces.png}
-    \caption{Interfaces}
+    \caption{Darstellung der wichtigsten Interfaces}
     \label{fig:GPI}
 \end{figure}

@@ -1,4 +1,4 @@
-Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden und dem Temporal-Difference Learning referenziert werden.
+Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden.
 \par 
 Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Optimierungsproblems in Teilprobleme. Dabei wird mit einem trivialem Problem gestartet und die optimale Lösung für jenes in einer Tabelle gespeichert, welches anschließend für die Lösung eines sukzessiv größer werdendes Problem verwendet wird \cite[S.~243]{mehlhorn}.
 \par 
@@ -7,7 +7,7 @@ Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der op
 Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Vorraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
 \par
 
-\subsubsection{Strategieevaluierung}
+\subsubsection{Strategieevaluierung}\label{sec:evaluierung}
 Wichtiger Bestandteil eines jeden RL Algorithmus ist die Berechnung der Zustands-Nutzenfunktion $v_\pi$ (oder Aktions-Nutzenfunktion $q_\pi$) für eine willkürliche Strategie $\pi$. Die geschätzte Nutzenfunktion (unter einer bestimmten Strategie) gegen die wahren Werte der Gewinne streben zu lassen, wird auch als Strategieevaluierung (\textit{Policy Evaluation}) bezeichnet \cite[S.~74]{Sutton1998}.
 \par 
 Die Vorgehensweise der DP um dieses Vorhersageproblem (\textit{Prediction Problem}) zu lösen, lässt sich folgendermaßen beschreiben. Zunächst wird eine willkürliche Nutzenfunktion $v_0$ gewählt, z.B. sind alle Nutzen zu Beginn mit 0 definiert. Die Bellman-Gleichung wird nun als Aktualisierungsregel angesehen, die Schritt für Schritt die geschätzten Nutzen verbessert. Es entsteht eine Reihenfolge von geschätzten Nutzenfunktionen $v_0$, $v_1$, $v_2$, \dots, die letztendlich zu $v_\pi$ konvergiert. \cite{Sutton1998} definieren die Aktualisierungsregel wie folgt (S.~74):
@@ -41,8 +41,8 @@ Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
 \pi_0 \rightarrow v_{k_0} \rightarrow  \pi_1 \rightarrow v_{k_1} \rightarrow  \pi_2 \rightarrow v_{k_2}\rightarrow  \pi_3 \rightarrow v_{k_3}\rightarrow \dots \rightarrow \pi_*
 \end{equation}
 
-\subsubsection{Nutzeniteration}
-In Kapitel 3.1.1 wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iteration durchlaufen muss, um letzendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
+\subsubsection{Nutzeniteration}\label{sec:Nutzeniteration}
+In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iteration durchlaufen muss, um letzendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
 \par 
 Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokusiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zur Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
 

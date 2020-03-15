@@ -1,5 +1,46 @@
 
+Nachdem in den beiden vorrigen Kapitel die Methoden der Dynamischen Programmierung und des Monte-Carlo Ansatzes beleuchtet wurden, befasst sich dieses Kapitel mit der dritten großen Gruppe an Algorithmen, die das Reinforcement Learning Problem lösen, dem \textit{Temporal-Difference Learning} (TD).
+Wie zuvor wird zunächst erläutert, wie diese Art der Algorithmen das Vorhersageproblem lösen. Anschließend werden zwei vollständige Algorithmen vorgestellt, die das Kontrollproblem, also die Suche nach einer optimalen Strategie, bewältigen.
+\par 
+Um einschätzen zu können, welche zentrale Rolle das TD in dem Bereich des Reinforcement Learnings eingenommen hat, folgt ein Zitat von \cite{Sutton1998}:
+\begin{quote}
+    If one had to identify one idea as central and novel to reinforcement learning, it would undoubtedly be temporal-di↵erence (TD) learning. TD learning is a combination of Monte Carlo ideas and dynamic programming (DP) ideas. \cite[S.~119]{Sutton1998}
+\end{quote}
+
+Die Verbindung besteht zum einen daraus, dass das TD genau wie die Monte-Carlo Methoden direkt durch die Interaktion mit der Umwelt lernt, folgerichtig auch \textit{model-free} sind. Zum anderen aktualisieren die TD Methoden, genauso wie bei der Dynamische Programmierung, ihre geschätzen Nutzen mit Hilfe weiterer geschätzen Nutzen, sie bedienen sich also ebenfalls dem Konzept des \textit{bootstrapping} \cite[S.~119]{Sutton1998}. Dadurch ist das TD in der Lage, seine Nutzentabelle nach jeder Aktion zu aktualisieren, \textit{step-by-step}. Ein Warten auf das Ende einer Episode, wie bei den MC-Methoden, ist nicht notwendig. TD kann somit zusätzlich bei kontinuierlichen Problem zum Einsatz kommen \cite[S.~124]{Sutton1998}.
+\par 
+
 \subsubsection{Vorhersageproblem}
+MC- und TD-Methoden lösen das Vorhersageproblem beide durch gesammelte Erfahrung durch die direkte Interaktion mit der Umwelt. Sie folgen einer Strategie $\pi$ und aktualisieren ihre geschätzen Nutzen $V$ (oder $Q$) für $v_\pi$ (respektive $q_\pi$) auf Grundlage der erhaltenen $(s,a,r)$ Triple. Doch wie schafft es das \textit{Temporal-Differene Learning} im Gegensatz zu den Monte Carlo Methoden nach jedem Schritt zu aktualisieren und nicht auf das Ende einer Episode zu warten, somit nicht den Gewinn $G_t$ zu benötigen?
+\par 
+Um diese Frage zu beantworten, wird zunächst ein neuer Parameter vorgestellt, die Schrittgröße $\alpha$ (\textit{step-size parameter}). Dieser Parameter beeinflusst die Lernrate und sorgt konkret dafür, wie stark die Veränderung eines neu geschätzen Nutzens gewichtet wird. Des Weiteren wird der Begriff \glqq Ziel\grqq{} (\textit{target}), im Umfeld von TD auch TD-Ziel (\textit{TD-target}), verwendet. Dieses Ziel sagt aus, zu welchem Wert die derzeitige Aktualiserung des Nutzen strebt.
+\par 
+Monte-Carlo Methoden müssen bis zu dem Ende einer Episode warten, da erst dann der Gewinn $G_t$ feststeht, der als Ziel für $V(S_t)$ benötigt wird \cite[S.~119]{Sutton1998}. Eine vereinfachte formale Darstellung der Aktualisierungsregel für die Ever-Visit MC-Methode sieht wie folgt aus \cite[S.~119]{Sutton1998}:
+
+\begin{equation}
+    V(S_t) \leftarrow V(S_t) + \alpha \left[G_t - V(S_t)\right]
+\end{equation}
+
+Im Gegensatz dazu, müssen die TD-Methoden lediglich bis zu dem nächsten Zeitstempel warten, um eine Aktualiserung vorzunehmen. Dazu wird zum Zeitpunkt $t+1$ sofort ein Ziel gebildet, welches aus der Belohnung $R_{t+1}$ und dem geschätzen Nutzen $V(S_{t+1})$ zusammengesetzt ist. Die Aktualisierungsregel für die einfachste Form des TD lautet somit \cite[S.~120]{Sutton1998}:
+\begin{equation}
+    V(S_t) \leftarrow V(S_t) + \alpha \left[R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\right]
+\end{equation}
+Statt dem Ziel $G_t$ der MC-Methoden, ist das Ziel des TD-Learnings $R_{t+1} + \gamma V(S_{t+1})$. Da der Wert für $V(S_{t+1})$ ein geschätzer Wert ist, aber dennoch für die Aktualiserung verwendet wird, \textit{bootstrappt} das TD-Learning. Dies ist notwendig, um nicht den realen Gewinn nach Abschluss einer Epsiode verwenden zu müssen, sondern diesen gewissermaßen aufspalten zu können und nur auf Basis der aktuellen Belohnung eine Anpassung vorzunehmen. Diese Aufspaltung basiert auf der fundamentalen Erkenntnis, dass Gewinne aufeinanderfolgender Zeitstempel in Verbindung stehen (siehe Kapitel \ref{Gewinne}) und somit gilt \cite[S.~120]{Sutton1998}: 
+\begin{equation}\label{eq:targets}
+\begin{aligned}
+v_\pi &= \EX_\pi\left[G_t \mid S_t = s \right] \\
+&= \EX_\pi\left[R_{t+1} + \gamma G_{t+1} \mid S_t = s \right] \\
+        &= \EX_\pi\left[R_{t+1} + \gamma v_\pi(S_{t+1}) \mid S_t = s \right]
+\end{aligned}
+\end{equation}
+
+Anhand von \ref{eq:targets} lässt sich der Zusammenhang der drei großen Gruppen von Lernmethoden sehr gut zusammenfassen. Die erste Zeile beschreibt den geschätzen Wert, den die Monte-Carlo Methoden als Ziel verwenden. Es handelt sich um einen Schätzwert, da der Erwartungswert unbekannt ist und stattdessen mit dem Durschnitt gesammelter Gewinne gerechnet wird. 
+\par 
+Die Dynamische Programmierung benutzt den Schätzwert, der sich aus der dritten Zeile ergibt. Dabei bezieht sich das Schätzen nicht auf die eigentlichen Erwartungswerte, denn diese können berechnet werden, da ein perfektes Modell der Umgebung mit allen Übergangswahrscheinlichkeiten vorhanden ist. Ausschlaggebend ist, dass $v_\pi(S_{t+1})$ zum Zeitpunkt $t$ nicht berechnet wird, sondern von dem derzeitige geschätzte Nutzen $V_{t+1}$ Gebrauch gemacht wird \cite[S.~120]{Sutton1998}.
+\par 
+Das TD-target ist eine Schätzung aufgrund beider Gründe, die in den zwei vorrigen Absätzen erläutert wurden. Es basiert auf der Sammlung von Erfahrung, um den Erwartungswert bzw. die Werte in der dritten Zeile von \ref{eq:targets} schätzen zu können und gleichzeitig wird der derzeitg geschätze Nutzen $V$ anstelle des wahren Wertes von $v_\pi$ verwendet \cite[S.~120f]{Sutton1998}.
+\par
+\cite{Sutton1998} fassen sehr gut zusammen: \glqq TD vereinigt die Probenahme (\textit{sampling}) der MC-Methoden mit dem \textit{bootstrapping} der DP\grqq{} (S.~121).
 
 \pagebreak
 \subsubsection{SARSA}
