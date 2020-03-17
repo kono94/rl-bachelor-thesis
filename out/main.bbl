@@ -187,6 +187,35 @@ Howard, R\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Jaakkola%
+, Jordan%
+\BCBL {}\ \BBA {} Singh%
+}{%
+Jaakkola%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1994}}%
+}]{%
+jaakkola1994convergence}
+\APACinsertmetastar {%
+jaakkola1994convergence}%
+\begin{APACrefauthors}%
+Jaakkola, T.%
+, Jordan, M\BPBI I.%
+\BCBL {}\ \BBA {} Singh, S\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Convergence of stochastic iterative dynamic programming
+  algorithms} {Convergence of stochastic iterative dynamic programming
+  algorithms}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 703--710).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kumar%
 }{%
 Kumar%
@@ -236,6 +265,37 @@ Mehlhorn, K.%
   and data structures: The basic toolbox}.
 \newblock
 \APACaddressPublisher{}{Springer Science \& Business Media}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mnih%
+\ \protect \BOthers {.}}{%
+Mnih%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+dqn}
+\APACinsertmetastar {%
+dqn}%
+\begin{APACrefauthors}%
+Mnih, V.%
+, Kavukcuoglu, K.%
+, Silver, D.%
+, Graves, A.%
+, Antonoglou, I.%
+, Wierstra, D.%
+\BCBL {}\ \BBA {} Riedmiller, M\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Playing Atari with Deep Reinforcement Learning} {Playing
+  atari with deep reinforcement learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CoRR}{abs/1312.5602}{}{}.
+\newblock
+\begin{APACrefURL} \url{http://arxiv.org/abs/1312.5602} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -350,6 +410,30 @@ Saul, L.%
 
 \bibitem [\protect \citeauthoryear {%
 Sutton%
+}{%
+Sutton%
+}{%
+{\protect \APACyear {1988}}%
+}]{%
+sutton1988TD}
+\APACinsertmetastar {%
+sutton1988TD}%
+\begin{APACrefauthors}%
+Sutton, R\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1988}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning to predict by the methods of temporal
+  differences} {Learning to predict by the methods of temporal
+  differences}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine learning}{3}{1}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sutton%
 \ \BBA {} Barto%
 }{%
 Sutton%
@@ -378,9 +462,57 @@ Sutton, R\BPBI S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Watkins%
+Tsitsiklis%
 }{%
-Watkins%
+Tsitsiklis%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+tsitsiklis1994asynchronous}
+\APACinsertmetastar {%
+tsitsiklis1994asynchronous}%
+\begin{APACrefauthors}%
+Tsitsiklis, J\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Asynchronous stochastic approximation and Q-learning}
+  {Asynchronous stochastic approximation and q-learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine learning}{16}{3}{185--202}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+C\BPBI J.~Watkins%
+\ \BBA {} Dayan%
+}{%
+C\BPBI J.~Watkins%
+\ \BBA {} Dayan%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+dayan}
+\APACinsertmetastar {%
+dayan}%
+\begin{APACrefauthors}%
+Watkins, C\BPBI J.%
+\BCBT {}\ \BBA {} Dayan, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Q-learning} {Q-learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine learning}{8}{3-4}{279--292}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+C\BPBI J\BPBI C\BPBI H.~Watkins%
+}{%
+C\BPBI J\BPBI C\BPBI H.~Watkins%
 }{%
 {\protect \APACyear {1989}}%
 }]{%

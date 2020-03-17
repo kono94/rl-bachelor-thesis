@@ -16,6 +16,7 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Strategieverbesserung}{23}% 
 \contentsline {subsubsection}{\numberline {3.1.3}Strategieiteration}{24}% 
 \contentsline {subsubsection}{\numberline {3.1.4}Nutzeniteration}{24}% 
+\contentsline {subsubsection}{\numberline {3.1.5}Zusammenfassung}{25}% 
 \contentsline {subsection}{\numberline {3.2}Monte-Carlo Methoden}{25}% 
 \contentsline {subsubsection}{\numberline {3.2.1}Vorhersageproblem}{26}% 
 \contentsline {subsubsection}{\numberline {3.2.2}Exploration}{27}% 
@@ -24,20 +25,20 @@
 \contentsline {subsubsection}{\numberline {3.2.5}Zusammenfassung}{30}% 
 \contentsline {subsection}{\numberline {3.3}Temporal Difference Learning}{31}% 
 \contentsline {subsubsection}{\numberline {3.3.1}Vorhersageproblem}{31}% 
-\contentsline {subsubsection}{\numberline {3.3.2}SARSA}{34}% 
-\contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{35}% 
-\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{35}% 
-\contentsline {section}{\numberline {4}Praktischer Teil}{35}% 
-\contentsline {subsection}{\numberline {4.1}Implementierung}{35}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{35}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{38}% 
-\contentsline {subsection}{\numberline {4.2}Jumping Dino}{39}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{39}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{39}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{39}% 
-\contentsline {subsection}{\numberline {4.3}Ant-Game}{39}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{39}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{39}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{39}% 
-\contentsline {section}{\numberline {5}Fazit}{39}% 
-\contentsline {section}{\numberline {6}Ausblick}{39}% 
+\contentsline {subsubsection}{\numberline {3.3.2}SARSA}{35}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{37}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{38}% 
+\contentsline {section}{\numberline {4}Praktischer Teil}{39}% 
+\contentsline {subsection}{\numberline {4.1}Implementierung}{39}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{39}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{41}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{42}% 
+\contentsline {subsection}{\numberline {4.3}Ant-Game}{42}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{42}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{42}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{42}% 
+\contentsline {section}{\numberline {5}Fazit}{42}% 
+\contentsline {section}{\numberline {6}Ausblick}{42}% 

@@ -1,4 +1,4 @@
-Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden.
+Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden bzw. als Grundlage für das, in Kapitel \ref{sec:GPI} beschriebene, Konzept der \textit{Generalized Policy Iteration} dienen.
 \par 
 Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Optimierungsproblems in Teilprobleme. Dabei wird mit einem trivialem Problem gestartet und die optimale Lösung für jenes in einer Tabelle gespeichert, welches anschließend für die Lösung eines sukzessiv größer werdendes Problem verwendet wird \cite[S.~243]{mehlhorn}.
 \par 
@@ -8,7 +8,7 @@ Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahr
 \par
 
 \subsubsection{Strategieevaluierung}\label{sec:evaluierung}
-Wichtiger Bestandteil eines jeden RL Algorithmus ist die Berechnung der Zustands-Nutzenfunktion $v_\pi$ (oder Aktions-Nutzenfunktion $q_\pi$) für eine willkürliche Strategie $\pi$. Die geschätzte Nutzenfunktion (unter einer bestimmten Strategie) gegen die wahren Werte der Gewinne streben zu lassen, wird auch als Strategieevaluierung (\textit{Policy Evaluation}) bezeichnet \cite[S.~74]{Sutton1998}.
+Wichtiger Bestandteil eines jeden RL Algorithmus ist die Berechnung der Zustands-Nutzenfunktion $v_\pi$ (oder Aktions-Nutzenfunktion $q_\pi$) für eine willkürliche Strategie $\pi$. Die geschätzte Nutzenfunktion (unter einer bestimmten Strategie) gegen die wahren erwartbaren Werte der Gewinne streben zu lassen, wird auch als Strategieevaluierung (\textit{Policy Evaluation}) bezeichnet \cite[S.~74]{Sutton1998}.
 \par 
 Die Vorgehensweise der DP um dieses Vorhersageproblem (\textit{Prediction Problem}) zu lösen, lässt sich folgendermaßen beschreiben. Zunächst wird eine willkürliche Nutzenfunktion $v_0$ gewählt, z.B. sind alle Nutzen zu Beginn mit 0 definiert. Die Bellman-Gleichung wird nun als Aktualisierungsregel angesehen, die Schritt für Schritt die geschätzten Nutzen verbessert. Es entsteht eine Reihenfolge von geschätzten Nutzenfunktionen $v_0$, $v_1$, $v_2$, \dots, die letztendlich zu $v_\pi$ konvergiert. \cite{Sutton1998} definieren die Aktualisierungsregel wie folgt (S.~74):
 \begin{equation}\label{eq:fullbackup}
@@ -18,10 +18,10 @@ Die Vorgehensweise der DP um dieses Vorhersageproblem (\textit{Prediction Proble
     \end{aligned}
 \end{equation}
 
-Mit Worten beschrieben, wird die Aktualisierungsregel in jeder Iteration auf alle Zustände $s \in \mathcal{S}$ angewendet. Dabei wird der alte Nutzen eines Zustands durch einen neuen Nutzen ersetzt, der auf dem erwarteten Nutzen aller Nachfolgezustände und der sofortigen Belohnung beruht, gewichtet nach den Übergangswahrscheinlichkeiten \cite[S.~20]{Wiering}. Hierbei ist festzustellen, dass die  Aktualisierung des geschätzen Nutzen für einen Zustand auf den ebenfalls geschätzen Nutzen der nachfolgenden Zustände stattfindet. DP-Methoden benutzen also das Prinzip des \textit{bootstrapping} \cite[S.~89]{Sutton1998}.
+Mit Worten beschrieben, wird die Aktualisierungsregel in jeder Iteration auf alle Zustände $s \in \mathcal{S}$ angewendet. Dabei wird der alte Nutzen eines Zustands durch einen neuen Nutzen ersetzt, der auf dem erwarteten Nutzen aller Nachfolgezustände und der sofortigen Belohnung beruht, gewichtet nach den Übergangswahrscheinlichkeiten \cite[S.~20]{Wiering}. Hierbei ist festzustellen, dass die  Aktualisierung des geschätzen Nutzens für einen Zustand, auf den ebenfalls geschätzen Nutzen der nachfolgenden Zustände stattfindet. DP-Methoden benutzen also das Prinzip des \textit{bootstrapping} \cite[S.~89]{Sutton1998}.
 
 \subsubsection{Strategieverbesserung}
-Ist eine suboptimale Strategie vollständig evaluiert worden, d.h. ist die Nutzenfunktion $v_\pi$ präsent, dann kann diese genutzt werden, um eine besser Strategie zu finden. Dazu wird zunächst $q_\pi$ berechnet durch \cite[S.~21]{Wiering}:
+Ist eine suboptimale Strategie vollständig evaluiert worden, d.h. ist die Nutzenfunktion $v_\pi$ präsent, dann kann diese genutzt werden, um eine bessere Strategie, $\pi'$, zu finden. Dazu wird zunächst $q_\pi$ berechnet durch \cite[S.~21]{Wiering}:
 
 \begin{equation}\label{eq:qBerechnung}
     \begin{aligned}
@@ -29,7 +29,7 @@ Ist eine suboptimale Strategie vollständig evaluiert worden, d.h. ist die Nutze
     \end{aligned}
 \end{equation}
 
-Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathcal{A}$, dann ist es besser die Aktion $a$ auszuführen, als jene Aktion, die durch die aktuelle Strategie $\pi$ gewählt wird. Wird diese Verbesserung (\textit{Policy Improvement}) für alle Zustände durchgeführt, dann ergibt sich die gierige (\textit{greedy}) Strategie $\pi'$, die die besten Aktionen basierend auf die aktuelle Nutzenfunktion ausführt.
+Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathcal{A}$, dann ist es besser die Aktion $a$ auszuführen, als jene Aktion, die durch die aktuelle Strategie $\pi$ gewählt wird. Wird diese Verbesserung (\textit{Policy Improvement}) für alle Zustände durchgeführt, dann ergibt sich die gierige (\textit{greedy}) Strategie $\pi'$, die die besten Aktionen basierend auf den Werten der aktuellen Aktions-Nutzentabelle ausführt.
 
 \subsubsection{Strategieiteration}
 Eine Methode, die die zwei Prozesse zum Evaluieren und der Verbesserung einer Strategie zusammenführt, ist die sog. Strategieiteration \textit{Policy Iteration}, die ihren Ursprung in den Arbeiten von \cite{bellman1957dynamic} und \cite{howard1960dynamic} hat. 
@@ -44,9 +44,10 @@ Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
 \subsubsection{Nutzeniteration}\label{sec:Nutzeniteration}
 In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iteration durchlaufen muss, um letzendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
 \par 
-Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokusiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zur Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
+Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokusiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
 
 \begin{equation}\label{eq:valueItSeq}
     v_0 \rightarrow v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow \dots \rightarrow v_*
 \end{equation}
 
+\subsubsection{Zusammenfassung}

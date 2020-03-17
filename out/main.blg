@@ -19,45 +19,45 @@ Warning--entry type for "linkedHashMap" isn't style-file defined
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in howard1960dynamic
 Warning--No journal in watkins1989learning
-You've used 17 entries,
+You've used 22 entries,
             6951 wiz_defined-function locations,
-            1373 strings with 13254 characters,
-and the built_in function-call counts, 30040 in all, are:
-= -- 3905
-> -- 232
-< -- 1269
-+ -- 1252
-- -- 39
-* -- 1764
-:= -- 5128
-add.period$ -- 73
-call.type$ -- 17
-change.case$ -- 309
+            1405 strings with 14003 characters,
+and the built_in function-call counts, 40064 in all, are:
+= -- 5195
+> -- 317
+< -- 1683
++ -- 1754
+- -- 49
+* -- 2363
+:= -- 6780
+add.period$ -- 95
+call.type$ -- 22
+change.case$ -- 395
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 745
-empty$ -- 1265
-format.name$ -- 379
-if$ -- 5991
+cite$ -- 46
+duplicate$ -- 1078
+empty$ -- 1662
+format.name$ -- 529
+if$ -- 7951
 int.to.chr$ -- 0
-int.to.str$ -- 55
+int.to.str$ -- 70
 missing$ -- 0
-newline$ -- 425
-num.names$ -- 138
-pop$ -- 646
+newline$ -- 550
+num.names$ -- 178
+pop$ -- 823
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 90
 quote$ -- 0
-skip$ -- 2145
+skip$ -- 2824
 stack$ -- 0
-substring$ -- 1374
-swap$ -- 407
-text.length$ -- 38
+substring$ -- 1958
+swap$ -- 584
+text.length$ -- 54
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1696
+type$ -- 2160
 warning$ -- 2
-while$ -- 131
+while$ -- 188
 width$ -- 0
-write$ -- 507
+write$ -- 662
 (There were 4 warnings)
