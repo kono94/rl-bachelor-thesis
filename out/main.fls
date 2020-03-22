@@ -270,6 +270,13 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT images/Interfaces.png
 INPUT ./images/Interfaces.png
 INPUT ./images/Interfaces.png
+INPUT part3/JumpingDino.tex
+INPUT part3/JumpingDino.tex
+INPUT images/jumpingDinoUmg.png
+INPUT ./images/jumpingDinoUmg.png
+INPUT ./images/jumpingDinoUmg.png
+INPUT part3/AntGame.tex
+INPUT part3/AntGame.tex
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd

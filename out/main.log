@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  17 MAR 2020 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  22 MAR 2020 14:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -487,6 +487,9 @@ or  <return>  to continue without it.
 
 LaTeX Warning: Label `fig:GPI' multiply defined.
 
+
+LaTeX Warning: Label `fig:2-Wege-2' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -699,7 +702,13 @@ File: images/Interfaces.png Graphic file (type png)
 <use images/Interfaces.png>
 Package pdftex.def Info: images/Interfaces.png  used on input line 35.
 (pdftex.def)             Requested size: 303.53267pt x 288.22845pt.
-) [41 <./images/Interfaces.png (PNG copy)>] [42] (out/main.bbl
+) (./part3/JumpingDino.tex [41 <./images/Interfaces.png (PNG copy)>]
+<images/jumpingDinoUmg.png, id=166, 790.45313pt x 192.72pt>
+File: images/jumpingDinoUmg.png Graphic file (type png)
+<use images/jumpingDinoUmg.png>
+Package pdftex.def Info: images/jumpingDinoUmg.png  used on input line 15.
+(pdftex.def)             Requested size: 216.81pt x 52.85847pt.
+ [42] [43 <./images/jumpingDinoUmg.png>] [44] [45]) (./part3/AntGame.tex) [46] (out/main.bbl
 
 out/main.bbl:23: Package inputenc Error: Unicode character ・ (U+30FB)
 (inputenc)                not set up for use with LaTeX.
@@ -721,24 +730,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43]) [44] (./anhang.tex) [45] (out/main.aux)
+ [47]) [48] (./anhang.tex) [49] (out/main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 11265 strings out of 492616
- 178290 string characters out of 6129481
- 413567 words of memory out of 5000000
- 14684 multiletter control sequences out of 15000+600000
- 32720 words of font info for 153 fonts, out of 8000000 for 9000
+ 11283 strings out of 492616
+ 178626 string characters out of 6129481
+ 413578 words of memory out of 5000000
+ 14691 multiletter control sequences out of 15000+600000
+ 32886 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,12n,51p,9194b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (45 pages, 1238899 bytes).
+Output written on out/main.pdf (49 pages, 1258127 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 284 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 25114 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 25119 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -32,13 +32,13 @@
 \contentsline {subsection}{\numberline {4.1}Implementierung}{39}% 
 \contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{39}% 
 \contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{41}% 
-\contentsline {subsection}{\numberline {4.2}Jumping Dino}{42}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino}{41}% 
 \contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{42}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{42}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Konvergenzverhalten}{42}% 
-\contentsline {subsection}{\numberline {4.3}Ant-Game}{42}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{42}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{42}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Konvergenzverhalten}{42}% 
-\contentsline {section}{\numberline {5}Fazit}{42}% 
-\contentsline {section}{\numberline {6}Ausblick}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{44}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{45}% 
+\contentsline {subsection}{\numberline {4.3}Ant-Game}{46}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{46}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{46}% 
+\contentsline {subsection}{\numberline {4.4}Ergebnisse}{46}% 
+\contentsline {section}{\numberline {5}Fazit}{46}% 
+\contentsline {section}{\numberline {6}Ausblick}{46}% 
