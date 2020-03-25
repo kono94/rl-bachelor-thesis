@@ -28,17 +28,19 @@
 \contentsline {subsubsection}{\numberline {3.3.2}SARSA}{35}% 
 \contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{37}% 
 \contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{38}% 
-\contentsline {section}{\numberline {4}Praktischer Teil}{39}% 
+\contentsline {section}{\numberline {4}Praktischer Teil}{38}% 
 \contentsline {subsection}{\numberline {4.1}Implementierung}{39}% 
 \contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{39}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{41}% 
-\contentsline {subsection}{\numberline {4.2}Jumping Dino}{41}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{42}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{44}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{45}% 
-\contentsline {subsection}{\numberline {4.3}Ant-Game}{46}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Problemstellung}{46}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Zustandsmodellierung}{46}% 
-\contentsline {subsection}{\numberline {4.4}Ergebnisse}{46}% 
-\contentsline {section}{\numberline {5}Fazit}{46}% 
-\contentsline {section}{\numberline {6}Ausblick}{46}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{42}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{43}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{45}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{46}% 
+\contentsline {subsection}{\numberline {4.3}Ant-Game}{47}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Inspiration}{48}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Problemstellung}{48}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Zustandsmodellierung}{49}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Belohnungsfunktion}{49}% 
+\contentsline {subsection}{\numberline {4.4}Ergebnisse}{49}% 
+\contentsline {section}{\numberline {5}Fazit}{49}% 
+\contentsline {section}{\numberline {6}Ausblick}{49}% 

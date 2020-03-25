@@ -379,6 +379,31 @@ Oracle.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Russel%
+\ \BBA {} Norvig%
+}{%
+Russel%
+\ \BBA {} Norvig%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+wumpus}
+\APACinsertmetastar {%
+wumpus}%
+\begin{APACrefauthors}%
+Russel, J\BPBI S.%
+\BCBT {}\ \BBA {} Norvig, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2002}.
+\newblock
+\APACrefbtitle {A modern approach} {A modern approach}.
+\newblock
+\APACaddressPublisher{}{Prentice Hall}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Saul%
 \ \BBA {} Jordan%
 }{%

@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage{listings}
 \usepackage[article, total={6in, 8in}]{geometry}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -22,6 +23,41 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage[noend]{algpseudocode}
+
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
 
 \begin{spacing}{1.0}
 	\bibliographystyle{apacite}
@@ -104,7 +140,7 @@
 	\subsection{Markov Entscheidungsprozess}
 	\input{part1/MDP.tex}
 
-	\subsection{Markov-Eigenschaft und Zustandsmodellierung}
+	\subsection{Markov-Eigenschaft und Zustandsmodellierung}\label{sec:MP}
 	\input{part1/MP.tex}
 	\pagebreak
 
@@ -138,6 +174,7 @@
 	\input{part2/TemporalDifference.tex}
 
 \section{Praktischer Teil}
+	\input{part3/praktischerTeil.tex}
 	\subsection{Implementierung}
 	\input{part3/Implementierung.tex}
 	\subsection{Jumping Dino}
