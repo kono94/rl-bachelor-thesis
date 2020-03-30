@@ -14,7 +14,7 @@ Auf eine aufwendige Visualisierung des Spielgeschehens wurde verzichtet, der Din
     \begin{center}
     \includegraphics[width=0.5\textwidth]{images/jumpingDinoUmg.png}  \end{center}
     \caption{Jumping Dino Umgebung}
-    \label{fig:2-Wege-2}
+    \label{fig:jumpingDinoUmg}
 \end{figure}
 
 Bei jedem Tick kann der Agent zwischen zwei Aktionen wählen, JUMP und NOTHING. Befindet sich der Agent bereits im Sprung, so ist es dennoch möglich die Aktion JUMP auszuwählen, sie hat jedoch keinen Effekt. Eine Episode endet, wenn eine Kollision zwischen dem Dino und dem Hindernis registriert wird.
@@ -34,11 +34,11 @@ In dem \textit{Jumping Dino Simple} Szenario muss der Agent lernen, im richtigen
 \par 
 Den Zustand nur anhand der Distanz zu verwirklichen ist bei der \textit{Advanced} Variante nicht ausreichend, um optimale Entscheidung zu treffen. Schnelle Hindernisse müssen frühzeitiger übersprungen werden, langsame hingehen erst kurz vor einer Kollision. Eine zweite Information muss somit gegeben sein, die Geschwindigkeit der Hindernisse.
 \par 
-Im späteren Verlauf der Untersuchungen zu dem Konvergenzverhalten, die in Kapitel 5 näher erläutert werden, stellt sich heraus, dass der Zustand um eine boolische Flag erweitert werden muss, die aussagt, ob der Dino sich im Sprung befindet oder nicht. 
+Im späteren Verlauf der Untersuchungen zu dem Konvergenzverhalten, die in Kapitel 5 näher erläutert werden, stellt sich heraus, dass der Zustand um eine boolesche Flag erweitert werden muss, die aussagt, ob der Dino sich im Sprung befindet oder nicht. 
 Es ergeben sich insgesamt drei unterschiedliche Zustandsmodellierungen, die auf folgenden Variablen beruhen:
 \begin{itemize}
  \item $dist$: \textit{Integer}, Abstand zwischen rechter Kante des Dinos und  linker Kante des Hindernisses
- \item $inJump$: \textit{Boolean}, Boolischer Wert, ob sich der Dino in einem Sprung befindet und somit die Aktion \textit{JUMP} keine Auswirkung hat.
+ \item $inJump$: \textit{Boolean}, Boolescher Wert, ob sich der Dino in einem Sprung befindet und somit die Aktion \textit{JUMP} keine Auswirkung hat.
  \item $obsSpeed$: \textit{Integer}, Geschwindigkeit, mit der das Hindernis nach links wandert. Bei dem \textit{Jumping Dino Advanced} kann diese Variable vier unterschiedliche Werte annehmen.    
 \end{itemize}
 \begin{equation}
@@ -48,9 +48,9 @@ Es ergeben sich insgesamt drei unterschiedliche Zustandsmodellierungen, die auf 
 \end{equation}
 
 Die Kombination des Zustandraumes mit den zwei ausführbaren Aktionen ergibt die Anzahl der möglichen Zustands-Aktions-Paare, für die Werte in der Aktions-Nutzentabelle gespeichert werden. Es gibt zwei Szenarien \textit{Simple} und \textit{Advanced} und drei Zustandsmodellierungen $Z_1, Z_2$ und $Z_3$.
-Für das Szenario \textit{Simple} ist die Modellierung $Z_3$ redundant, da die Variable $obsSpeed$ nur einen Wert annehmen kann. Wie bereits erwähnt, muss der $obsSpeed$ bei der \textit{Advanced} Variante gegegen sein. 
+Für das Szenario \textit{Simple} ist die Modellierung $Z_3$ redundant, da die Variable $obsSpeed$ nur einen Wert annehmen kann. Wie bereits erwähnt, muss der $obsSpeed$ bei der \textit{Advanced} Variante gegeben sein. 
 \par 
-Wichtig zu erwähnen ist, dass diese Werte sich auf die tatsächlich möglichen $(s,a)$-Paare beziehen. D.h. für die \textit{Simple} Variante ergeben sich für $Z_2$ in der Theorie 62 mögliche Zustände (Abstand des Hindernisses * im Sprung oder nicht, $31*2$). Die Nutzentablle registriert jedoch nur 58 Zustände, da einige Zustände gar nicht erreicht werden können. Für die Abstände $-40, -10, 20$ und $50$ existieren nur die Kombinationen mit $inJump = true$. Der Dino musste vorher springen bzw. befindet sich im Sprung, da ansonsten die Episode zuvor bei einer Kollision vorzeitig beendet werden würde. Das erklärt die abweichenden Größen im Vergleich zu den Werten der theoretischen Kombinationen.
+Wichtig zu erwähnen ist, dass diese Werte sich auf die tatsächlich möglichen $(s,a)$-Paare beziehen. D.h. für die \textit{Simple} Variante ergeben sich für $Z_2$ in der Theorie 62 mögliche Zustände (Abstand des Hindernisses * im Sprung oder nicht, $31*2$). Die Nutzentablle registriert jedoch nur 58 Zustände, da einige Zustände gar nicht erreicht werden können. Für die Abstände $-40, -10, 20$ und $50$ existieren nur die Kombinationen mit $inJump = true$. Der Dino muss vorher gesprungen sein bzw. befindet sich im Sprung, da ansonsten die Episode zuvor bei einer Kollision vorzeitig beendet werden würde. Das erklärt die abweichenden Größen im Vergleich zu den Werten der theoretischen Kombinationen.
 \par 
 Gesamtanzahl aller gespeicherten Aktions-Nutzen:
 \begin{equation}
@@ -61,9 +61,25 @@ G_{advanced, Z_3} = 4146 \quad
 
 
 \subsubsection{Belohnungsfunktion}
+//TODO
+B1: +1 pro Zeitstempel +0 wenn Kollision
+B2: +1 pro Zeitstempel -1 wenn SPRINGEN im Sprung, +0 wenn Kollision
+B3: +0 pro Zeitstempel -1 wenn Kollision
+B4: +0 pro Zeitstempel, -1 wenn Springen im Sprung, -1 wenn Kollision
 Im Kapitel \ref{sec:belohnung} wurde darauf eingegangen, wie in eine Belohnungsfunktion gewählt werden sollte. Die Schlussfolgerung war, dass eine Belohnungsfunktion dem Agenten vermitteln soll, \textit{was} er erreichen soll und nicht \textit{wie} er es erreichen soll \cite[S.~54]{Sutton1998}.
 \par 
 Die Aufgabe des hüpfenden Dinos besteht darin, die Episode so lang wie möglich zu überleben. Anders formuliert soll die Episode eine maximale Anzahl von Zeitstempeln andauern. Um dieses Ziel als Belohungssignal zu modellieren, reicht es aus dem Agenten zu jedem Zeitpunkt $t$ eine Belohnung von +1 mitzuteilen. Einzige Ausnahme ist hierbei das Erreichen eines Terminalzustandes. Kollidiert der Dino mit einem Hindernis, so erhält er die Belohnung +0 und die Episode ist beendet. Der Gewinn einer Episode richtet sich somit nach der Anzahl der Zeitstempel. Eine explizite Modellierung der Hindernisse oder die Vergabe von Belohnungen für das Überspringen dieser ist nicht notwendig, da der Agent implizit lernt, Hindernisse zu überspringen, um die Summe der Belohnungen zu maximieren. 
 \par 
-//TODO
+Eine abweichende Belohnungsvergabe ergibt sich bei Lernmethoden, die nach jedem Schritt eine Anpassung der Nutzen vornehmen. Anstatt die Summe aller Belohnungen einer Episode zu maximieren, wie es die Monte-Carlo Methoden machen, basieren die Aktualisierung bei dem \textit{Temporal-Difference Learning} auf der sofortigen Belohnung und dem geschätzen Nutzen des Folgezustands. Als Initialwert für sämtliche Aktions-Nutzen wird 0 gewählt. Statt dem Agenten positive Belohnungen zu vergeben, damit die Summe dieser auf Episodenbasis maximiert werden kann, wird nun mit negativen Belohnungen für fehlerhaftes Verhalten gearbeitet. Das bedeutet für das Jumpin Dino Spiel, dass für jeden Zeitstempel eine neutrale Belohnung von +0 verteilt wird, aber für den Fall einer Kollision -1. Dies hat zudem den positiven Effekt auf die Exploration, denn Aktionen, die zu einer Kollsion geführt haben, nehmen einen negativen Wert an und werden daraufhin von einer gierigen Strategie zunächst ignoriert, weil andere mögliche Aktionen für diesen Zustand einen höheren Nutzen haben, den Intilialwert 0.
 \par 
+Es soll zudem getestet werden, ob das Konvergenzverhalten beeinflusst wird, wenn der Agent negatives Feedback bekommt, wenn er die Aktion JUMP wählt, während er sich bereits in einem Sprung befindet. 
+\par
+Es ergeben sich somit vier Belohnungsfunktionen:
+\begin{multline}
+    \begin{aligned}
+& B_{1} =  \begin{bmatrix} +1 \text{ pro Zeitstempel}\\  +0 \text{ bei Kollsion} \end{bmatrix}, \quad
+B_{2} =  \begin{bmatrix} +0 \text{ pro Zeitstempel} \\ -1 \text{ bei Kollision}   \end{bmatrix}, \\
+& B_{3} =  \begin{bmatrix}  +1 \text{ pro Zeitstempel}\\  +0 \text{ bei Kollsion} \\ -1 \text{ wenn JUMP im Sprung}   \end{bmatrix},
+B_{4} =  \begin{bmatrix} +0 \text{ pro Zeitstempel} \\ -1 \text{ bei Kollision} \\  -1 \text{ wenn JUMP im Sprung}   \end{bmatrix}
+\end{aligned}
+\end{multline}

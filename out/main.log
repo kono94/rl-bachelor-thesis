@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  25 MAR 2020 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  30 MAR 2020 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -149,7 +149,7 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              `\addtokomafont' for the page style elements need
 (scrartcl)              explicite user intervention to work.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 6.
+(scrartcl)              package `fancyhdr' on input line 7.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
@@ -505,28 +505,21 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-(out/main.aux
-
-LaTeX Warning: Label `fig:GPI' multiply defined.
-
-
-LaTeX Warning: Label `fig:2-Wege-2' multiply defined.
-
-)
+(out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count133
@@ -613,7 +606,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \microtypecontext on input line 99.
+LaTeX Info: Redefining \microtypecontext on input line 97.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -634,7 +627,7 @@ LaTeX Info: Redefining \BHBI on input line 143.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 126.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 124.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -642,64 +635,368 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 126.
- (out/main.toc [2])
+Package tocbasic Info: character protrusion at toc deactivated on input line 124.
+
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3]
-Package tocbasic Info: character protrusion at lof deactivated on input line 128.
- (out/main.lof)
+[2]
+Package tocbasic Info: character protrusion at lof deactivated on input line 126.
+
+No file main.lof.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [4] (./part1/einleitung.tex) [5] (./part1/grundlagen.tex) (./part1/MDP.tex
+[3] (./part1/einleitung.tex) [4] (./part1/grundlagen.tex) (./part1/MDP.tex
 
-./part1/MDP.tex:2: Package inputenc Error: Unicode character ∏ (U+220F)
+Package natbib Warning: Citation `Gosavi' on page 5 undefined on input line 1.
+
+
+./part1/MDP.tex:1: Package inputenc Error: Unicode character ∏ (U+220F)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2 ...theoretische Aussagen treffen zu können∏
+l.1 ...theoretische Aussagen treffen zu können∏
                                                    Als \textit{MDP} versteht...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[6]
-<images/agentUmweltInterface.png, id=32, 675.52374pt x 353.32pt>
+
+Package natbib Warning: Citation `Sutton1998' on page 5 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Gosavi' on page 5 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Gosavi' on page 5 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 5 undefined on input line 3.
+
+[5]
+<images/agentUmweltInterface.png, id=29, 675.52374pt x 353.32pt>
 File: images/agentUmweltInterface.png Graphic file (type png)
 <use images/agentUmweltInterface.png>
-Package pdftex.def Info: images/agentUmweltInterface.png  used on input line 10.
+Package pdftex.def Info: images/agentUmweltInterface.png  used on input line 9.
 (pdftex.def)             Requested size: 287.86171pt x 150.56305pt.
-LaTeX Font Info:    Try loading font information for U+eus on input line 16.
+LaTeX Font Info:    Try loading font information for U+eus on input line 15.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-) [7 <./images/agentUmweltInterface.png>]
+)
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 39.
+Package natbib Warning: Citation `watkins1989learning' on page 6 undefined on input line 17.
 
-[8]) (./part1/MP.tex [9]
-<images/2passagesDefault.png, id=55, 304.13625pt x 608.2725pt>
+
+Package natbib Warning: Citation `Wiering' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `YuMDP' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 6 undefined on input line 19.
+
+[6 <./images/agentUmweltInterface.png>]
+
+Package natbib Warning: Citation `Sutton1998' on page 7 undefined on input line 25.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 7 undefined on input line 31.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 38.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 7 undefined on input line 41.
+
+[7]) (./part1/MP.tex
+
+Package natbib Warning: Citation `Feldman2010' on page 8 undefined on input line 7.
+
+
+Package natbib Warning: Citation `kumar2014markov' on page 8 undefined on input line 7.
+
+
+Package natbib Warning: Citation `capela2019monogamy' on page 8 undefined on input line 7.
+
+
+Package natbib Warning: Citation `SaulMarkov' on page 8 undefined on input line 7.
+
+
+Package natbib Warning: Citation `Brunskill' on page 8 undefined on input line 7.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 8 undefined on input line 9.
+
+
+Package natbib Warning: Citation `Brunskill' on page 8 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Brunskill' on page 8 undefined on input line 13.
+
+[8]
+<images/2passagesDefault.png, id=52, 304.13625pt x 608.2725pt>
 File: images/2passagesDefault.png Graphic file (type png)
 <use images/2passagesDefault.png>
 Package pdftex.def Info: images/2passagesDefault.png  used on input line 17.
 (pdftex.def)             Requested size: 100.37454pt x 200.75073pt.
-<images/2passagesStart.png, id=56, 329.23pt x 651.43375pt>
+<images/2passagesStart.png, id=53, 329.23pt x 651.43375pt>
 File: images/2passagesStart.png Graphic file (type png)
 <use images/2passagesStart.png>
 Package pdftex.def Info: images/2passagesStart.png  used on input line 26.
 (pdftex.def)             Requested size: 101.4574pt x 200.75073pt.
- [10 <./images/2passagesDefault.png>]) [11 <./images/2passagesStart.png>] (./part1/BelohnungenZielstrebigkeit.tex [12]) (./part1/GewinnEpisoden.tex [13] [14]) [15] (./part1/StrategieNutzenfunktion.tex [16]) (./part1/Optimalitaet.tex [17] [18]) (./part1/GPI.tex [19]
-<images/gpi.jpg, id=91, 3791.16376pt x 1632.0975pt>
+
+
+LaTeX Warning: Reference `fig:2-Wege-1' on page 9 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:2-Wege-2' on page 9 undefined on input line 31.
+
+[9 <./images/2passagesDefault.png>]) [10 <./images/2passagesStart.png>] (./part1/BelohnungenZielstrebigkeit.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 11 undefined on input line 1.
+
+[11]
+
+Package natbib Warning: Citation `Sutton1998' on page 12 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 12 undefined on input line 14.
+
+) (./part1/GewinnEpisoden.tex
+
+LaTeX Warning: Reference `eq:episode' on page 12 undefined on input line 1.
+
+[12]
+
+Package natbib Warning: Citation `Sutton1998' on page 13 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 13 undefined on input line 13.
+
+[13]
+
+Package natbib Warning: Citation `Sutton1998' on page 14 undefined on input line 20.
+
+
+LaTeX Warning: Reference `eq:simpleReturn' on page 14 undefined on input line 29.
+
+
+LaTeX Warning: Reference `eq:discountedReturn' on page 14 undefined on input line 29.
+
+
+LaTeX Warning: Reference `sec:MC' on page 14 undefined on input line 35.
+
+
+LaTeX Warning: Reference `sec:TD' on page 14 undefined on input line 35.
+
+) (./part1/StrategieNutzenfunktion.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 14 undefined on input line 2.
+
+[14]
+
+Package natbib Warning: Citation `Sutton1998' on page 15 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Brunskill' on page 15 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 15 undefined on input line 6.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 15 undefined on input line 11.
+
+) [15] (./part1/Optimalitaet.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 16 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 16 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 16 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 16 undefined on input line 21.
+
+[16]
+
+Package natbib Warning: Citation `Sutton1998' on page 17 undefined on input line 23.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 17 undefined on input line 23.
+
+) (./part1/GPI.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 17 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Wiering' on page 17 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Wiering' on page 17 undefined on input line 1.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 17 undefined on input line 1.
+
+
+Package natbib Warning: Citation `dekking2006modern' on page 17 undefined on input line 2.
+
+[17]
+
+Package natbib Warning: Citation `Wiering' on page 18 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 18 undefined on input line 6.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 18 undefined on input line 6.
+
+<images/gpi.jpg, id=84, 3791.16376pt x 1632.0975pt>
 File: images/gpi.jpg Graphic file (type jpg)
 <use images/gpi.jpg>
 Package pdftex.def Info: images/gpi.jpg  used on input line 10.
 (pdftex.def)             Requested size: 303.53267pt x 130.67007pt.
-) (./part1/ExplorationExploitation.tex [20 <./images/gpi.jpg>]) (./part1/Zusammenfasung.tex) [21] (./part2/DP.tex [22] [23] [24]) (./part2/MonteCarlo.tex [25] [26] [27] [28] [29]) (./part2/TemporalDifference.tex [30]
+
+Package natbib Warning: Citation `Sutton1998' on page 18 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 18 undefined on input line 11.
+
+[18]
+
+LaTeX Warning: Reference `fig:GPI' on page 19 undefined on input line 15.
+
+) (./part1/ExplorationExploitation.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 19 undefined on input line 3.
+
+
+Package natbib Warning: Citation `greedy' on page 19 undefined on input line 4.
+
+[19 <./images/gpi.jpg>]
+
+Package natbib Warning: Citation `Sutton1998' on page 20 undefined on input line 6.
+
+) (./part1/Zusammenfasung.tex) (./part2/DP.tex
+
+LaTeX Warning: Reference `sec:MC' on page 20 undefined on input line 1.
+
+
+LaTeX Warning: Reference `sec:TD' on page 20 undefined on input line 1.
+
+
+LaTeX Warning: Reference `sec:GPI' on page 20 undefined on input line 1.
+
+[20]
+
+Package natbib Warning: Citation `mehlhorn' on page 21 undefined on input line 3.
+
+
+LaTeX Warning: Reference `eq:bellmanValue' on page 21 undefined on input line 5.
+
+
+LaTeX Warning: Reference `sec:optimality' on page 21 undefined on input line 5.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 21 undefined on input line 11.
+
+[21]
+
+Package natbib Warning: Citation `Sutton1998' on page 22 undefined on input line 13.
+
+
+Package natbib Warning: Citation `Wiering' on page 22 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 22 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Wiering' on page 22 undefined on input line 24.
+
+[22]
+
+Package natbib Warning: Citation `bellman1957dynamic' on page 23 undefined on input line 35.
+
+
+Package natbib Warning: Citation `howard1960dynamic' on page 23 undefined on input line 35.
+
+
+LaTeX Warning: Reference `eq:qBerechnung' on page 23 undefined on input line 37.
+
+
+Package natbib Warning: Citation `Wiering' on page 23 undefined on input line 37.
+
+
+Package natbib Warning: Citation `Wiering' on page 23 undefined on input line 39.
+
+
+LaTeX Warning: Reference `sec:evaluierung' on page 23 undefined on input line 45.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 23 undefined on input line 45.
+
+
+Package natbib Warning: Citation `Wiering' on page 23 undefined on input line 47.
+
+) (./part2/MonteCarlo.tex [23]
+
+Package natbib Warning: Citation `Wiering' on page 24 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 24 undefined on input line 6.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 24 undefined on input line 12.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 24 undefined on input line 12.
+
+[24]
+
+Package natbib Warning: Citation `Sutton1998' on page 25 undefined on input line 16.
+
+[25]
+
+Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 23.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 23.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 25.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 29.
+
+[26] [27]
+
+Package natbib Warning: Citation `Sutton1998' on page 28 undefined on input line 32.
+
+
+Overfull \hbox (7.38998pt too wide) in paragraph at lines 32--33
+\T1/cmr/m/n/12 (-20) tho-den zur Be-stim-mung der op-ti-ma-len Stra-te-gie $\OML/cmm/m/it/12 ^^Y[]$ \T1/cmr/m/n/12 (-20) auf Ba-sis der Aktions-Nutzenfunktion
+ []
+
+
+LaTeX Warning: Reference `sec:GPI' on page 28 undefined on input line 71.
+
+
+LaTeX Warning: Reference `sec:Nutzeniteration' on page 28 undefined on input line 71.
+
+[28]) (./part2/TemporalDifference.tex [29]
+
+Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 5.
+
 
 ./part2/TemporalDifference.tex:7: Package inputenc Error: Unicode character ↵ (U+21B5)
 (inputenc)                not set up for use with LaTeX.
@@ -713,72 +1010,224 @@ l.7 ...ing, it would undoubtedly be temporal-di↵
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[31] [32] [33] [34] [35] [36] [37]) (./part3/praktischerTeil.tex [38]) (./part3/Implementierung.tex
+
+Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 7.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 10.
+
+[30]
+
+Package natbib Warning: Citation `Sutton1998' on page 31 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 31 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 31 undefined on input line 24.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 31 undefined on input line 30.
+
+
+LaTeX Warning: Reference `Gewinne' on page 31 undefined on input line 34.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 31 undefined on input line 34.
+
+[31]
+
+LaTeX Warning: Reference `eq:targets' on page 32 undefined on input line 43.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 32 undefined on input line 45.
+
+
+LaTeX Warning: Reference `eq:targets' on page 32 undefined on input line 47.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 32 undefined on input line 47.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 32 undefined on input line 49.
+
+[32]
+
+LaTeX Warning: Reference `eq:tdupdate' on page 33 undefined on input line 51.
+
+
+Package natbib Warning: Citation `sutton1988TD' on page 33 undefined on input line 51.
+
+
+Package natbib Warning: Citation `dayan' on page 33 undefined on input line 51.
+
+
+Package natbib Warning: Citation `jaakkola1994convergence' on page 33 undefined on input line 51.
+
+
+Package natbib Warning: Citation `tsitsiklis1994asynchronous' on page 33 undefined on input line 51.
+
+[33]
+
+LaTeX Warning: Reference `sec:GPI' on page 34 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:tdupdate' on page 34 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:tdupdate' on page 34 undefined on input line 58.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 34 undefined on input line 58.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 34 undefined on input line 62.
+
+[34]
+
+Package natbib Warning: Citation `Sutton1998' on page 35 undefined on input line 87.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 35 undefined on input line 87.
+
+[35]
+
+Package natbib Warning: Citation `watkins1989learning' on page 36 undefined on input line 90.
+
+
+Package natbib Warning: Citation `dqn' on page 36 undefined on input line 90.
+
+
+LaTeX Warning: Reference `sec:exploration' on page 36 undefined on input line 92.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 36 undefined on input line 95.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 36 undefined on input line 101.
+
+[36]) (./part3/praktischerTeil.tex [37]) (./part3/Implementierung.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
- [39] [40]
-<images/Interfaces.png, id=162, 2469.225pt x 2344.76pt>
+ [38]
+
+Package natbib Warning: Citation `hashmap' on page 39 undefined on input line 19.
+
+
+Package natbib Warning: Citation `linkedHashMap' on page 39 undefined on input line 20.
+
+[39]
+<images/Interfaces.png, id=159, 2469.225pt x 2344.76pt>
 File: images/Interfaces.png Graphic file (type png)
 <use images/Interfaces.png>
 Package pdftex.def Info: images/Interfaces.png  used on input line 35.
 (pdftex.def)             Requested size: 303.53267pt x 288.22845pt.
-) [41] (./part3/JumpingDino.tex [42 <./images/Interfaces.png (PNG copy)>]
-<images/jumpingDinoUmg.png, id=169, 790.45313pt x 192.72pt>
+) [40] (./part3/JumpingDino.tex [41 <./images/Interfaces.png (PNG copy)>]
+<images/jumpingDinoUmg.png, id=166, 790.45313pt x 192.72pt>
 File: images/jumpingDinoUmg.png Graphic file (type png)
 <use images/jumpingDinoUmg.png>
 Package pdftex.def Info: images/jumpingDinoUmg.png  used on input line 15.
 (pdftex.def)             Requested size: 216.81pt x 52.85847pt.
- [43] [44 <./images/jumpingDinoUmg.png>] [45] [46]) (./part3/AntGame.tex
+ [42] [43 <./images/jumpingDinoUmg.png>] [44]
+
+LaTeX Warning: Reference `sec:belohnung' on page 45 undefined on input line 69.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 45 undefined on input line 69.
+
+[45]
+Underfull \hbox (badness 10000) detected at line 85
+ []$[]  [][]$ []  
+ []
+
+[46]) (./part3/AntGame.tex
 <images/rasterwelt.png, id=184, 552.0625pt x 361.35pt>
 File: images/rasterwelt.png Graphic file (type png)
 <use images/rasterwelt.png>
 Package pdftex.def Info: images/rasterwelt.png  used on input line 12.
 (pdftex.def)             Requested size: 200.75073pt x 131.40369pt.
  [47]
+
+Package natbib Warning: Citation `wumpus' on page 48 undefined on input line 16.
+
+
+LaTeX Warning: Reference `fig:rasterwelt' on page 48 undefined on input line 16.
+
+
+LaTeX Warning: Reference `sec:MP' on page 48 undefined on input line 21.
+
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 22.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [48 <./images/rasterwelt.png>]) [49] (out/main.bbl
+ [48 <./images/rasterwelt.png>]
 
-out/main.bbl:23: Package inputenc Error: Unicode character ・ (U+30FB)
-(inputenc)                not set up for use with LaTeX.
+LaTeX Warning: Reference `sec:MP' on page 49 undefined on input line 37.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \APACjournalVolNumPages{N・J}{95}{}{}
-                                           .
-You may provide a definition with
-\DeclareUnicodeCharacter 
+[49]
 
-[50]) [51] (./anhang.tex) [52] (out/main.aux)
+LaTeX Warning: Reference `fig:rasterweltNeu' on page 50 undefined on input line 46.
 
-LaTeX Warning: There were multiply-defined labels.
+<images/rasterwelt_neu.png, id=198, 494.84875pt x 494.84875pt>
+File: images/rasterwelt_neu.png Graphic file (type png)
+<use images/rasterwelt_neu.png>
+Package pdftex.def Info: images/rasterwelt_neu.png  used on input line 49.
+(pdftex.def)             Requested size: 200.75073pt x 200.74487pt.
+[50 <./images/rasterwelt_neu.png>]
+
+LaTeX Warning: Reference `sec:MDP' on page 51 undefined on input line 59.
+
+
+LaTeX Warning: Reference `sec:MP' on page 51 undefined on input line 59.
+
+
+Package natbib Warning: Citation `dqn' on page 51 undefined on input line 59.
+
+[51]
+
+Package natbib Warning: Citation `Sutton1998' on page 52 undefined on input line 82.
+
+
+Package natbib Warning: Citation `Sutton1998' on page 52 undefined on input line 84.
+
+[52]) (./part3/Ergebnisse.tex) [53]
+No file main.bbl.
+(./anhang.tex)
+
+Package natbib Warning: There were undefined citations.
+
+[54] (out/main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 12912 strings out of 492616
- 200063 string characters out of 6129481
- 446523 words of memory out of 5000000
- 16304 multiletter control sequences out of 15000+600000
- 32886 words of font info for 155 fonts, out of 8000000 for 9000
+ 12831 strings out of 492616
+ 198601 string characters out of 6129481
+ 444804 words of memory out of 5000000
+ 16232 multiletter control sequences out of 15000+600000
+ 31985 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,12n,51p,9194b,1809s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (52 pages, 2978090 bytes).
+ 51i,21n,51p,9183b,1809s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on out/main.pdf (54 pages, 2984493 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
+ 304 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 25124 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 24617 words of extra memory for PDF output out of 24883 (max. 10000000)
 

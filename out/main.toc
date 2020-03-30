@@ -1,46 +1,46 @@
 \babel@toc {german}{}
-\contentsline {section}{\numberline {1}Einleitung}{5}% 
-\contentsline {section}{\numberline {2}Grundlagen}{6}% 
-\contentsline {subsection}{\numberline {2.1}Markov Entscheidungsprozess}{6}% 
-\contentsline {subsection}{\numberline {2.2}Markov-Eigenschaft und Zustandsmodellierung}{9}% 
-\contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{12}% 
-\contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{13}% 
-\contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{16}% 
-\contentsline {subsection}{\numberline {2.6}Optimalit\IeC {\"a}t}{17}% 
-\contentsline {subsection}{\numberline {2.7}Generalized Policy Iteration}{19}% 
-\contentsline {subsection}{\numberline {2.8}Exploration-Exploitation Dilemma}{20}% 
-\contentsline {subsection}{\numberline {2.9}Zusammenfasung}{22}% 
-\contentsline {section}{\numberline {3}Lernmethoden}{22}% 
-\contentsline {subsection}{\numberline {3.1}Dynamische Programmierung}{22}% 
-\contentsline {subsubsection}{\numberline {3.1.1}Strategieevaluierung}{23}% 
-\contentsline {subsubsection}{\numberline {3.1.2}Strategieverbesserung}{23}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Strategieiteration}{24}% 
-\contentsline {subsubsection}{\numberline {3.1.4}Nutzeniteration}{24}% 
-\contentsline {subsubsection}{\numberline {3.1.5}Zusammenfassung}{25}% 
-\contentsline {subsection}{\numberline {3.2}Monte-Carlo Methoden}{25}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Vorhersageproblem}{26}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Exploration}{27}% 
-\contentsline {subsubsection}{\numberline {3.2.3}Pseudocode}{29}% 
-\contentsline {subsubsection}{\numberline {3.2.4}BlackJack Beispiel*}{30}% 
-\contentsline {subsubsection}{\numberline {3.2.5}Zusammenfassung}{30}% 
-\contentsline {subsection}{\numberline {3.3}Temporal Difference Learning}{31}% 
-\contentsline {subsubsection}{\numberline {3.3.1}Vorhersageproblem}{31}% 
-\contentsline {subsubsection}{\numberline {3.3.2}SARSA}{35}% 
-\contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{37}% 
-\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{38}% 
-\contentsline {section}{\numberline {4}Praktischer Teil}{38}% 
-\contentsline {subsection}{\numberline {4.1}Implementierung}{39}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{39}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{42}% 
-\contentsline {subsection}{\numberline {4.2}Jumping Dino}{42}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{43}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{45}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{46}% 
+\contentsline {section}{\numberline {1}Einleitung}{4}% 
+\contentsline {section}{\numberline {2}Grundlagen}{5}% 
+\contentsline {subsection}{\numberline {2.1}Markov Entscheidungsprozess}{5}% 
+\contentsline {subsection}{\numberline {2.2}Markov-Eigenschaft und Zustandsmodellierung}{8}% 
+\contentsline {subsection}{\numberline {2.3}Belohnungen und Zielstrebigkeit}{11}% 
+\contentsline {subsection}{\numberline {2.4}Gewinn und Episoden}{12}% 
+\contentsline {subsection}{\numberline {2.5}Strategie und Nutzenfunktion}{15}% 
+\contentsline {subsection}{\numberline {2.6}Optimalit\IeC {\"a}t}{16}% 
+\contentsline {subsection}{\numberline {2.7}Generalized Policy Iteration}{18}% 
+\contentsline {subsection}{\numberline {2.8}Exploration-Exploitation Dilemma}{19}% 
+\contentsline {subsection}{\numberline {2.9}Zusammenfasung}{20}% 
+\contentsline {section}{\numberline {3}Lernmethoden}{21}% 
+\contentsline {subsection}{\numberline {3.1}Dynamische Programmierung}{21}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Strategieevaluierung}{21}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Strategieverbesserung}{22}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Strategieiteration}{23}% 
+\contentsline {subsubsection}{\numberline {3.1.4}Nutzeniteration}{23}% 
+\contentsline {subsubsection}{\numberline {3.1.5}Zusammenfassung}{24}% 
+\contentsline {subsection}{\numberline {3.2}Monte-Carlo Methoden}{24}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Vorhersageproblem}{24}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Exploration}{26}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Pseudocode}{28}% 
+\contentsline {subsubsection}{\numberline {3.2.4}BlackJack Beispiel*}{29}% 
+\contentsline {subsubsection}{\numberline {3.2.5}Zusammenfassung}{29}% 
+\contentsline {subsection}{\numberline {3.3}Temporal Difference Learning}{30}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Vorhersageproblem}{30}% 
+\contentsline {subsubsection}{\numberline {3.3.2}SARSA}{34}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{36}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{37}% 
+\contentsline {section}{\numberline {4}Praktischer Teil}{37}% 
+\contentsline {subsection}{\numberline {4.1}Implementierung}{38}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{38}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{41}% 
+\contentsline {subsection}{\numberline {4.2}Jumping Dino}{41}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{42}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{44}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{45}% 
 \contentsline {subsection}{\numberline {4.3}Ant-Game}{47}% 
 \contentsline {subsubsection}{\numberline {4.3.1}Inspiration}{48}% 
 \contentsline {subsubsection}{\numberline {4.3.2}Problemstellung}{48}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Zustandsmodellierung}{49}% 
-\contentsline {subsubsection}{\numberline {4.3.4}Belohnungsfunktion}{49}% 
-\contentsline {subsection}{\numberline {4.4}Ergebnisse}{49}% 
-\contentsline {section}{\numberline {5}Fazit}{49}% 
-\contentsline {section}{\numberline {6}Ausblick}{49}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Zustandsmodellierung}{50}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Belohnungsfunktion}{52}% 
+\contentsline {subsection}{\numberline {4.4}Ergebnisse}{53}% 
+\contentsline {section}{\numberline {5}Fazit}{53}% 
+\contentsline {section}{\numberline {6}Ausblick}{53}% 

@@ -1,5 +1,6 @@
+% !TeX root = ./main.tex
 \documentclass[12pt]{scrartcl}
-\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{comment} % enables the use of multi-line comments 
 \usepackage[english,german]{babel} 
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
@@ -13,7 +14,7 @@
 \usepackage{tabularx}
 \usepackage{pdfpages}
 \usepackage{wrapfig}
-\usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit UmlaPuten
+\usepackage[T1]{fontenc}% wichtig für Trennung von Wörtern mit Umlauten
 \usepackage{microtype}% verbesserter Randausgleich
 \setlength{\headheight}{21.4pt}
 \usepackage{apacite}
@@ -23,7 +24,6 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage[noend]{algpseudocode}
-
 
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
@@ -83,9 +83,7 @@
 \algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
 \algtext*{Indent}
 \algtext*{EndIndent}
-
 %%%% footer and header %%%%
-\usepackage{scrpage2}%
 \pagestyle{scrheadings}%  S
 \clearscrheadfoot% 
 \setheadwidth{text}%
@@ -137,7 +135,7 @@
 
 \section{Grundlagen}
 	\input{part1/grundlagen.tex}
-	\subsection{Markov Entscheidungsprozess}
+	\subsection{Markov Entscheidungsprozess}\label{sec:MDP}
 	\input{part1/MDP.tex}
 
 	\subsection{Markov-Eigenschaft und Zustandsmodellierung}\label{sec:MP}
@@ -182,6 +180,7 @@
 	\subsection{Ant-Game}
 	\input{part3/AntGame.tex}
 	\subsection{Ergebnisse}
+	\input{part3/Ergebnisse.tex}
 \section{Fazit}
 \section{Ausblick}
 
