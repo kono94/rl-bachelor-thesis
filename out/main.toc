@@ -36,11 +36,18 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Problemstellung}{42}% 
 \contentsline {subsubsection}{\numberline {4.2.2}Zustandsmodellierung}{44}% 
 \contentsline {subsubsection}{\numberline {4.2.3}Belohnungsfunktion}{45}% 
-\contentsline {subsection}{\numberline {4.3}Ant-Game}{47}% 
+\contentsline {subsection}{\numberline {4.3}AntGame}{47}% 
 \contentsline {subsubsection}{\numberline {4.3.1}Inspiration}{48}% 
 \contentsline {subsubsection}{\numberline {4.3.2}Problemstellung}{48}% 
 \contentsline {subsubsection}{\numberline {4.3.3}Zustandsmodellierung}{50}% 
 \contentsline {subsubsection}{\numberline {4.3.4}Belohnungsfunktion}{52}% 
-\contentsline {subsection}{\numberline {4.4}Ergebnisse}{53}% 
-\contentsline {section}{\numberline {5}Fazit}{53}% 
-\contentsline {section}{\numberline {6}Ausblick}{53}% 
+\contentsline {subsection}{\numberline {4.4}Ergebnisse Jumping Dino}{54}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Konvergenzverhalten \textit {Simple} Variante}{54}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Konvergenzverhalten \textit {Advanced} Variante}{62}% 
+\contentsline {subsubsection}{\numberline {4.4.3}Zusammenfassung}{64}% 
+\contentsline {subsection}{\numberline {4.5}Ergebnisse AntGame}{64}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Auswirkung Diskontierungsfaktor und Lernrate}{65}% 
+\contentsline {subsubsection}{\numberline {4.5.2}Optimales Verhalten}{69}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Zusammenfassung}{73}% 
+\contentsline {section}{\numberline {5}Fazit}{74}% 
+\contentsline {section}{\numberline {6}Ausblick}{74}% 

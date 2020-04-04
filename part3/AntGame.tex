@@ -46,7 +46,7 @@ Finalisiert wird die neue kontinuierliche Umwelt dadurch, dass sich nur eine Fut
 Alle Tests wurden auf einer vordefinierten Rasterwelt durchgeführt, bei der die Hindernisse eine spezielle Anordnung haben. Gleichzeitig ist die Spielfeldgröße auf 8x8 Felder reduziert worden. Eine Visualisierung der Rasterwelt  kann der Abbildung \ref{fig:rasterweltNeu} entnommen werden, wobei der Start (das Nest) blau, freie Felder grün und Hindernisse rot markiert sind. Die aktuelle Position der Ameise wird mit einem \glqq A\grqq{} gekennzeichnet, welches die Farbe Schwarz hat, wenn die Ameise kein Futter trägt bzw. Rot wenn sie Futter bei sich hat.
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[width=200px]{images/rasterwelt_neu.png}  \end{center}
+    \includegraphics[width=150px]{images/rasterwelt_neu.png}  \end{center}
     \caption{Rasterwelt neu}
     \label{fig:rasterweltNeu}
   \end{figure}
@@ -80,15 +80,25 @@ DROP\_DOWN}. Zusammen mit 2810 möglichen Zuständen für die definierte Rasterw
 In diesem Unterabschnitt wird eine abweichende Methode für die Belohnungsfunktion vorgestellt, die den Lernprozess deutlich beschleunigt.
 \par
 Das Ziel des Agenten ist es, Futter auf direktem Weg zu seinem Nest zu bringen. Gemäß \cite{Sutton1998} und der ähnlichen Modellierung bei dem Jumping Dino Problem, sollte es ausreichen, dem Agenten lediglich eine positive Belohnung von +1 zu übergeben, wenn er das Futter auf sein Nest fallen lässt. Alle anderen Aktionen werden mit +0 belohnt. Und in der Tat, führt diese Modellierung zu einem annährend optimalen Ergebnis. \glqq Optimal\grqq{} bedeutet im Zusammenhang des \textit{AntGames}, dass die Ameise immer den direkten Weg zum Futter nimmt, es aufhebt und auf direkten Weg zurück zum Nest läuft, um es abzulegen. Sie läuft nicht gegen Hindernisse oder den Rand der Rasterwelt und legt auf keinem anderen Feld als das Nest ab.
-\par
-Diese einfache Modellierung der Belohnung hat jedoch zwei Nachteile. Der erste Punkt ist, dass sie nur annäherungsweise zu dem optimalen Verhalten konvergiert. In Kapitel XX wird eine Methodik vorgestellt, wie gemessen werden kann, ob die Ameise immer den direkten Weg nimmt oder nicht. Vorweggenommen, liegt die durschnittliche Anzahl an Zeitstempeln pro gesammelten Futter bei optimalen Verhalten bei circa 22,92. \textit{QLearning} erreicht mit der einfachen Modellierung jedoch nur einen Durschnitt von circa 23,5. Ein maginal erscheinender Unterschied, der jedoch auffällig genug ist, damit ein Mensch ihn ohne Probleme erkennt, wenn er der Ameise zu sieht. Es fehlt die explizite Modellierung, dass die Ameise nicht \glqq trödeln\grqq{} soll. Dem Labyrinth-Beispiel von \cite{Sutton1998} nachempfunden, erhält die Ameise nach jedem Zeitstempeln eine negative Belohnung von -1, was letztendlich dazu führt, dass die Ameise optimal handelt.
-\par 
-Zwar ist durch diese kleine Änderung sichergestellt, dass die gefundene optimale Strategie $\pi_*$ gleichzeitig auch das optimale Verhalten widerspiegelt, doch bleibt das zweites Problem, die Dauer bis zu der Konvergenz. \textit{QLearning} benötigt rund $600000$ Zeitstempel, um die ersten 1000 Futtereinheiten zu sammeln. Eine detaillierte Belohnungsfunktion ist in der Lage, den benötigten Aufwand deutlich zu verringern. Aktionen, die dem Ziel der Ameise deutlich widersprechen werden zusätzlich negativ belohnt, damit die Ameise schneller lernt, diese in der Zukunft nicht erneut auszuführen. Hierzu zählt beispielsweise das Laufen gegen Wände oder Hindernisse, das Ausführen der Aktion \textit{PICK\_UP} auf einem Feld ohne Futter oder Futter auf einem anderen Feld als das Nest abzulegen. Durch diese Änderungen ist die Ameise während des Lernprozesses in der Lage, die ersten 1000 Futtereinheiten in nur circa $80000$ Zeitstempeln zu sammeln. 
-\par
-Die detaillierte Belohnungsfunktion sieht wie folgt aus:
 \begin{equation}
     B_{1} =  \begin{bmatrix} 
-        FOOD\_PICK\_UP\_SUCCESS = +1\\
+        FOOD\_DROP\_DOWN\_SUCCESS = +1\\
+        DEFAULT\_REWARD = 0           
+ \end{bmatrix}
+\end{equation}
+Diese einfache Modellierung der Belohnung hat jedoch zwei Nachteile. Der erste Punkt ist, dass sie nur annäherungsweise zu dem optimalen Verhalten konvergiert. In Kapitel XX wird eine Methodik vorgestellt, wie gemessen werden kann, ob die Ameise immer den direkten Weg nimmt oder nicht. Vorweggenommen, liegt die durschnittliche Anzahl an Zeitstempeln pro gesammelten Futter bei optimalen Verhalten bei circa 22,92. \textit{QLearning} erreicht mit der einfachen Modellierung jedoch nur einen Durschnitt von circa 23,5. Ein maginal erscheinender Unterschied, der jedoch auffällig genug ist, damit ein Mensch ihn ohne Probleme erkennen kann, wenn er der Ameise zusieht. Es fehlt die explizite Modellierung, dass die Ameise nicht \glqq trödeln\grqq{} soll. Dem Labyrinth-Beispiel von \cite{Sutton1998} nachempfunden, erhält die Ameise nach jedem Zeitstempeln eine negative Belohnung von -1, was letztendlich dazu führt, dass die Ameise optimal handelt.
+\begin{equation}
+    B_{2} =  \begin{bmatrix} 
+        FOOD\_DROP\_DOWN\_SUCCESS = +1\\
+        DEFAULT\_REWARD = -1          
+ \end{bmatrix}
+\end{equation}
+Zwar ist durch diese kleine Änderung sichergestellt, dass die gefundene optimale Strategie $\pi_*$ gleichzeitig auch das optimale Verhalten widerspiegelt, doch bleibt das zweites Problem, die Dauer bis zu der Konvergenz. \textit{QLearning} benötigt rund $600000$ Zeitstempel, um die ersten 1000 Futtereinheiten zu sammeln. Eine detaillierte Belohnungsfunktion ist in der Lage, den benötigten Aufwand deutlich zu verringern. Aktionen, die dem Ziel der Ameise deutlich widersprechen werden zusätzlich negativ belohnt, damit die Ameise schneller lernt, diese in der Zukunft nicht erneut auszuführen. Hierzu zählt beispielsweise das Laufen gegen Wände oder Hindernisse, das Ausführen der Aktion \textit{PICK\_UP} auf einem Feld ohne Futter oder Futter auf einem anderen Feld als das Nest abzulegen. Durch diese Änderungen ist die Ameise während des Lernprozesses in der Lage, die ersten 1000 Futtereinheiten in nur circa $80000$ Zeitstempeln zu sammeln. 
+\par
+Negative Belohnungen bei Ausführung einer unerwünschten Aktion werden mit dem \textit{DEFAULT\_REWARD} addiert wird, wodurch die -2 zustande kommt. Grund hierfür ist, dass der Agent zwischen der normalen \glqq Bestrafung\grqq{} eines vergangenen Zeitstempels und einer suboptimalen Aktion unterscheiden muss. Die detaillierte Belohnungsfunktion sieht wie folgt aus:
+\begin{equation}
+    B_{3} =  \begin{bmatrix} 
+        FOOD\_PICK\_UP\_SUCCESS = +0\\
         FOOD\_PICK\_UP\_FAIL\_NO\_FOOD = -2 \\
         FOOD\_PICK\_UP\_FAIL\_HAS\_FOOD\_ALREADY = -2\\
         FOOD\_DROP\_DOWN\_FAIL\_NO\_FOOD = -2 \\

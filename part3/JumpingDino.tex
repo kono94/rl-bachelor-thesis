@@ -27,7 +27,7 @@ Für die Untersuchungen wird zwischen zwei Szenarien unterschieden:
 \par
 Eine weitere Anpassung bei dem \textit{Jumping Dino Advanced} ist, dass die Hindernisse nicht immer mit dem gleichen Abstand spawnen, sondern ebenfalls zufällig mit vier unterschiedlichen Werten ($x=1630, x=1694, x=1718, x=1814$). Insgesamt ergeben sich 827 mögliche Positionen, die ein Hindernis einnehmen kann.
 
-\subsubsection{Zustandsmodellierung}
+\subsubsection{Zustandsmodellierung}\label{sec:JDzustandsmodellierung}
 Für eine korrekt gewählt Zustandsmodellierung, die genug aber nicht redundante Informationen beinhaltet, um die optimalen Entscheidung zu treffen, ist zunächst die Problemstellung genauer zu betrachten. 
 \par 
 In dem \textit{Jumping Dino Simple} Szenario muss der Agent lernen, im richtigen Moment die Aktion JUMPING durchzuführen. Anders ausgedrückt, kann der Agent in der Theorie immer die Aktion NOTHING wählen, muss aber bei einem bestimmten Abstand zu dem Hindernis die Aktion JUMP ausführen. Im Grunde ist dies eine Schwellwertsuche, bei der vorerst angenommen wird, dass alleine die Distanz zu dem Hindernis ausreichend ist, um das Problem zu lösen.
@@ -60,7 +60,7 @@ G_{advanced, Z_3} = 4146 \quad
 \end{equation}
 
 
-\subsubsection{Belohnungsfunktion}
+\subsubsection{Belohnungsfunktion}\label{sec:JDbelohnungsfunktion}
 //TODO
 B1: +1 pro Zeitstempel +0 wenn Kollision
 B2: +1 pro Zeitstempel -1 wenn SPRINGEN im Sprung, +0 wenn Kollision

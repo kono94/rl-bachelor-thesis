@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  30 MAR 2020 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  4 APR 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -272,21 +272,44 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \TX@delta=\dimen126
 \TX@cols=\count104
 \TX@ftn=\toks23
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+)
+Package caption Info: KOMA-Script document class.
+\c@caption@flags=\count105
+\c@ContinuedFloat=\count106
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count107
+\c@subtable=\count108
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count105
-\calc@Bcount=\count106
-\calc@Adimen=\dimen127
-\calc@Bdimen=\dimen128
+\calc@Acount=\count109
+\calc@Bcount=\count110
+\calc@Adimen=\dimen134
+\calc@Bdimen=\dimen135
 \calc@Askip=\skip68
 \calc@Bskip=\skip69
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count107
+\calc@Ccount=\count111
 \calc@Cskip=\skip70
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
@@ -312,15 +335,15 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-\AM@pagewidth=\dimen129
-\AM@pageheight=\dimen130
+\AM@pagewidth=\dimen136
+\AM@pageheight=\dimen137
  (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box36
 \AM@global@opts=\toks24
 \AM@toc@title=\toks25
-\c@AM@survey=\count108
+\c@AM@survey=\count112
 \AM@templatesizebox=\box37
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
@@ -330,11 +353,11 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks26
-\MT@count=\count109
+\MT@count=\count113
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen131
+\MT@outer@kern=\dimen138
 LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
-\MT@listname@count=\count110
+\MT@listname@count=\count114
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 914.
@@ -346,7 +369,7 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count111
+\c@BibCnt=\count115
 \bibleftmargin=\skip72
 \bibindent=\skip73
 \bibparsep=\skip74
@@ -359,7 +382,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 LaTeX Info: Redefining \citeauthor on input line 712.
 LaTeX Info: Redefining \citeyear on input line 735.
-\c@NAT@ctr=\count112
+\c@NAT@ctr=\count116
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box38
@@ -373,44 +396,44 @@ Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
-\ex@=\dimen132
+\ex@=\dimen139
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen133
+\pmbraise@=\dimen140
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count113
+\inf@bad=\count117
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count114
-\leftroot@=\count115
+\uproot@=\count118
+\leftroot@=\count119
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count116
-\DOTSCASE@=\count117
+\classnum@=\count120
+\DOTSCASE@=\count121
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
 \Mathstrutbox@=\box39
 \strutbox@=\box40
-\big@size=\dimen134
+\big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count118
-\c@MaxMatrixCols=\count119
+\macc@depth=\count122
+\c@MaxMatrixCols=\count123
 \dotsspace@=\muskip11
-\c@parentequation=\count120
-\dspbrk@lvl=\count121
+\c@parentequation=\count124
+\dspbrk@lvl=\count125
 \tag@help=\toks28
-\row@=\count122
-\column@=\count123
-\maxfields@=\count124
+\row@=\count126
+\column@=\count127
+\maxfields@=\count128
 \andhelp@=\toks29
-\eqnshift@=\dimen135
-\alignsep@=\dimen136
-\tagshift@=\dimen137
-\tagwidth@=\dimen138
-\totwidth@=\dimen139
-\lineht@=\dimen140
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
 \@envbody=\toks30
 \multlinegap=\skip80
 \multlinetaggap=\skip81
@@ -420,20 +443,20 @@ LaTeX Info: Redefining \] on input line 2845.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 \@float@every@algorithm=\toks32
-\c@algorithm=\count125
+\c@algorithm=\count129
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count126
-\c@ALG@rem=\count127
-\c@ALG@nested=\count128
+\c@ALG@line=\count130
+\c@ALG@rem=\count131
+\c@ALG@nested=\count132
 \ALG@tlm=\skip82
 \ALG@thistlm=\skip83
-\c@ALG@Lnr=\count129
-\c@ALG@blocknr=\count130
-\c@ALG@storecount=\count131
-\c@ALG@tmpcounter=\count132
+\c@ALG@Lnr=\count133
+\c@ALG@blocknr=\count134
+\c@ALG@storecount=\count135
+\c@ALG@tmpcounter=\count136
 \ALG@tmplength=\skip84
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -492,14 +515,14 @@ or  <return>  to continue without it.
 
 )
 
-/Users/jan/Projects/rl-bachelor-thesis/main.tex:80: LaTeX Error: Command \max already defined.
+/Users/jan/Projects/rl-bachelor-thesis/main.tex:82: LaTeX Error: Command \max already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 \DeclareMathOperator*{\max}{argmax}
+l.82 \DeclareMathOperator*{\max}{argmax}
                                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -508,30 +531,30 @@ or  <return>  to continue without it.
 (out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen141
+\scratchcounter=\count137
+\scratchdimen=\dimen148
 \scratchbox=\box41
-\nofMPsegments=\count134
-\nofMParguments=\count135
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen142
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen149
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks34
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -562,7 +585,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count139
+\c@lstlisting=\count143
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -598,6 +621,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box42
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -606,7 +631,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \microtypecontext on input line 97.
+LaTeX Info: Redefining \microtypecontext on input line 99.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -619,7 +644,7 @@ Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\c@maskedRefs=\count140
+\c@maskedRefs=\count144
  (/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/german.apc
 File: german.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 142.
@@ -627,7 +652,7 @@ LaTeX Info: Redefining \BHBI on input line 143.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 124.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 126.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -635,14 +660,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 124.
+Package tocbasic Info: character protrusion at toc deactivated on input line 126.
 
 No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
 [2]
-Package tocbasic Info: character protrusion at lof deactivated on input line 126.
+Package tocbasic Info: character protrusion at lof deactivated on input line 128.
 
 No file main.lof.
 \tf@lof=\write5
@@ -973,6 +998,9 @@ Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line
 Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 23.
 
 
+LaTeX Warning: Reference `sec:resJumpSimple' on page 26 undefined on input line 23.
+
+
 Package natbib Warning: Citation `Sutton1998' on page 26 undefined on input line 25.
 
 
@@ -996,19 +1024,6 @@ LaTeX Warning: Reference `sec:Nutzeniteration' on page 28 undefined on input lin
 [28]) (./part2/TemporalDifference.tex [29]
 
 Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 5.
-
-
-./part2/TemporalDifference.tex:7: Package inputenc Error: Unicode character ↵ (U+21B5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...ing, it would undoubtedly be temporal-di↵
-                                                  erence (TD) learning. TD l...
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
 Package natbib Warning: Citation `Sutton1998' on page 30 undefined on input line 7.
@@ -1175,16 +1190,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 LaTeX Warning: Reference `sec:MP' on page 49 undefined on input line 37.
 
-[49]
 
-LaTeX Warning: Reference `fig:rasterweltNeu' on page 50 undefined on input line 46.
+LaTeX Warning: Reference `fig:rasterweltNeu' on page 49 undefined on input line 46.
 
-<images/rasterwelt_neu.png, id=198, 494.84875pt x 494.84875pt>
+<images/rasterwelt_neu.png, id=194, 494.84875pt x 494.84875pt>
 File: images/rasterwelt_neu.png Graphic file (type png)
 <use images/rasterwelt_neu.png>
 Package pdftex.def Info: images/rasterwelt_neu.png  used on input line 49.
-(pdftex.def)             Requested size: 200.75073pt x 200.74487pt.
-[50 <./images/rasterwelt_neu.png>]
+(pdftex.def)             Requested size: 150.56305pt x 150.56244pt.
+[49] [50 <./images/rasterwelt_neu.png>]
 
 LaTeX Warning: Reference `sec:MDP' on page 51 undefined on input line 59.
 
@@ -1199,15 +1213,132 @@ Package natbib Warning: Citation `dqn' on page 51 undefined on input line 59.
 Package natbib Warning: Citation `Sutton1998' on page 52 undefined on input line 82.
 
 
-Package natbib Warning: Citation `Sutton1998' on page 52 undefined on input line 84.
+Package natbib Warning: Citation `Sutton1998' on page 52 undefined on input line 89.
 
-[52]) (./part3/Ergebnisse.tex) [53]
+[52]) (./part3/ErgebnisseJumpingDino.tex [53] [54]
+
+LaTeX Warning: Reference `sec:JDbelohnungsfunktion' on page 55 undefined on input line 18.
+
+<images/SimpleZ2B1MonteCarloA.png, id=217, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B1MonteCarloA.png Graphic file (type png)
+<use images/SimpleZ2B1MonteCarloA.png>
+Package pdftex.def Info: images/SimpleZ2B1MonteCarloA.png  used on input line 22.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+[55 <./images/SimpleZ2B1MonteCarloA.png (PNG copy)>]
+
+LaTeX Warning: Reference `sec:JDbelohnungsfunktion' on page 56 undefined on input line 32.
+
+<images/SimpleZ2B1QLearningA.png, id=222, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B1QLearningA.png Graphic file (type png)
+<use images/SimpleZ2B1QLearningA.png>
+Package pdftex.def Info: images/SimpleZ2B1QLearningA.png  used on input line 40.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+<images/SimpleZ2B1QLearningMaxA.png, id=223, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B1QLearningMaxA.png Graphic file (type png)
+<use images/SimpleZ2B1QLearningMaxA.png>
+Package pdftex.def Info: images/SimpleZ2B1QLearningMaxA.png  used on input line 46.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+[56] [57 <./images/SimpleZ2B1QLearningA.png (PNG copy)> <./images/SimpleZ2B1QLearningMaxA.png (PNG copy)>]
+<images/SimpleZ2B2QLearningA.png, id=230, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B2QLearningA.png Graphic file (type png)
+<use images/SimpleZ2B2QLearningA.png>
+Package pdftex.def Info: images/SimpleZ2B2QLearningA.png  used on input line 67.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+<images/SimpleZ2B2SarsaA.png, id=231, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B2SarsaA.png Graphic file (type png)
+<use images/SimpleZ2B2SarsaA.png>
+Package pdftex.def Info: images/SimpleZ2B2SarsaA.png  used on input line 73.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+ [58 <./images/SimpleZ2B2QLearningA.png (PNG copy)> <./images/SimpleZ2B2SarsaA.png (PNG copy)>]
+<images/SimpleNoJumpEveryVisitMCA.png, id=235, 1606.0pt x 803.0pt>
+File: images/SimpleNoJumpEveryVisitMCA.png Graphic file (type png)
+<use images/SimpleNoJumpEveryVisitMCA.png>
+Package pdftex.def Info: images/SimpleNoJumpEveryVisitMCA.png  used on input line 93.
+(pdftex.def)             Requested size: 433.62pt x 216.8129pt.
+ [59]
+<images/SimpleZ1B2QLearningA.png, id=239, 1204.5pt x 602.25pt>
+File: images/SimpleZ1B2QLearningA.png Graphic file (type png)
+<use images/SimpleZ1B2QLearningA.png>
+Package pdftex.def Info: images/SimpleZ1B2QLearningA.png  used on input line 106.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+<images/SimpleZ1B2SarsaA.png, id=240, 1204.5pt x 602.25pt>
+File: images/SimpleZ1B2SarsaA.png Graphic file (type png)
+<use images/SimpleZ1B2SarsaA.png>
+Package pdftex.def Info: images/SimpleZ1B2SarsaA.png  used on input line 112.
+(pdftex.def)             Requested size: 216.81pt x 108.40031pt.
+ [60 <./images/SimpleNoJumpEveryVisitMCA.png>]
+<images/SimpleZ2B4QLearningA.png, id=245, 1204.5pt x 602.25pt>
+File: images/SimpleZ2B4QLearningA.png Graphic file (type png)
+<use images/SimpleZ2B4QLearningA.png>
+Package pdftex.def Info: images/SimpleZ2B4QLearningA.png  used on input line 122.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+ [61 <./images/SimpleZ1B2QLearningA.png (PNG copy)> <./images/SimpleZ1B2SarsaA.png (PNG copy)> <./images/SimpleZ2B4QLearningA.png (PNG copy)>]
+<images/AdvancedZ3B1MonteCarloA.png, id=250, 1204.5pt x 602.25pt>
+File: images/AdvancedZ3B1MonteCarloA.png Graphic file (type png)
+<use images/AdvancedZ3B1MonteCarloA.png>
+Package pdftex.def Info: images/AdvancedZ3B1MonteCarloA.png  used on input line 134.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+ [62 <./images/AdvancedZ3B1MonteCarloA.png (PNG copy)>] [63]) (./part3/ErgebnisseAntGame.tex [64]
+
+LaTeX Warning: Reference `Gewinne' on page 65 undefined on input line 7.
+
+
+LaTeX Warning: Reference `sec:TD' on page 65 undefined on input line 7.
+
+[65]
+<images/antGameAnalysis05DiscA.png, id=263, 1204.5pt x 602.25pt>
+File: images/antGameAnalysis05DiscA.png Graphic file (type png)
+<use images/antGameAnalysis05DiscA.png>
+Package pdftex.def Info: images/antGameAnalysis05DiscA.png  used on input line 26.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+ [66 <./images/antGameAnalysis05DiscA.png>]
+<images/antGameAnalysis09DiscA.png, id=268, 1204.5pt x 602.25pt>
+File: images/antGameAnalysis09DiscA.png Graphic file (type png)
+<use images/antGameAnalysis09DiscA.png>
+Package pdftex.def Info: images/antGameAnalysis09DiscA.png  used on input line 35.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+
+
+LaTeX Warning: Reference `fig:gamma09' on page 67 undefined on input line 39.
+
+[67 <./images/antGameAnalysis09DiscA.png>]
+
+LaTeX Warning: Reference `Gewinne' on page 68 undefined on input line 41.
+
+<images/antGameAnalysis099DiscA.png, id=274, 1204.5pt x 602.25pt>
+File: images/antGameAnalysis099DiscA.png Graphic file (type png)
+<use images/antGameAnalysis099DiscA.png>
+Package pdftex.def Info: images/antGameAnalysis099DiscA.png  used on input line 44.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+[68 <./images/antGameAnalysis099DiscA.png>]
+<images/NeededTimestampsFromEverywhere.png, id=279, 368.1253pt x 368.1253pt>
+File: images/NeededTimestampsFromEverywhere.png Graphic file (type png)
+<use images/NeededTimestampsFromEverywhere.png>
+Package pdftex.def Info: images/NeededTimestampsFromEverywhere.png  used on input line 61.
+(pdftex.def)             Requested size: 150.56305pt x 150.56723pt.
+ [69]
+<images/optDisc.png, id=283, 1204.5pt x 602.25pt>
+File: images/optDisc.png Graphic file (type png)
+<use images/optDisc.png>
+Package pdftex.def Info: images/optDisc.png  used on input line 76.
+(pdftex.def)             Requested size: 433.62pt x 216.80983pt.
+ [70 <./images/NeededTimestampsFromEverywhere.png>]
+
+LaTeX Warning: Reference `fig:optDisc' on page 71 undefined on input line 82.
+
+[71 <./images/optDisc.png>]
+<images/optDiscTotalTS.png, id=292, 1606.0pt x 803.0pt>
+File: images/optDiscTotalTS.png Graphic file (type png)
+<use images/optDiscTotalTS.png>
+Package pdftex.def Info: images/optDiscTotalTS.png  used on input line 89.
+(pdftex.def)             Requested size: 433.62pt x 216.8129pt.
+ [72]) [73 <./images/optDiscTotalTS.png>] [74]
 No file main.bbl.
 (./anhang.tex)
 
 Package natbib Warning: There were undefined citations.
 
-[54] (out/main.aux)
+[75] (out/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1216,18 +1347,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 12831 strings out of 492616
- 198601 string characters out of 6129481
- 444804 words of memory out of 5000000
- 16232 multiletter control sequences out of 15000+600000
- 31985 words of font info for 151 fonts, out of 8000000 for 9000
+ 14028 strings out of 492616
+ 221726 string characters out of 6129481
+ 459562 words of memory out of 5000000
+ 17381 multiletter control sequences out of 15000+600000
+ 33301 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,21n,51p,9183b,1809s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (54 pages, 2984493 bytes).
+ 51i,21n,51p,9183b,1807s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfso1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on out/main.pdf (75 pages, 3558746 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
+ 399 PDF objects out of 1000 (max. 8388607)
+ 254 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 24617 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 25209 words of extra memory for PDF output out of 29859 (max. 10000000)
 

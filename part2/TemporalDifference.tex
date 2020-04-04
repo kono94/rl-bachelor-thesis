@@ -4,7 +4,7 @@ Wie zuvor wird zunächst erläutert, wie diese Art der Algorithmen das Vorhersag
 \par 
 Um einschätzen zu können, welche zentrale Rolle das TD in dem Bereich des Reinforcement Learnings eingenommen hat, folgt ein Zitat von \cite{Sutton1998}:
 \begin{quote}
-    If one had to identify one idea as central and novel to reinforcement learning, it would undoubtedly be temporal-di↵erence (TD) learning. TD learning is a combination of Monte Carlo ideas and dynamic programming (DP) ideas. \cite[S.~119]{Sutton1998}
+    If one had to identify one idea as central and novel to reinforcement learning, it would undoubtedly be temporal-difference (TD) learning. TD learning is a combination of Monte Carlo ideas and dynamic programming (DP) ideas. \cite[S.~119]{Sutton1998}
 \end{quote}
 
 Die Verbindung besteht zum einen daraus, dass das TD genau wie die Monte-Carlo Methoden direkt durch die Interaktion mit der Umwelt lernt, folgerichtig auch \textit{model-free} sind. Zum anderen aktualisieren die TD Methoden, genauso wie bei der Dynamische Programmierung, ihre geschätzen Nutzen mit Hilfe weiterer geschätzen Nutzen, sie bedienen sich also ebenfalls dem Konzept des \textit{bootstrapping} \cite[S.~119]{Sutton1998}. Dadurch ist das TD in der Lage, seine Nutzentabelle nach jeder Aktion zu aktualisieren, \textit{step-by-step}. Ein Warten auf das Ende einer Episode, wie bei den MC-Methoden, ist nicht notwendig. TD kann somit zusätzlich bei kontinuierlichen Problem zum Einsatz kommen \cite[S.~124]{Sutton1998}.
