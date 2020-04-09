@@ -28,7 +28,7 @@
 \contentsline {subsubsection}{\numberline {3.3.2}SARSA}{34}% 
 \contentsline {subsubsection}{\numberline {3.3.3}Q-Learning}{36}% 
 \contentsline {subsubsection}{\numberline {3.3.4}Zusammenfassung}{37}% 
-\contentsline {section}{\numberline {4}Praktischer Teil}{37}% 
+\contentsline {section}{\numberline {4}Praktischer Teil}{38}% 
 \contentsline {subsection}{\numberline {4.1}Implementierung}{38}% 
 \contentsline {subsubsection}{\numberline {4.1.1}Anforderungen}{38}% 
 \contentsline {subsubsection}{\numberline {4.1.2}Interfaces}{41}% 
@@ -49,5 +49,5 @@
 \contentsline {subsubsection}{\numberline {4.5.1}Auswirkung Diskontierungsfaktor und Lernrate}{65}% 
 \contentsline {subsubsection}{\numberline {4.5.2}Optimales Verhalten}{69}% 
 \contentsline {subsubsection}{\numberline {4.5.3}Zusammenfassung}{73}% 
-\contentsline {section}{\numberline {5}Fazit}{74}% 
-\contentsline {section}{\numberline {6}Ausblick}{74}% 
+\contentsline {section}{\numberline {5}Fazit}{75}% 
+\contentsline {section}{\numberline {6}Ausblick}{75}% 

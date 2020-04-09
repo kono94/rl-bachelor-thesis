@@ -1,10 +1,10 @@
-Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden bzw. als Grundlage für das, in Kapitel \ref{sec:GPI} beschriebene, Konzept der \textit{Generalized Policy Iteration} dienen.
+Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden und als Grundlage für das, in Kapitel \ref{sec:GPI} beschriebene, Konzept der \textit{Generalized Policy Iteration} dienen.
 \par 
-Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Optimierungsproblems in Teilprobleme. Dabei wird mit einem trivialem Problem gestartet und die optimale Lösung für jenes in einer Tabelle gespeichert, welches anschließend für die Lösung eines sukzessiv größer werdendes Problem verwendet wird \cite[S.~243]{mehlhorn}.
+Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Optimierungsproblems in Teilprobleme. Dabei wird mit einem trivialem Problem gestartet und die optimale Lösung für jenes in einer Tabelle gespeichert, welches anschließend für die Lösung eines sukzessiv größer werdenden Problems verwendet wird \cite[S.~243]{mehlhorn}.
 \par 
-Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der optimalen Strategie $\pi_*$ bzw. der Lösung der \textit{Bellman Optimality Equation}, siehe \ref{eq:bellmanValue}. Wie bereits in Kapitel \ref{sec:optimality} erwähnt, ist es möglich dieses Gleichungssystem zu lösen und somit $v_*$ oder $q_*$ linear zu berechnen. Mithilfe der DP erschließt sich jedoch ein iterativer Weg.
+Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der optimalen Strategie $\pi_*$ genaue gesagt der Lösung der \textit{Bellman Optimality Equation}, siehe \ref{eq:bellmanValue}. Wie bereits in Kapitel \ref{sec:optimality} erwähnt, ist es möglich dieses Gleichungssystem zu lösen und somit $v_*$ oder $q_*$ linear zu berechnen. Mithilfe der DP erschließt sich jedoch ein iterativer Weg.
 \par 
-Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Vorraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
+Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Voraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
 \par
 
 \subsubsection{Strategieevaluierung}\label{sec:evaluierung}
@@ -29,7 +29,7 @@ Ist eine suboptimale Strategie vollständig evaluiert worden, d.h. ist die Nutze
     \end{aligned}
 \end{equation}
 
-Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathcal{A}$, dann ist es besser die Aktion $a$ auszuführen, als jene Aktion, die durch die aktuelle Strategie $\pi$ gewählt wird. Wird diese Verbesserung (\textit{Policy Improvement}) für alle Zustände durchgeführt, dann ergibt sich die gierige (\textit{greedy}) Strategie $\pi'$, die die besten Aktionen basierend auf den Werten der aktuellen Aktions-Nutzentabelle ausführt.
+Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathcal{A}$, dann ist es besser die Aktion $a$ auszuführen, als jene Aktion, die durch die derzeitige Strategie $\pi$ gewählt wird. Wird diese Verbesserung (\textit{Policy Improvement}) für alle Zustände durchgeführt, so ergibt sich die gierige (\textit{greedy}) Strategie $\pi'$, die die besten Aktionen basierend auf den Werten der aktuellen Aktions-Nutzentabelle tätigt.
 
 \subsubsection{Strategieiteration}
 Eine Methode, die die zwei Prozesse zum Evaluieren und der Verbesserung einer Strategie zusammenführt, ist die sog. Strategieiteration \textit{Policy Iteration}, die ihren Ursprung in den Arbeiten von \cite{bellman1957dynamic} und \cite{howard1960dynamic} hat. 
@@ -42,9 +42,9 @@ Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
 \end{equation}
 
 \subsubsection{Nutzeniteration}\label{sec:Nutzeniteration}
-In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iteration durchlaufen muss, um letzendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
+In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iterationen durchlaufen muss, um letztendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
 \par 
-Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokusiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
+Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokussiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
 
 \begin{equation}\label{eq:valueItSeq}
     v_0 \rightarrow v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow \dots \rightarrow v_*

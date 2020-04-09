@@ -1,5 +1,5 @@
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Agent-Umwelt Interface\relax }}{6}% 
+\contentsline {figure}{\numberline {1}{\ignorespaces Agent-Umwelt-Interface\relax }}{6}% 
 \contentsline {figure}{\numberline {2}{\ignorespaces Zwei-Wege Beispiel zu der Markov-Eigenschaft\relax }}{9}% 
 \contentsline {figure}{\numberline {3}{\ignorespaces Zwei-Wege Beispiel Forts.\relax }}{10}% 
 \contentsline {figure}{\numberline {4}{\ignorespaces GPI nach \cite [S.~86f]{Sutton1998}\relax }}{19}% 
@@ -17,9 +17,9 @@
 \contentsline {figure}{\numberline {16}{\ignorespaces SARSA $Z_1, B_2$\relax }}{61}% 
 \contentsline {figure}{\numberline {17}{\ignorespaces Q-Learning $Z_2, B_4$\relax }}{61}% 
 \contentsline {figure}{\numberline {18}{\ignorespaces First-Visit Monte-Carlo $Z_3, B_1$\relax }}{62}% 
-\contentsline {figure}{\numberline {19}{\ignorespaces Durschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.5$ und $\epsilon = 0.15$\relax }}{66}% 
-\contentsline {figure}{\numberline {20}{\ignorespaces Durschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.9$ und $\epsilon = 0.15$\relax }}{67}% 
-\contentsline {figure}{\numberline {21}{\ignorespaces Durschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.99$ und $\epsilon = 0.15$\relax }}{68}% 
+\contentsline {figure}{\numberline {19}{\ignorespaces Durchschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.5$ und $\epsilon = 0.15$\relax }}{66}% 
+\contentsline {figure}{\numberline {20}{\ignorespaces Durchschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.9$ und $\epsilon = 0.15$\relax }}{67}% 
+\contentsline {figure}{\numberline {21}{\ignorespaces Durchschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.99$ und $\epsilon = 0.15$\relax }}{68}% 
 \contentsline {figure}{\numberline {22}{\ignorespaces A figure\relax }}{70}% 
 \contentsline {figure}{\numberline {23}{\ignorespaces Optimales Verhalten bei unterschiedlichen Diskontierungsfaktoren\relax }}{71}% 
 \contentsline {figure}{\numberline {24}{\ignorespaces Total ben\IeC {\"o}tigte Zeitstempel bei fortlaufender Futtersammlung\relax }}{73}% 

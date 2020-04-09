@@ -5,27 +5,27 @@ Zu Beginn und während der Umsetzung kristallisierten sich Anforderungen heraus,
 
 \begin{itemize}
     \item Gut gewählte Interfaces, die die Theorie widerspiegeln
-    \item Determinismus; Wiederholbare Ergebnisse
+    \item Determinismus; wiederholbare Ergebnisse
     \item Visualisierung; GUI
     \item Erweiterbarkeit
     \item Sammlung von Statistiken
     \item Lernprozess speichern
 \end{itemize}
 
-\textbf{Gut gewählte Interfaces}. Die Interfaces sind so geschnitten, dass sie die grundlegenden Bestandteile des Reinforcement Learnings widerspiegeln. Dabei richtet sich die Terminologie an das Agent-Umwelt Interface, welches in Kapitel 2.1 vorgestellt ist. 
+\textbf{Gut gewählte Interfaces}. Die Interfaces sind so geschnitten, dass sie die grundlegenden Bestandteile des Reinforcement Learnings widerspiegeln. Dabei richtet sich die Terminologie an das Agent-Umwelt-Interface, welches in Kapitel 2.1 vorgestellt ist. 
 \par 
-\textbf{Determinismus}. Um zu gewährleisten, dass gesammelte Ergebnisse zum Verhalten von unterschiedlichen Algorithmen vergleichbar sind, muss die gesammte Implementierung determistisch sein und wiederholbare Ergebnisse liefern. Eines der wichtigsten Faktoren hierbei ist die Handhabung des \textit{Random Number Generators}, der vor allem dafür benötigt wird, um \glqq willkürliche\grqq{} Aktionen bei $\epsilon$\textit{-greedy} Strategien zu wählen. Gearbeitet wird ausschließlich mit der \textit{RNG.java} Klasse, die mit Hilfe eines \textit{static}-Kontruktors einmalig ein \textit{Random}-Objekt anlegt und \textit{seeded}.
+\textbf{Determinismus}. Um zu gewährleisten, dass gesammelte Ergebnisse zum Verhalten von unterschiedlichen Algorithmen vergleichbar sind, muss die gesamte Implementierung deterministisch sein und wiederholbare Ergebnisse liefern. Eines der wichtigsten Faktoren hierbei ist die Handhabung des \textit{Random Number Generators}, der vor allem dafür benötigt wird, um \glqq willkürliche\grqq{} Aktionen bei $\epsilon$\textit{-greedy} Strategien zu wählen. Gearbeitet wird ausschließlich mit der \textit{RNG.java} Klasse, die mit Hilfe eines \textit{static}-Kontruktors einmalig ein \textit{Random}-Objekt anlegt und \textit{seeded}.
 \par 
 Eine wichtige Erkenntnis ist außerdem, dass die HashMap in Java nicht deterministisch agiert im Bezug auf die Reihenfolge der Elemente. Die Reihenfolge ist jedoch entscheidend, da u.a. eine HashMap die Aktionen auf ihre Nutzen abbildet und das \textit{KeySet} dieser Map dazu benutzt wird, um eine willkürliche Aktion zu wählen. In der Dokumentation zu der \textit{HashMap}-Klasse heißt es: \glqq This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time \grqq{}\cite{hashmap}.
 Um dennoch eine feste Reihenfolge zu garantieren, wird ausschließlich die \textit{LinkedHashMap} als Implementationen des \textit{Map}-Interfaces benutzt. Diese sichert eine konsistente, vorhersagebare Ordnung zu \cite[]{linkedHashMap}.
 
-Die umgesetzten Algorithmen sind alle iterativ und somit \textit{single-threaded}. Dennoch werden weitere nebenläufige Threads eingesetzt, um z.B. Laufzeitstatistiken zu sammeln. Auch das UI läuft in einem seperaten Thread. Es muss somit darauf geachtet werden, nur geeignete Aufgaben in andere Threads auszulagern, die den eigentlichen Lernprozess im Main-Thread nicht beeinflussen.
+Die umgesetzten Algorithmen sind alle iterativ und somit \textit{single-threaded}. Dennoch werden weitere nebenläufige Threads eingesetzt, um z.B. Laufzeitstatistiken zu sammeln. Auch das UI läuft in einem separaten Thread. Es muss somit darauf geachtet werden, nur geeignete Aufgaben in andere Threads auszulagern, die den eigentlichen Lernprozess im Main-Thread nicht beeinflussen.
 \par 
-\textbf{Visualisierung}. Wenn über tausende Episoden gelernt wird, Millionen von Belohnungen verteilt und Aktionen ausgeführt werden, dann reicht eine simple Konsolenausgabe nicht mehr aus, um das Verhalten eines Algorithmus einzuschätzen. Eine Graphische Nutzungsoberfläche (\textit{GUI}) ist erstellt worden, mit der Parameter während des Lernens gesteuert werden können. Außerdem wird die Umwelt visualisiert, die Nutzentabelle kann angezeigt werden und ein kontinuierlicher Graph zeigt die erhaltenen Belohnungen an.
+\textbf{Visualisierung}. Wenn über Tausende Episoden gelernt wird, Millionen von Belohnungen verteilt und Aktionen ausgeführt werden, dann reicht eine simple Konsolenausgabe nicht mehr aus, um das Verhalten eines Algorithmus einzuschätzen. Eine Grafische Nutzungsoberfläche (\textit{GUI}) ist erstellt worden, mit der Parameter während des Lernens gesteuert werden können. Außerdem wird die Umwelt visualisiert, die Nutzentabelle kann angezeigt werden und ein kontinuierlicher Graph zeigt die erhaltenen Belohnungen an.
 
 \textbf{Erweiterbarkeit}. Der Aufbau der Implementierung erlaubt ein einfaches Hinzufügen von weiteren Lernszenarien. Hierzu muss lediglich ein \textit{Enum}, welches den Aktionsraum repräsentiert und eine Klasse, die das \textit{Environment}-Interface implementiert, anlegt werden. Ebenfalls können weitere RL Algorithmen ergänzt werden, indem von der abstrakten Klasse \textit{Learning} bzw. \textit{EpisodicLearning} abgeleitet wird. Letztendlich ergibt sich eine Art RL-Framework, welches unterschiedliche Umgebungen und Algorithmen bereitstellt.
 
-\textbf{Sammlung von Statistiken}. Um z.B. Aussagen über das Konvergenzverhalten von unterschiedlichen Lernmethoden treffen zu können, ist es notwendig, Daten zu sammeln und auszuwerten. Das umgesetzte \textit{Listener}-Pattern, bei dem die Algorithmen u.a. nach jedem Zeitstempel oder nach jeder kompletten Episode ein Event mit Informationen auslösen, erlaubt eine generische Datenerhebung für unterschiedliche Lernmethoden und Problemstellungen.
+\textbf{Sammlung von Statistiken}. Um z.B. Aussagen über das Konvergenzverhalten von unterschiedlichen Lernmethoden treffen zu können, ist es notwendig, Daten zu sammeln und auszuwerten. Das umgesetzte \textit{Listener}-Pattern, bei dem die Algorithmen u.a. nach jedem Zeitstempel oder nach jeder kompletten Episode ein Event mit Informationen auslösen, erlaubt eine generische Datenerhebung für verschiedenartige Lernmethoden und Problemstellungen.
 
 \textbf{Lernprozess speichern}. Alle Methoden des Reinforcement Learnings, die im Rahmen dieser Arbeit implementiert sind, laufen \textit{single-threaded} und benötigen bei großen Zustands- und Aktionsräumen (100.000+ Zustände) lange Laufzeiten. Daher ist eine Speichern- und Laden-Funktion umgesetzt, die die aktuelle Nutzentabelle serialisieren und deserialisieren kann, um einen Lernvorgang zu einem späteren Zeitpunkt fortzusetzen.
 

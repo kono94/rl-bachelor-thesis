@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  4 APR 2020 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  8 APR 2020 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,17 +912,16 @@ Package natbib Warning: Citation `greedy' on page 19 undefined on input line 4.
 
 Package natbib Warning: Citation `Sutton1998' on page 20 undefined on input line 6.
 
-) (./part1/Zusammenfasung.tex) (./part2/DP.tex
+) (./part1/Zusammenfasung.tex) [20] (./part2/DP.tex
 
-LaTeX Warning: Reference `sec:MC' on page 20 undefined on input line 1.
-
-
-LaTeX Warning: Reference `sec:TD' on page 20 undefined on input line 1.
+LaTeX Warning: Reference `sec:MC' on page 21 undefined on input line 1.
 
 
-LaTeX Warning: Reference `sec:GPI' on page 20 undefined on input line 1.
+LaTeX Warning: Reference `sec:TD' on page 21 undefined on input line 1.
 
-[20]
+
+LaTeX Warning: Reference `sec:GPI' on page 21 undefined on input line 1.
+
 
 Package natbib Warning: Citation `mehlhorn' on page 21 undefined on input line 3.
 
@@ -1124,7 +1123,7 @@ Package natbib Warning: Citation `Sutton1998' on page 36 undefined on input line
 
 Package natbib Warning: Citation `Sutton1998' on page 36 undefined on input line 101.
 
-[36]) (./part3/praktischerTeil.tex [37]) (./part3/Implementierung.tex
+[36]) [37] (./part3/praktischerTeil.tex) (./part3/Implementierung.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1207,6 +1206,11 @@ LaTeX Warning: Reference `sec:MP' on page 51 undefined on input line 59.
 
 
 Package natbib Warning: Citation `dqn' on page 51 undefined on input line 59.
+
+
+Overfull \hbox (1.68909pt too wide) in paragraph at lines 70--75
+[]\T1/cmr/m/n/12 (-20) Der Ak-ti-ons-raum um-fasst die Ak-tio-nen \T1/cmr/m/it/12 (-20) MO-VE_UP, MO-VE_RIGHT, MO-VE_DOWN,
+ []
 
 [51]
 
@@ -1332,13 +1336,13 @@ File: images/optDiscTotalTS.png Graphic file (type png)
 <use images/optDiscTotalTS.png>
 Package pdftex.def Info: images/optDiscTotalTS.png  used on input line 89.
 (pdftex.def)             Requested size: 433.62pt x 216.8129pt.
- [72]) [73 <./images/optDiscTotalTS.png>] [74]
+ [72]) [73 <./images/optDiscTotalTS.png>] [74] [75]
 No file main.bbl.
 (./anhang.tex)
 
 Package natbib Warning: There were undefined citations.
 
-[75] (out/main.aux)
+[76] (out/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1347,18 +1351,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14028 strings out of 492616
- 221726 string characters out of 6129481
+ 14040 strings out of 492616
+ 221842 string characters out of 6129481
  459562 words of memory out of 5000000
  17381 multiletter control sequences out of 15000+600000
- 33301 words of font info for 162 fonts, out of 8000000 for 9000
+ 33867 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,21n,51p,9183b,1807s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfso1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/main.pdf (75 pages, 3558746 bytes).
+Output written on out/main.pdf (76 pages, 3559333 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  25209 words of extra memory for PDF output out of 29859 (max. 10000000)
 
