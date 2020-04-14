@@ -1,1 +1,30 @@
-//TODO
+Viele Probleme sind derart komplex, besitzen gigantische Zustandsräume oder sind dynamisch, sodass es praktisch unmöglich ist, ein Programm im klassischen Sinne zu entwerfen, das auf jegliche Situation eine vordefinierte beste Lösung hat. In einigen Fällen sind die Anforderung an den benötigten Speicher oder die Rechenleistung zu enorm, in den meisten Fällen könnten jedoch selbst Menschen aufgrund der gegegeben Faktoren nicht bestimmen, welche die optimale Aktion ist. Es ist somit erstrebenswert, dass ein Computer selber lernt, wie er zu handelt hat und das ausschließlich auf Basis  einer abstrakten Formulierung des eigentlichen Problems und Ziels. \par 
+Eine Sammlung von Methoden setzt sich genau mit dieser Thematik auseinander, das Bestärkende Lernen (\textit{Reinforcement Learning}, RL). Neben dem \textit{Supervised Learning} und dem \textit{Unsupervised Learning} ist sie eine der drei Hauptdisziplinen des Maschinellen Lernens.
+
+
+\subsection{Motivation}
+Die Motivation des Autors sich intensiv mit dem Thema Reinforcement Learning auseinanderzusetzen basiert auf drei Gründen.
+\par 
+Zum einen ist die Arbeit im Zusammenhang mit dem einjährigen Bachelorprojekt zu nennen. In diesem beschäftigte sich eine Gruppe von Studierenden mit dem breiten Thema \glqq Maschinelles Lernen\grqq{}. Neben der Vertiefung in dem Bereich \glqq Neuronale Netze\grqq{} wurde sich auch mit dem sog. \textit{NEAT}-Algorithmus (\textit{NeuroEvolution of Augmented Topologies}) befasst, einem genetischen Algorithmus, der eine Form des Reinforcement Learning darstellt, jedoch nur für Probleme mit kleinem Zustandsraum anwendbar ist \cite[S.~7f]{Sutton1998}.
+\par
+Ein weiterer Punkt stellt die Belegung eines Wahlpflichtmoduls dar, welches der Autor im Verlauf seines Studiums absolvierte. Dieses Modul trägt den Namen \glqq Agentensysteme\grqq{} und behandelt autark fungierende Softwareagenten, die mit ihrer Umwelt interagieren. Dieses Grundkonzept, dass ein Entscheidungsfinder Aktionen ausführt, um letztendlich ein Ziel zu erreichen, ist annähernd auf das Kontext des Reinforcement Learnings übertragbar. Wohingegen für das Modul auf \glqq klassische\grqq{} Programmierung mit Algorithmen, wie dem \textit{A-Star} oder der Tiefensuche zurückgegriffen wurde, liegt die Motivation für diese Arbeit darin, herauszufinden, ob auch Reinforcement Learning auf die gestellte Semesteraufgabe anwendbar ist.
+\par
+Komplettiert wird das Ganze dadurch, dass das Thema Reinforcement Learning in den letzten fünf Jahren einen regelrechten Boom erlebt. Untermauert wird diese Behauptung durch die Anzahl der Veröffentlichungen zu diesem Thema in den vergangen Jahren auf dem Dokumentenserver \textit{arXiv.org}. Waren es für das gesamte Jahr 2015 nur 50 Publikationen, so stieg die Zahl der veröffentlichen Papers für das Jahr 2019 auf 1206 \cite[]{arxiv}.
+
+
+\subsection{Zielsetzung}
+Einerseits besteht das Ziel dieser Arbeit darin, einen Überblick über die theoretischen Grundlagen des Reinforcement Learnings, seiner Bestandteile und den tabularen Lernmethoden zu geben. Diese Auseinandersetzung stützt sich vor allem auf die beiden Standardwerke von \cite{Sutton1998} und \cite{Wiering}, sowie der öffentlich zugänglichen Vorlesung der Stanford-Professorin \cite{Brunskill}.
+\par
+Neben dem theoretischen Teil eine praktische Vertiefung stattfinden. Hierbei soll den Lesenden durch ausführlich beschriebene Zustands- und Belohnungsfunktionsmodellierungen verdeutlicht werden, welche abstrakten Eigenschaften und Voraussetzungen erfüllt sein müssen, um Reinforcement Learning als solches auf eine Problemstellung anwenden zu können.
+Des Weiteren sollen Fragen beantwortet werden, die sich darauf beziehen, welchen Einfluss verschiedene Parameter auf den Lernprozess haben und wie sich diese auf das Konvergenzverhalten auswirken.
+\par 
+Zusätzlich setzt sich der Autor das Ziel, herauszufinden, ob Algorithmen des RLs auf die Semesteraufgabe des Wahlpflichtmoduls \glqq Agentensysteme\grqq{} anwendbar sind und die Fähigkeit beherrschen, implizit Verhalten zu erlenen, welches einem Wegfindungsalgorithmus, wie dem \textit{A-Star}, ähnelt.
+
+\subsection{Struktur der Arbeit}
+Die Arbeit besteht aus fünf Teilen. Zu Beginn werden in Kapitel \ref{sec:Grundlagen} die theoretischen Grundlagen hinter dem Reinforcement Learning erläutert. Darauf aufbauend beleuchtet das Kapitel \ref{sec:Lernmethoden} die drei großen Algorithmengruppen. Darunter zählt die Dynamische Programmierung, die Monte-Carlo Methoden und das \textit{Temporal-Difference Learning}. Besonders die letzten beiden Gruppen werden intensiv behandelt, Parallelen zwischen ihnen aufgezeigt und Pseudocode dargestellt.
+\par 
+Mit dem Kapitel \ref{sec:praktischerTeil} beginnt der praktische Teil der Arbeit, der wiederum in drei Teile gegliedert ist. Zunächst wird die Implementation vorgestellt und spezielle Anforderungen und Herausforderungen während der Erstellung aufgeführt. Anschließend werden zwei Problemszenarien detailliert definiert und beschrieben. Eine ist das episodiale Problem mit dem Namen \textit{Jumping Dino}, das andere ist ein kontinuierliches Problem, welches den Namen \textit{AntGame} trägt.
+\par 
+Der letzte Teil der Arbeit sind die Ergebnissekapitel \ref{sec:ergbJD} und \ref{sec:ergbAG}, in denen u.a. das Konvergenzverhalten und die Auswirkungen bestimmter Lernparameter untersucht werden. Zudem werden theoretische Annahmen mit den praktischen Ergebnissen verglichen, um Schlussfolgerungen zu ziehen.
+\par 
+Abgeschlossen wird die Arbeit durch ein Fazit und einem Ausblick, welche Problemstellungen oder Methoden beispielsweise bei einer potenziellen Masterarbeit untersucht werden könnten.

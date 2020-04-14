@@ -102,7 +102,7 @@
 	\centering	
 	{\scshape\LARGE Hochschule Bremerhaven \par}
 	\vspace{1cm}
-	{\scshape\Large Exposé für eine Bachelorarbeit zum Thema:\par}
+	{\scshape\Large Bachelorarbeit zum Thema:\par}
 	\vspace{1.5cm}
 	{\huge\bfseries Reinforcement Learning\par}
 	\vspace{2cm}
@@ -135,8 +135,11 @@
 \input{part1/einleitung.tex}
 \pagebreak
 
-\section{Grundlagen}
+\section{Grundlagen}\label{sec:Grundlagen}
 	\input{part1/grundlagen.tex}
+	\subsection{Definition}\label{sec:definition}
+	\input{part1/Definition.tex}
+
 	\subsection{Markov Entscheidungsprozess}\label{sec:MDP}
 	\input{part1/MDP.tex}
 
@@ -147,10 +150,10 @@
 	\subsection{Belohnungen und Zielstrebigkeit}\label{sec:belohnung}
 	\input{part1/BelohnungenZielstrebigkeit.tex}
 
-	\subsection{Gewinn und Episoden}\label{Gewinne}
+	\subsection{Gewinn und Episoden}\label{sec:Gewinne}
 	\input{part1/GewinnEpisoden.tex}
 
-	\subsection{Strategie und Nutzenfunktion}
+	\subsection{Strategie und Nutzenfunktion}\label{sec:StrategieNutzenfunktion}
 	\input{part1/StrategieNutzenfunktion.tex}
 
 	\subsection{Optimalität} \label{sec:optimality}
@@ -159,13 +162,13 @@
 	\subsection{Generalized Policy Iteration}\label{sec:GPI}
 	\input{part1/GPI.tex}
 
-	\subsection{Exploration-Exploitation Dilemma}
+	\subsection{Exploration-Exploitation-Dilemma}\label{sec:explorationDilemma}
 	\input{part1/ExplorationExploitation.tex}
 
 	\subsection{Zusammenfasung}
 	\input{part1/Zusammenfasung.tex}
 \pagebreak
-\section{Lernmethoden}
+\section{Lernmethoden}\label{sec:Lernmethoden}
 	\subsection{Dynamische Programmierung}
 	\input{part2/DP.tex}
 	\subsection{Monte-Carlo Methoden}\label{sec:MC}
@@ -174,7 +177,7 @@
 	\input{part2/TemporalDifference.tex}
 
 \pagebreak
-\section{Praktischer Teil}
+\section{Praktischer Teil}\label{sec:praktischerTeil}
 	\input{part3/praktischerTeil.tex}
 	\subsection{Implementierung}
 	\input{part3/Implementierung.tex}
@@ -182,13 +185,16 @@
 	\input{part3/JumpingDino.tex}
 	\subsection{AntGame}
 	\input{part3/AntGame.tex}
-	\subsection{Ergebnisse Jumping Dino}
+	\subsection{Ergebnisse Jumping Dino}\label{sec:ergbJD}
 	\input{part3/ErgebnisseJumpingDino.tex}
-	\subsection{Ergebnisse AntGame}
+	\subsection{Ergebnisse AntGame}\label{sec:ergbAG}
 	\input{part3/ErgebnisseAntGame.tex}
 \pagebreak
 \section{Fazit}
+\input{part3/Fazit.tex}
+
 \section{Ausblick}
+\input{part3/Ausblick.tex}
 
 \pagebreak
 \bibliography{quellen}

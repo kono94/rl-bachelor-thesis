@@ -1,8 +1,8 @@
-Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem Temporal-Difference Learning (\ref{sec:TD}) referenziert werden und als Grundlage für das, in Kapitel \ref{sec:GPI} beschriebene, Konzept der \textit{Generalized Policy Iteration} dienen.
+Die Algorithmen der Dynamischen Programmierung (\textit{Dynamic Programming}, DP) sind im Rahmen dieser Arbeit nicht implementiert und weiter untersucht worden. Dennoch ist ein grundlegendes Verständnis für die DP von Vorteil, da elementare Bestandteile auch in den nachfolgenden Kapiteln zu den Monte-Carlo Methoden (\ref{sec:MC}) und dem \textit{Temporal-Difference Learning} (\ref{sec:TD}) referenziert werden und als Grundlage für das, in Kapitel \ref{sec:GPI} beschriebene, Konzept der \textit{Generalized Policy Iteration} dienen.
 \par 
 Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Optimierungsproblems in Teilprobleme. Dabei wird mit einem trivialem Problem gestartet und die optimale Lösung für jenes in einer Tabelle gespeichert, welches anschließend für die Lösung eines sukzessiv größer werdenden Problems verwendet wird \cite[S.~243]{mehlhorn}.
 \par 
-Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der optimalen Strategie $\pi_*$ genaue gesagt der Lösung der \textit{Bellman Optimality Equation}, siehe \ref{eq:bellmanValue}. Wie bereits in Kapitel \ref{sec:optimality} erwähnt, ist es möglich dieses Gleichungssystem zu lösen und somit $v_*$ oder $q_*$ linear zu berechnen. Mithilfe der DP erschließt sich jedoch ein iterativer Weg.
+Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der optimalen Strategie $\pi_*$ genauer gesagt der Lösung der \textit{Bellman Optimality Equation}, siehe \ref{eq:bellmanValue}. Wie bereits in Kapitel \ref{sec:optimality} erwähnt, ist es möglich dieses Gleichungssystem zu lösen und somit $v_*$ oder $q_*$ linear zu berechnen. Mithilfe der DP erschließt sich jedoch ein iterativer Weg.
 \par 
 Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Voraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
 \par
@@ -10,7 +10,7 @@ Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahr
 \subsubsection{Strategieevaluierung}\label{sec:evaluierung}
 Wichtiger Bestandteil eines jeden RL Algorithmus ist die Berechnung der Zustands-Nutzenfunktion $v_\pi$ (oder Aktions-Nutzenfunktion $q_\pi$) für eine willkürliche Strategie $\pi$. Die geschätzte Nutzenfunktion (unter einer bestimmten Strategie) gegen die wahren erwartbaren Werte der Gewinne streben zu lassen, wird auch als Strategieevaluierung (\textit{Policy Evaluation}) bezeichnet \cite[S.~74]{Sutton1998}.
 \par 
-Die Vorgehensweise der DP um dieses Vorhersageproblem (\textit{Prediction Problem}) zu lösen, lässt sich folgendermaßen beschreiben. Zunächst wird eine willkürliche Nutzenfunktion $v_0$ gewählt, z.B. sind alle Nutzen zu Beginn mit 0 definiert. Die Bellman-Gleichung wird nun als Aktualisierungsregel angesehen, die Schritt für Schritt die geschätzten Nutzen verbessert. Es entsteht eine Reihenfolge von geschätzten Nutzenfunktionen $v_0$, $v_1$, $v_2$, \dots, die letztendlich zu $v_\pi$ konvergiert. \cite{Sutton1998} definieren die Aktualisierungsregel wie folgt (S.~74):
+Die Vorgehensweise der DP um dieses Vorhersageproblem (\textit{Prediction Problem}) zu lösen, lässt sich folgendermaßen beschreiben. Zunächst wird eine willkürliche Nutzenfunktion $v_0$ gewählt, z.B. sind alle Nutzen zu Beginn mit 0 definiert. Die Bellman-Gleichung wird daraufhin als Aktualisierungsregel angesehen, die Schritt für Schritt die geschätzten Nutzen verbessert. Es entsteht eine Reihenfolge von geschätzten Nutzenfunktionen $v_0$, $v_1$, $v_2$, \dots, die letztendlich zu $v_\pi$ konvergiert. \cite{Sutton1998} definieren die Aktualisierungsregel wie folgt (S.~74):
 \begin{equation}\label{eq:fullbackup}
     \begin{aligned}
         \forall s \in \mathcal{S}: v_{k+1}(s) &= \EX_{\pi}[ R_{t+1} + \gamma v_k(S_{t+1}) \mid S_t = s] \\
@@ -32,7 +32,7 @@ Ist eine suboptimale Strategie vollständig evaluiert worden, d.h. ist die Nutze
 Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathcal{A}$, dann ist es besser die Aktion $a$ auszuführen, als jene Aktion, die durch die derzeitige Strategie $\pi$ gewählt wird. Wird diese Verbesserung (\textit{Policy Improvement}) für alle Zustände durchgeführt, so ergibt sich die gierige (\textit{greedy}) Strategie $\pi'$, die die besten Aktionen basierend auf den Werten der aktuellen Aktions-Nutzentabelle tätigt.
 
 \subsubsection{Strategieiteration}
-Eine Methode, die die zwei Prozesse zum Evaluieren und der Verbesserung einer Strategie zusammenführt, ist die sog. Strategieiteration \textit{Policy Iteration}, die ihren Ursprung in den Arbeiten von \cite{bellman1957dynamic} und \cite{howard1960dynamic} hat. 
+Eine Methode, die die zwei Prozesse zum Evaluieren und der Verbesserung einer Strategie zusammenführt, ist die sog. Strategieiteration (\textit{Policy Iteration}), die ihren Ursprung in den Arbeiten von \cite{bellman1957dynamic} und \cite{howard1960dynamic} hat. 
 \par 
 Bei der Strategieiteration wird zunächst eine willkürliche Strategie $\pi_0$ gewählt, die anschließend zu der Nutzenfunktionen $v_{\pi_k}$ evaluiert wird. Ist dieser Schritt abgeschlossen, wird die Strategie gemäß der berechneten Aktions-Nutzenfunktion $q_{\pi_k}$ (vgl. \ref{eq:qBerechnung}) verbessert, aus $\pi_k$ folgt $\pi_{k+1}$ und eine erneute Evaluation kann erfolgen. Die Schleife wird gestoppt, wenn für alle Zustände $s$ gilt, dass $\pi_{k+1}(s) = \pi_k(s)$ \cite[S.~22]{Wiering}. 
 \par 
@@ -42,7 +42,7 @@ Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
 \end{equation}
 
 \subsubsection{Nutzeniteration}\label{sec:Nutzeniteration}
-In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iterationen durchlaufen muss, um letztendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen, \glqq ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren\grqq{} \cite[S.~82]{Sutton1998}. 
+In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iterationen durchlaufen muss, um letztendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren \cite[S.~82]{Sutton1998}. 
 \par 
 Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokussiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
 
@@ -51,3 +51,10 @@ Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) 
 \end{equation}
 
 \subsubsection{Zusammenfassung}
+Die Dynamische Programmierung ist ein \textit{model-based} Lernverfahren, welches auf dem Konzept des \textit{bootstrappings} basiert. Dadurch, dass die Dynamiken der Umwelt und somit die komplette Übergangsfunktion \textit{p} Voraussetzung für den Einsatz der DP ist, gestaltet sich die Anwendung der DP auf reale Probleme als sehr schwierig.
+\par 
+Dennoch ist die DP als theoretisches Bindeglied zwischen der linearen Lösung der \textit{Bellman Optimality Equation} und den nachfolgenden iterativen RL-Algorithmen (Monte-Carlo und Temporal-Difference) zu verstehen. Sie führt wichtige Konzepte ein, wie der Evaluation einer bestimmten Strategie zur Lösung des Vorhersageproblems (\textit{Prediction Problem}) oder der schrittweisen Verbesserung einer Strategie bei dem Kontrollproblem (\textit{Control Problem}).
+\par
+Neben der Strategieiteration (\textit{Policy Iteration}), bei der Strategien zunächst vollständig evaluiert werden bevor eine Verbesserung der Strategie stattfindet, wurde zudem die Nutzeniteration (\textit{Value Iteration}) vorgestellt. Hierbei wird die Evaluierung einer Strategie bereits nach der ersten Iteration abgebrochen und eine neue gierige Strategie anhand der aktuellen Nutzen gewählt.
+\par
+Zwar orientieren sich alle nachfolgenden RL-Algorithmen an dem Konzept der \textit{Generalized Policy Iteration}, um das Kontrollproblem zu lösen, doch durch den Einsatz von $\epsilon$-\textit{greedy} Strategien, wird implizit das Prinzip der Nutzeniteration verfolgt. Nach jeder Iteration werden die Nutzen angepasst, auf Grundlage derer sich die $\epsilon$-\textit{greedy} Strategien anschließend verhält. Es ensteht eine Reihenfolge, wie in \ref{eq:valueItSeq} dargestellt.
