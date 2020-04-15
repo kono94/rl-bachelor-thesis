@@ -6,7 +6,7 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{listings}
-\usepackage[article, total={6in, 8in}]{geometry}
+\usepackage[bottom=2cm]{geometry}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage[onehalfspacing]{setspace}
@@ -99,8 +99,19 @@
 \begin{document}
 
 \begin{titlepage}
+
+\thispagestyle{empty}
+
+% Kopfzeile mit Logos
+% Eventuell die \hspace{} je nach Logogröße anpassen
+\newgeometry{top=1cm, left=3cm, right=3cm}
+\begin{tabular}{lcr}
+  \hspace{10cm} &
+  \includegraphics[width=170px]{images/hb_logo_2c} 
+  \vspace{1cm}
+\end{tabular}
+\par
 	\centering	
-	{\scshape\LARGE Hochschule Bremerhaven \par}
 	\vspace{1cm}
 	{\scshape\Large Bachelorarbeit zum Thema:\par}
 	\vspace{1.5cm}
@@ -120,11 +131,14 @@
 % Bottom of the page with current date
 	{\large \today \par}       
 \end{titlepage}
+\restoregeometry
 
+\input{extra/abstract.tex}
+\newpage
 % Count title page as first page
 \setcounter{page}{2}
 \tableofcontents
-\pagebreak
+\newpage
 \listoffigures
 \newpage
 
@@ -145,7 +159,6 @@
 
 	\subsection{Markov-Eigenschaft und Zustandsmodellierung}\label{sec:MP}
 	\input{part1/MP.tex}
-	\pagebreak
 
 	\subsection{Belohnungen und Zielstrebigkeit}\label{sec:belohnung}
 	\input{part1/BelohnungenZielstrebigkeit.tex}
@@ -196,9 +209,14 @@
 \section{Ausblick}
 \input{part3/Ausblick.tex}
 
-\pagebreak
+\newpage
 \bibliography{quellen}
-\pagebreak
 
+\newpage
+\sectionmark{Anhang}
 \input{anhang.tex}
+
+\newpage
+\sectionmark{Erklärung der Urheberschaft}
+\input{extra/eidesstaatliche.tex}
 \end{document}

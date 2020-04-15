@@ -34,7 +34,7 @@ Zunächst ist zu verdeutlichen, warum das originale Problem die Markov-Eigenscha
     }
 }}
 \end{lstlisting}
-Bei einer solchen Zustandsmodellierung kommt es zu einem ähnlichen Problem wie bei dem, in Kapitel \ref{sec:MP} vorgestellten, Roboter-Beispiel. Angenommen, die Ameise befindet sich auf dem Feld mit den Koordinaten (0,10) und nimmt den Futtergeruch 1 wahr, dann kann die Ameise nicht logisch entscheiden, in welche Richtung sie sich bewegen muss. In einer Konstellation befindet sich das Futter auf dem nördlichen Nachbarfeld, in einer anderen auf dem westlichen Nachbarfeld. Für den Agenten sehen beide Situation identisch aus und er wird sich aufgrund des höchsten Aktions-Nutzens in beiden Fällen für dieselbe Aktion entscheiden.
+Bei einer solchen Zustandsmodellierung kommt es zu einem ähnlichen Problem wie bei dem, in Kapitel \ref{sec:MP} vorgestellten, Roboter-Beispiel. Angenommen die Ameise befindet sich auf dem Feld mit den Koordinaten (0,10) und nimmt den Futtergeruch 1 wahr, dann kann die Ameise nicht logisch entscheiden in welche Richtung sie sich bewegen muss. In einer Konstellation befindet sich das Futter auf dem nördlichen Nachbarfeld, in einer anderen auf dem westlichen Nachbarfeld. Für den Agenten sehen beide Situation identisch aus und er wird sich aufgrund des höchsten Aktions-Nutzens in beiden Fällen für dieselbe Aktion entscheiden.
 \par 
 Hinzu kommt, dass das Konzept von Fallen genauer gesagt der Fallenerkennung relativ komplex ist und interne Berechnungen benötigt, um logische Schlussfolgerungen ziehen zu können. Bei der ursprünglichen Semesteraufgabe hat der Autor die Umwelt sukzessive in einer internen Repräsentation nachgebaut und anhand von rekursiven Berechnungen Erkenntnisse über mögliche und definitive Fallen zu erhalten.
 \par 
@@ -54,7 +54,7 @@ Alle Tests wurden auf einer vordefinierten Rasterwelt durchgeführt, bei der die
 \subsubsection{Zustandsmodellierung}
 Die neue Version des \textit{AntGames} wurde im vorangegangen Unterkapitel definiert. Nun beschäftigt sich dieses Unterkapitel mit der Frage, wie eine konkrete Zustandsmodellierung aussehen muss, die die Markov-Eigenschaft bedient und zu optimalen Verhalten führt.
 \par 
-Das ursprüngliche Konzept von \glqq Gerüchen\grqq{} kann nicht Teil des Zustands sein, da Entscheidung dadurch nicht eindeutig sein können. Nimmt der Agent Futtergeruch wahr, dann befindet sich Futter auf einem der orthogonalen Nachbarfelder. Doch in welche Himmelsrichtung er sich bewegen muss, ist unklar und Bedarf geplantes Erkunden. Bewegt sich die Ameise z.B. nach Norden und bemerkt, dass sie auf keinem Futter steht, dann sollte sie zurückgehen und anschließend das westliche Nachbarfeld überprüfen. Nacheinander potentielle Futterquellen abzusuchen erfordert in jedem Fall das Wissen, welche Felder bereits untersucht worden sind und damit eine Historie besuchter Felder.
+Das ursprüngliche Konzept von \glqq Gerüchen\grqq{} kann nicht Teil des Zustands sein, da Entscheidungen dadurch nicht eindeutig sein können. Nimmt der Agent Futtergeruch wahr, dann befindet sich Futter auf einem der orthogonalen Nachbarfelder. Doch in welche Himmelsrichtung er sich bewegen muss ist unklar und bedarf geplantes Erkunden. Bewegt sich die Ameise z.B. nach Norden und bemerkt, dass sie auf keinem Futter steht, dann sollte sie zurückgehen und anschließend das westliche Nachbarfeld überprüfen. Nacheinander potentielle Futterquellen abzusuchen erfordert in jedem Fall das Wissen, welche Felder bereits untersucht worden sind und damit eine Historie besuchter Felder.
 \par 
 \textit{MDPs} zeichnen sich jedoch gerade dadurch aus, dass Zustandswechsel nicht abhängig von der Historie der gewählten Aktionen ist, wie in Kapitel \ref{sec:MDP} und \ref{sec:MP} beschrieben. Um zu gewährleisten, dass die Historie nicht Teil des Entscheidungsprozesses sein muss, um optimale Entscheidungen zu treffen, wird die gesamte Spielfeldkonstellation als Zustand gewählt. Dieser Ansatz ist inspiriert durch \cite{dqn}, die in ihrer Arbeit vorstellen, wie sämtliche \textit{Atari}-Spiele mithilfe von \textit{Deep Reinforcement Learning} auf menschlichem Niveau gespielt werden können. Als Eingabe oder vielmehr Zustand für den Algorithmus dient die gesamte Pixelkonfiguration des aktuellen Frames. Das Besondere hierbei ist, dass keinerlei Anpassungen an dem Programmcode oder dem Neuronalen Netz vorgenommen werden müssen, um alle 49 \textit{Atari}-Spiele erfolgreich zu meistern.
 \par 
@@ -93,19 +93,21 @@ Diese einfache Modellierung der Belohnung hat jedoch zwei Nachteile. Der erste P
         DEFAULT\_REWARD = -1          
  \end{bmatrix}
 \end{equation}
-Zwar ist durch diese kleine Änderung sichergestellt, dass die gefundene optimale Strategie $\pi_*$ gleichzeitig auch das optimale Verhalten widerspiegelt, doch bleibt das zweite Problem, die Dauer bis zu der Konvergenz. \textit{Q-Learning} benötigt rund $600000$ Zeitstempel, um die ersten 1000 Futtereinheiten zu sammeln. Eine detaillierte Belohnungsfunktion ist in der Lage, den benötigten Aufwand drastisch zu verringern. Aktionen, die dem Ziel der Ameise entschieden widersprechen werden zusätzlich negativ belohnt, damit die Ameise schneller lernt, diese in der Zukunft nicht erneut auszuführen. Hierzu zählt beispielsweise das Laufen gegen Wände oder Hindernisse, das Ausführen der Aktion \textit{PICK\_UP} auf einem Feld ohne Futter oder Futter auf einem anderen Feld als das Nest abzulegen. Durch diese Änderungen ist die Ameise während des Lernprozesses in der Lage, die ersten 1000 Futtereinheiten in nur circa $80000$ Zeitstempeln zu sammeln. 
+Zwar ist durch diese kleine Änderung sichergestellt, dass die gefundene optimale Strategie $\pi_*$ gleichzeitig auch das optimale Verhalten widerspiegelt, doch bleibt das zweite Problem, die Dauer bis zu der Konvergenz. \textit{Q-Learning} benötigt rund $600000$ Zeitstempel, um die ersten 1000 Futtereinheiten zu sammeln. Eine detaillierte Belohnungsfunktion ist in der Lage den benötigten Aufwand drastisch zu verringern. Aktionen, die dem Ziel der Ameise entschieden widersprechen werden zusätzlich negativ belohnt, damit die Ameise schneller lernt, diese in der Zukunft nicht erneut auszuführen. Hierzu zählt beispielsweise das Laufen gegen Wände oder Hindernisse, das Ausführen der Aktion \textit{PICK\_UP} auf einem Feld ohne Futter oder Futter auf einem anderen Feld als das Nest abzulegen. Durch diese Änderungen ist die Ameise während des Lernprozesses fähig, die ersten 1000 Futtereinheiten in nur circa $80000$ Zeitstempeln zu sammeln. 
 \par
 Negative Belohnungen bei Ausführung einer unerwünschten Aktion werden mit dem \textit{DEFAULT\_REWARD} addiert wird, wodurch die -2 zustande kommt. Grund hierfür ist, dass der Agent zwischen der normalen \glqq Bestrafung\grqq{} eines vergangenen Zeitstempels und einer suboptimalen Aktion unterscheiden muss. Die detaillierte Belohnungsfunktion sieht wie folgt aus:
 \begin{equation}
     B_{3} =  \begin{bmatrix} 
-        FOOD\_PICK\_UP\_SUCCESS = +0\\
-        FOOD\_PICK\_UP\_FAIL\_NO\_FOOD = -2 \\
-        FOOD\_PICK\_UP\_FAIL\_HAS\_FOOD\_ALREADY = -2\\
-        FOOD\_DROP\_DOWN\_FAIL\_NO\_FOOD = -2 \\
-        FOOD\_DROP\_DOWN\_FAIL\_NOT\_START = -2 \\
-        FOOD\_DROP\_DOWN\_SUCCESS = +1\\
-        RAN\_INTO\_WALL = -2\\
-        RAN\_INTO\_OBSTACLE = -2 \\
-        DEFAULT\_REWARD = -1                  
+        \begin{aligned} 
+        & FOOD\_PICK\_UP\_SUCCESS &= +0 \\
+        & FOOD\_PICK\_UP\_FAIL\_NO\_FOOD &= -2 \\
+        & FOOD\_PICK\_UP\_FAIL\_HAS\_FOOD\_ALREADY &= -2 \\
+        & FOOD\_DROP\_DOWN\_FAIL\_NO\_FOOD &= -2 \\
+        & FOOD\_DROP\_DOWN\_FAIL\_NOT\_START &= -2 \\
+        & FOOD\_DROP\_DOWN\_SUCCESS &= +1 \\
+        & RAN\_INTO\_WALL &= -2 \\
+        & RAN\_INTO\_OBSTACLE &= -2 \\
+        & DEFAULT\_REWARD &= -1 
+    \end{aligned}                 
  \end{bmatrix}
 \end{equation}

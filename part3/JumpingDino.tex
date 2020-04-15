@@ -21,16 +21,16 @@ Bei jedem Tick kann der Entscheidungsfinder zwischen zwei Aktionen wählen, JUMP
 \par 
 Für die Untersuchungen wird zwischen zwei Szenarien unterschieden:
 \par 
-\textit{Simple}. Bei dieser Variante wandern die Hindernisse immer mit der gleichen Geschwindigkeit (30px pro Tick) nach links. Außerdem erscheinen sie jedes Mal mit dem identischen Abstand, d.h. erreicht die rechte Kante des Hindernisses den linken Bildschirmrand, so wird sofort ein neues Hindernis gespwant an der Position $x=860$. Es ergeben sich 31 mögliche Positionen, in der sich ein Hindernis in der Umwelt befinden kann ($x=860, x=830, \dots, x=-10, x=-40$).
+\textit{Simple}. Bei dieser Variante wandern die Hindernisse immer mit der gleichen Geschwindigkeit (30px pro Tick) nach links. Außerdem erscheinen sie jedes Mal mit dem identischen Abstand, d.h. erreicht die rechte Kante des Hindernisses den linken Bildschirmrand, so wird sofort ein neues Hindernis an der Position $x=860$ erscheinen. Es ergeben sich 31 mögliche Positionen, in der sich ein Hindernis in der Umwelt befinden kann ($x=860, x=830, \dots, x=-10, x=-40$).
 \par 
 \textit{Advanced}. Um die Umwelt anspruchsvoller zu gestalten, werden in diesem Szenario ein paar Änderungen vorgenommen. Statt einer festen Geschwindigkeit, bewegen sich die Hindernisse unter diesen Umständen mit vier unterschiedlichen Geschwindigkeiten. Dies sorgt dafür, dass die Geschwindigkeit nun auch ein Faktor ist, der für einen Sprung des Dinos entscheidend ist. Bei sehr schnellen Hindernissen muss der Dino frühzeitig springen, um z.B. bei zwei aufeinanderfolgenden, schnellen Hindernissen überhaupt in der Lage zu sein, das zweite Hindernis zu überspringen. Hingegen muss er lernen, bei besonders langsamen Hindernissen erst sehr spät zu hüpfen, um bei der Landung nicht zu kollidieren. Mit einer gleichen Wahrscheinlichkeit kann die Geschwindigkeit den Wert 10px, 21px, 48px oder 105px annehmen.
 \par
 Eine weitere Anpassung bei dem \textit{Jumping Dino Advanced} ist, dass die Hindernisse nicht immer mit dem gleichen Abstand erscheinen, sondern ebenfalls zufällig mit vier unterschiedlichen Werten ($x=1630, x=1694, x=1718, x=1814$). Insgesamt ergeben sich 827 mögliche Positionen, die ein Hindernis einnehmen kann.
 
 \subsubsection{Zustandsmodellierung}\label{sec:JDzustandsmodellierung}
-Für eine korrekt gewählte Zustandsmodellierung, die genug aber nicht redundante Informationen beinhaltet, um die optimalen Entscheidung zu treffen, ist zunächst die Problemstellung genauer zu betrachten. 
+Für eine korrekt gewählte Zustandsmodellierung, die genug aber nicht redundante Informationen beinhaltet, um die optimalen Entscheidungen zu treffen, ist zunächst die Problemstellung genauer zu betrachten. 
 \par 
-In dem \textit{Jumping Dino Simple} Szenario muss der Agent lernen, im richtigen Moment die Aktion JUMPING durchzuführen. Anders ausgedrückt, kann der Agent in der Theorie immer die Aktion NOTHING wählen, muss aber bei einem bestimmten Abstand zu dem Hindernis die Aktion JUMP ausführen. Im Grunde ist dies eine Schwellwertsuche, bei der vorerst angenommen wird, dass alleine die Distanz zu dem Hindernis ausreichend ist, um das Problem zu lösen.
+In dem \textit{Jumping Dino Simple} Szenario muss der Agent lernen, im richtigen Moment die Aktion JUMPING durchzuführen. Anders ausgedrückt kann der Agent in der Theorie immer die Aktion NOTHING wählen, muss aber bei einem bestimmten Abstand zu dem Hindernis die Aktion JUMP ausführen. Im Grunde ist dies eine Schwellwertsuche, bei der vorerst angenommen wird, dass alleine die Distanz zu dem Hindernis ausreichend ist, um das Problem zu lösen.
 \par 
 Den Zustand nur anhand der Distanz zu verwirklichen ist bei der \textit{Advanced} Variante nicht ausreichend, um optimale Entscheidung zu treffen. Schnelle Hindernisse müssen frühzeitiger übersprungen werden, langsame hingehen erst kurz vor einer Kollision. Eine zweite Information muss somit gegeben sein, die Geschwindigkeit der Hindernisse.
 \par 
@@ -67,7 +67,7 @@ Die Aufgabe des hüpfenden Dinos besteht darin, die Episode so lang wie möglich
 \par 
 Eine abweichende Belohnungsvergabe ergibt sich bei Lernmethoden, die nach jedem Schritt eine Anpassung der Nutzen vornehmen. Anstatt die Summe aller Belohnungen einer Episode zu maximieren, wie es die Monte-Carlo Methoden machen, basieren die Aktualisierung bei dem \textit{Temporal-Difference Learning} auf der sofortigen Belohnung und dem geschätzten Nutzen des Folgezustands. Als Initialwert für sämtliche Aktions-Nutzen wird 0 gewählt. Statt dem Agenten positive Belohnungen zu vergeben, damit die Summe dieser auf Episodenbasis maximiert werden kann, wird nun mit negativen Belohnungen für fehlerhaftes Verhalten gearbeitet. Das bedeutet für das \textit{Jumping Dino} Spiel, dass für jeden Zeitstempel eine neutrale Belohnung von +0 verteilt wird, aber für den Fall einer Kollision -1. Dies hat zudem den positiven Effekt auf die Exploration, denn Aktionen, die zu einer Kollision geführt haben, nehmen einen negativen Wert an und werden daraufhin von einer gierigen Strategie zunächst ignoriert, weil andere mögliche Aktionen für diesen Zustand einen höheren Nutzen haben, den Initialwert 0.
 \par 
-Es soll zudem getestet werden, ob das Konvergenzverhalten beeinflusst wird, wenn der Agent negatives Feedback bekommt, wenn er die Aktion JUMP wählt, während er sich bereits in einem Sprung befindet. 
+Es soll zudem getestet werden, ob das Konvergenzverhalten beeinflusst wird, wenn der Agent negatives Feedback bekommt, wenn er die Aktion \textit{JUMP} wählt, während er sich bereits in einem Sprung befindet. 
 \par
 Es ergeben sich somit vier Belohnungsfunktionen:
 \begin{multline}

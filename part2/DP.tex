@@ -4,7 +4,7 @@ Die grundlegende Idee der Dynamischen Programmierung ist die Aufteilung eines Op
 \par 
 Bezogen auf das Reinforcement Learning, ist dieses Problem die Suche nach der optimalen Strategie $\pi_*$ genauer gesagt der Lösung der \textit{Bellman Optimality Equation}, siehe \ref{eq:bellmanValue}. Wie bereits in Kapitel \ref{sec:optimality} erwähnt, ist es möglich dieses Gleichungssystem zu lösen und somit $v_*$ oder $q_*$ linear zu berechnen. Mithilfe der DP erschließt sich jedoch ein iterativer Weg.
 \par 
-Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Voraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
+Da die Algorithmen der Dynamischen Programmierung Zugriff auf die Übergangswahrscheinlichkeiten der Umwelt sowie der Belohnungsfunktion haben müssen, ist ein perfektes Modell der Umgebung Voraussetzung. DP-Methoden sind folgerichtig immer \textit{model-based}.
 \par
 
 \subsubsection{Strategieevaluierung}\label{sec:evaluierung}
@@ -44,7 +44,7 @@ Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
 \subsubsection{Nutzeniteration}\label{sec:Nutzeniteration}
 In Kapitel \ref{sec:evaluierung} wurde gezeigt, dass die Evaluierung einer Strategie mehrere Iterationen durchlaufen muss, um letztendlich zu $v_\pi$ zu konvergieren. Es ist jedoch möglich diesen Prozess vorzeitig abzubrechen ohne die Garantie der Konvergenz der Stratgieiteration zu verlieren \cite[S.~82]{Sutton1998}. 
 \par 
-Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokussiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
+Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) zu Nutzen, die bereits nach einer Iteration der Evaluation abbricht und den Schritt zur Verbesserung der Strategie direkt im Bezug auf diese Berechnung ausführt. Die Nutzeniteration fokussiert sich somit ausschließlich auf Schätzung der Nutzenfunktion und erzeugt im Vergleich zu der Strategieiteration folgende Sequenz \cite[S.~23]{Wiering}:
 
 \begin{equation}\label{eq:valueItSeq}
     v_0 \rightarrow v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow \dots \rightarrow v_*

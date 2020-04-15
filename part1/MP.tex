@@ -19,7 +19,7 @@ Folgendes Beispiel, basierend auf der Vorlesung von \cite{Brunskill}, liefert ei
   \label{fig:2-Wege-1}
 \end{figure}
 
-Gegeben ist ein beweglicher Roboter und eine Strecke mit zwei Korridoren. Der Roboter ist mit vier Sensoren ausgestattet, die jeweils eine Himmelsrichtung abdecken. Diese Sensoren sind in der Lage, angrenzende Wände zu erkennen und bilden den Zustand der Umwelt ab. Wahlweise ist der Zustand im Uhrzeiger definiert $\{N, O, S, W\}$, wobei 1 angibt, dass eine Wand erkannt wurde und 0, dass sich keine Wand in der unmittelbaren Nähe befindet. Es ergeben sich folglich 16 unterschiedliche Zustände, die der Agent unterscheiden und auf dessen Basis er Entscheidungen treffen kann (vier Aktionen: Fahrt in jeweils eine Richtungen). Der Roboter soll sein Ziel erreichen, markiert mit einer Flagge, ohne dabei in eine der beiden Fallen zu navigieren.
+Gegeben ist ein beweglicher Roboter und eine Strecke mit zwei Korridoren. Der Roboter ist mit vier Sensoren ausgestattet, die jeweils eine Himmelsrichtung abdecken. Diese Sensoren sind in der Lage, angrenzende Wände zu erkennen und bilden den Zustand der Umwelt ab. Wahlweise ist der Zustand im Uhrzeiger definiert $\{N, O, S, W\}$, wobei 1 angibt, dass eine Wand erkannt wurde und 0, dass sich keine Wand in der unmittelbaren Nähe befindet. Es ergeben sich folglich 16 unterschiedliche Zustände, die der Agent unterscheiden und auf dessen Basis er Entscheidungen treffen kann (vier Aktionen: Fahrt in jeweils eine Richtung). Der Roboter soll sein Ziel erreichen, markiert mit einer Flagge, ohne dabei in eine der beiden Fallen zu navigieren.
 \par
 \begin{wrapfigure}{H}{0.5\textwidth}
   \begin{center}
@@ -34,10 +34,11 @@ Eine potenzielle Startposition, wie in Abb. \ref{fig:2-Wege-1} dargestellt, lief
 Bezogen auf diesen Entscheidungsprozess ist die Modellierung der Zustände über den Sensorinput alleine nicht ausreichend, um die gestellte Aufgabe zu lösen. Die Kombination von Aufgabenstellung und dem Format der Zustände in dieser Form erfüllt insofern nicht die Markov-Eigenschaft, dass auf Basis der erkannten Zustände keine Möglichkeit besteht, die optimalen Entscheidungen zu treffen. 
 \par
 
-In der Theorie ist es jedoch möglich diesen Entscheidungsprozess als MDP umzumodellieren. Dabei werden die Sensordaten als Beobachtungen der Umwelt betrachtet und eine interne Repräsentation von Markov-Zuständen gepflegt. Möglich ist z.B. die gesamte Historie der Zustände und Aktionen zu speichern, damit der Roboter zurückverfolgen kann, wo er sich zurzeit befindet. Ein Prozess als MDP zu definieren bedeutet aber gerade darauf zu verzichten, nämlich die gesamte Vergangenheit in einen Zustand zu verarbeitet. Denkbar ist auch, dass der Agent eine interne Repräsentation nach jeder Beobachtung pflegt und die Umwelt suk­zes­si­ve nachbildet.
+In der Theorie ist es jedoch möglich diesen Entscheidungsprozess als MDP umzumodellieren.
+Dazu kann z.B. die gesamte Historie der Zustände und Aktionen gespeichert werden. Dadurch ist der Roboter in der Lage, zurückzuverfolgen, wo er sich zurzeit befindet. Obowhl dies rein theoretisch möglich ist, sollte diese Herangehensweise vermieden werden. Historien als Zustand für eine Entscheidung zu betrachten bedient zwar die Markov-Eigenschaft, ist allerdings in der Praxis nicht praktikabel, da der Zustandsraum auf diese Weise sehr schnell zu große Ausmaße annimmt.
 \par 
-//TODO Schlussfolgerung; Modellierung
-\\
-Letztendlich sollte 
-
-
+Eine weitere Möglichkeit besteht darin, die Sensordaten als Beobachtungen der Umwelt zu betrachten und eine interne Repräsentation von Markov-Zuständen zu pflegen. Dabei bildet der Agent die Umwelt nach jeder erhaltenden Beobachtung suk­zes­si­ve nach, wodurch letztendlich ein Gesamtbild der Umgebung entsteht. Diese Form der Zustandsbildung bedarf jedoch zusätzlicher Algorithmen, die zwischen der Wahrnehmung des Agenten und dem jeweiligen RL-Algorithmus sitzen. 
+\par 
+Zudem ist das Lernen auf diese Weise auf eine bestimmte Umgebung festgelegt. Wird der Roboter mit einer neuer Welt konfrontiert, z.B. eine Welt mit drei Korridoren, so kann er Gelerntes nicht anwenden, weil sein interne Repräsentation invalide ist.
+\par 
+Letztendlich muss jedes Szenario zu Beginn genau untersucht werden, um zu beurteilen, ob Reinforcement Learning überhaupt auf dieses Problem anwendbar ist. Dabei spielt vor allem die Markov-Eigenschaft eine wichtige Rolle, die Grundvorraussetzung für alle RL-Algorithmen ist. Ein*e Designer*in sollte sich immer fragen, ob die gegebenen Eigenschaften (\textit{Features}), die durch die Umgebung bereitgestellt werden, ausreichend sind, um optimales Verhalten zu erreichen. Für diese Bewertung existieren jedoch keine festen Regeln oder eine Blaupause. Es muss auf Erfahrungswerte oder Untersuchungen zu dem Konvergenzverhalten und den Ergebnissen des gelernten Verhaltens zurückgegriffen werden, wie es auch in den Beispielen dieser Arbeit geschieht in dem Kapitel \ref{sec:praktischerTeil}.
