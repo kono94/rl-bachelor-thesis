@@ -27,6 +27,7 @@ Der erste Diskontierungsfaktor, der getestet wird, ist $0.5$:
     \captionof{figure}{Durchschnittliche Belohnung pro Zeitstempel bei $\gamma = 0.5$ und $\epsilon = 0.15$}
     \label{fig:test1}
 \end{figure}
+\newpage
 Bezogen auf die Lernrate $\alpha$ konnte die ursprüngliche Annahme bestätigt werden. Alle Durchläufe konvergieren zwar auf eine durchschnittliche Belohnung pro Zeitstempel von circa 0.5, jedoch wird diese Konvergenz mit steigender Lernrate schneller erreicht. Eine Lernrate von 0.9 benötigt rund 12500 Zeitstempel, wohingegen eine Lernrate von 0.1 über 100000 Zeitstempel benötigt, um zu konvergieren. Durch ein weiteres Experiment, welches nicht Teil der Abbildung ist, konnte zudem bewiesen werden, dass sogar eine Lernrate von $\alpha = 1$ praktikabel für dieses stationäre Problemszenario ist und am schnellsten konvergiert.
 \par 
 Das zweite Experiment wurde mit einem höheren Diskontierungsfaktor von $\gamma=0.9$ durchgeführt:
@@ -77,6 +78,7 @@ Das nachfolgende Experiment untersucht, ob unterschiedliche Diskontierungsfaktor
     \captionof{figure}{Optimales Verhalten bei unterschiedlichen Diskontierungsfaktoren}
     \label{fig:optDisc}
 \end{figure}
+\newpage
 Ein Diskontierungsfaktor zwischen 0.3 und 0.9 sorgt für eine Konvergenz zu optimalem Verhalten, nachdem der Explorationsparameter$\epsilon$ nach 4000 gesammelten Futtereinheit auf 0 gesetzt worden ist. Ein hoher Wert von $\gamma = 0.95$ erreicht erst nach rund 6000 Episoden optimales Verhalten, kann also noch nach dem Wegfallen der Exploration durch Anpassung der Aktions-Nutzen lernen. Auffällig ist, dass bei dem höchsten Wert für $\gamma$, 0.99, deutlich mehr Zeitstempel benötigt werden für die ersten 1000 Futtereinheit, 2205 im Vergleich zu nur 81 bei $\gamma = 0.3$. 
 \par 
 Die Abbildung \ref{fig:optDisc} zeigt, dass der Durchlauf mit $\gamma = 0.99$ knapp mehr durchschnittliche Zeitstempel benötigt als das optimale Verhalten. Dies gilt jedoch speziell für die gewählten Schranken für die Verringerung von $\epsilon$. Wird die letzte Senkung von 0.05 auf 0, auf eine Schranke von 20000 gesammelten Einheiten verändert, dann konvergiert auch $\gamma = 0.99$ zu optimalen Verhalten. Durch die \glqq Weitsichtigkeit\grqq{} sind die Entscheidungsreihenfolge umfangreicher und eine längere Exploration muss stattfinden, um die Gewinne für das \textit{bootstrapping} genauer zu schätzen.

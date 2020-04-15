@@ -33,7 +33,7 @@ Für den Fall, dass $q_\pi(s,a)$ größer ist als $v_\pi$ für ein $a \in \mathc
 
 \subsubsection{Strategieiteration}
 Eine Methode, die die zwei Prozesse zum Evaluieren und der Verbesserung einer Strategie zusammenführt, ist die sog. Strategieiteration (\textit{Policy Iteration}), die ihren Ursprung in den Arbeiten von \cite{bellman1957dynamic} und \cite{howard1960dynamic} hat. 
-\par 
+\newpage
 Bei der Strategieiteration wird zunächst eine willkürliche Strategie $\pi_0$ gewählt, die anschließend zu der Nutzenfunktionen $v_{\pi_k}$ evaluiert wird. Ist dieser Schritt abgeschlossen, wird die Strategie gemäß der berechneten Aktions-Nutzenfunktion $q_{\pi_k}$ (vgl. \ref{eq:qBerechnung}) verbessert, aus $\pi_k$ folgt $\pi_{k+1}$ und eine erneute Evaluation kann erfolgen. Die Schleife wird gestoppt, wenn für alle Zustände $s$ gilt, dass $\pi_{k+1}(s) = \pi_k(s)$ \cite[S.~22]{Wiering}. 
 \par 
 Die Strategieiteration generiert somit folgende Sequenz \cite[S.~22]{Wiering}:
@@ -52,7 +52,7 @@ Diese Erkenntnis macht sich die sog. Nutzeniteration (\textit{Value Iteration}) 
 
 \subsubsection{Zusammenfassung}
 Die Dynamische Programmierung ist ein \textit{model-based} Lernverfahren, welches auf dem Konzept des \textit{bootstrappings} basiert. Dadurch, dass die Dynamiken der Umwelt und somit die komplette Übergangsfunktion \textit{p} Voraussetzung für den Einsatz der DP ist, gestaltet sich die Anwendung der DP auf reale Probleme als sehr schwierig.
-\par 
+\newpage
 Dennoch ist die DP als theoretisches Bindeglied zwischen der linearen Lösung der \textit{Bellman Optimality Equation} und den nachfolgenden iterativen RL-Algorithmen (Monte-Carlo und Temporal-Difference) zu verstehen. Sie führt wichtige Konzepte ein, wie der Evaluation einer bestimmten Strategie zur Lösung des Vorhersageproblems (\textit{Prediction Problem}) oder der schrittweisen Verbesserung einer Strategie bei dem Kontrollproblem (\textit{Control Problem}).
 \par
 Neben der Strategieiteration (\textit{Policy Iteration}), bei der Strategien zunächst vollständig evaluiert werden bevor eine Verbesserung der Strategie stattfindet, wurde zudem die Nutzeniteration (\textit{Value Iteration}) vorgestellt. Hierbei wird die Evaluierung einer Strategie bereits nach der ersten Iteration abgebrochen und eine neue gierige Strategie anhand der aktuellen Nutzen gewählt.

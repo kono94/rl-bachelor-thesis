@@ -1,5 +1,5 @@
 In Kapitel \ref{sec:MDP} wurde gezeigt, dass die Interaktion eines Agenten mit seiner Umwelt als bestimmte Abfolge beschrieben werden kann \eqref{eq:episode}. In ihr werden letztendlich alle Triple von Zustand, ausgeführter Aktion aufgrund dieses Zustands und anschließende Belohnung chronologisch aufgezeichnet. Ist diese Reihenfolge endlich, so wird sie auch als Episode (\textit{Episode}) bezeichnet. Eine Episode fasst somit alle Informationen zusammen, die ein Agent erlebt, während er von einem beliebigen Startzustand aus anfängt die Umwelt zu erkunden. Das Ende einer Episode wird durch das Erreichen eines beliebigen Zielzustands erreicht. Ist eine Episode zu Ende, dann wird das Szenario zurückgesetzt und der Agent startet erneut im Startzustand. Episoden sind komplett unabhängig voneinander und erzeugen Abfolgen, die nicht durch vorige Episoden beeinflusst sind.
-\par
+\newpage
 Bisher wurde erwähnt, dass das Ziel eines Agenten sei, die Summe der zu erwartenden Belohnungen zu maximieren. Formal betrachtet, versucht er somit die Sequenz der Belohnungen, die er nach dem Zeitpunkt $t$ erhält, den sog. erwarteten Gewinn (\textit{Return}), zu maximieren. Im einfachsten Fall sieht $G_t$ wie folgt aus, wobei $T$ der finale Zeitstempel ist \cite[S.55]{Sutton1998}:
 
 \begin{equation}\label{eq:simpleReturn}
@@ -16,8 +16,8 @@ Um diese kontinuierlichen und die zuvor beschriebenen episodialen Aufgaben im Be
     G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots  = \sum_{k=0}^\infty{\gamma^k R_{t+k+1}}
 \end{equation}
 Eine wichtige Erkenntnis ist, dass Gewinne aufeinanderfolgender Zeitpunkte in Verbindung stehen. Vor allem Algorithmen, die ihr Schätzungen nach jedem Zeitstempel aktualisieren, profitieren von dieser Eigenschaft. Sie verwenden den geschätzten Gewinn des Folgezustands, also $G_{t+1}$, zur Berechnung von $G_t$, dem geschätzten Gewinn des aktuellen Zustands. Dieses Verfahren, bei dem ein Schätzwert aufgrund eines anderen Schätzwertes aktualisiert wird, wird auch als \textit{bootstrapping} bezeichnet.  
-\par 
-Durch simple Umformung wird der Zusammenhang von Gewinnen deutlich \cite[S.55]{Sutton1998}:
+\newpage 
+Durch Umformung wird der Zusammenhang von Gewinnen deutlich \cite[S.55]{Sutton1998}:
 
 \begin{equation}\label{eq:successiveReturn}
     \begin{aligned}
